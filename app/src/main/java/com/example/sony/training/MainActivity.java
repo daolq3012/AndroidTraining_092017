@@ -11,5 +11,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //TODO toi la Chuong
+        System.out.println("Chuong");
     }
 }
