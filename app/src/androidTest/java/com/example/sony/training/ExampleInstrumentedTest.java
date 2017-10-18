@@ -20,7 +20,8 @@ public class ExampleInstrumentedTest {
     public void useAppContext() throws Exception {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
-
+kkkk
+        
         assertEquals("com.example.sony.training", appContext.getPackageName());
     }
 }
