@@ -19,13 +19,13 @@
         android:id="@+id/billAmountEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/billAmountLabel"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@+id/billAmountLabel"
         android:ems="8"
         android:inputType="numberDecimal"
         android:text="@string/bill_amount"
-        android:textSize="20sp" >
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <requestFocus />
     </EditText>

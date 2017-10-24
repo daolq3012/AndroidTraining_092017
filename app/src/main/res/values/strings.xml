@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tip Calculator</string>
+    <string name="app_name">AndroidTraining_092017</string>
     <string name="title_activity_tip_calculator">Tip Calculator</string>
     <string name="menu_settings">Settings</string>
 
@@ -16,4 +16,16 @@
 
     <string name="total_amount_label">Total</string>
     <string name="total_amount">$0.00</string>
+
+    <array name="spinner_email">
+        <item>HotMail</item>
+        <item>Gmail</item>
+        <item>YahooMail</item>
+    </array>
+    <array name="spinner_SplitBill">
+        <item>1 ways</item>
+        <item>2 ways</item>
+        <item>3 ways</item>
+    </array>
+
 </resources>

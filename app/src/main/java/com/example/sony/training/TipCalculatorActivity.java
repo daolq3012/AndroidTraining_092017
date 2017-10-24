@@ -2,12 +2,14 @@ package com.example.sony.training;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.NumberFormat;
 
@@ -38,8 +40,10 @@ public class TipCalculatorActivity extends AppCompatActivity implements TextView
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_UNSPECIFIED) {
-            calculatorAndDisplay();
-
+//            calculatorAndDisplay();
+            String billAmountString = billAmountEditText.getText().toString();
+            Toast.makeText(this,"PhongCH"+billAmountString,Toast.LENGTH_LONG).show();
+            Log.e("PhongCH", "click on button done"+ billAmountString);
         }
         return false;
     }
