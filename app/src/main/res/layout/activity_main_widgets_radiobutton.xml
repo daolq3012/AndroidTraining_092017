@@ -10,7 +10,6 @@
     android:textStyle="bold"
     android:orientation="vertical">
 
-
     <TextView
         android:id="@+id/txtTotal"
         android:layout_width="wrap_content"
@@ -64,8 +63,6 @@
             android:text="Total" />
     </RadioGroup>
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -81,7 +78,6 @@
         android:layout_gravity="center"
         android:layout_above="@+id/txtPerson"
         android:layout_centerHorizontal="true" />
-
 
     <TextView
         android:id="@+id/PersonLabel"
@@ -107,4 +103,5 @@
         android:layout_height="wrap_content"
         android:text="Apply"
         android:layout_centerVertical="true"/>
+
 </RelativeLayout>
