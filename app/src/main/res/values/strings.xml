@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+
+    <array name="spinner_email">
+        <item>Gmail</item>
+        <item>Yahoo</item>
+        <item>HotGmail</item>
+    </array>
 </resources>
