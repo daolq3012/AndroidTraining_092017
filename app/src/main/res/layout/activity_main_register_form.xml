@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp">
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_below="@id/txtUserName"
+        android:id="@+id/edtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_below="@+id/edtUserName"
+        android:id="@+id/txtPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password: "
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_below="@+id/txtPassword"
+        android:id="@+id/edtPassWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <CheckBox
+        android:id="@+id/cbReceiveEmail"
+        android:layout_below="@id/edtPassWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Receive email" />
+
+    <RadioGroup
+        android:id="@+id/rgSex"
+        android:layout_below="@+id/cbReceiveEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nam" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nu" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinerEmail"
+        android:layout_below="@+id/rgSex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Spinner>
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/imvIcon"
+        android:layout_below="@+id/spinerEmail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/imvIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Register" />
+</RelativeLayout>
