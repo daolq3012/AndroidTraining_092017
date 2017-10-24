@@ -32,8 +32,8 @@ public class TipRadioActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_widgets_radiobutton);
 
-        mEditTotal = (EditText) findViewById(R.id.editPerson);
-        mTxtTotal = (TextView) findViewById(R.id.txtPerson);
+        mEditTotal = (EditText) findViewById(R.id.editTotal);
+        mTxtTotal = (TextView) findViewById(R.id.txtTotal);
         mSpinner_SplitBill = (Spinner) findViewById(R.id.spinner_SplitBill);
 
 
