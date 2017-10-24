@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:textSize="20sp"
+    android:layout_marginTop="30dp"
+    android:textStyle="bold"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/txtRounding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rounding"
+        android:textStyle="bold"
+        android:layout_below="@+id/editTotal" />
+
+    <RadioGroup
+        android:id="@+id/radioGr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/editTotal"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/radioTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip" />
+
+        <RadioButton
+            android:id="@+id/radioTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Split Bill"
+        android:textStyle="bold"
+        android:layout_above="@+id/txtPerson"
+        android:id="@+id/txtSplitBill" />
+
+    <Spinner
+        android:id="@+id/spinner_SplitBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_above="@+id/txtPerson"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/PersonLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Per Person"
+        android:textStyle="bold"
+        android:layout_below="@+id/txtSplitBill" />
+    <TextView
+        android:id="@+id/txtPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="$18.80"
+        android:textStyle="bold"
+        android:layout_above="@+id/buttonApply"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonApply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
