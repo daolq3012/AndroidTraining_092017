@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/labelAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editAmount"
+        android:layout_alignBottom="@+id/editAmount"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Bill Amount" />
+
+    <EditText
+        android:id="@+id/editAmount"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_toRightOf="@+id/labelAmount" />
+
+    <TextView
+        android:id="@+id/labelPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Percent" />
+
+    <TextView
+
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editAmount"
+        android:layout_alignStart="@+id/editAmount"
+        android:layout_below="@+id/editAmount"
+        android:text="15%" />
+
+    <SeekBar
+        android:id="@+id/seekBarPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editAmount"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_toRightOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/labelTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarPercent"
+        android:text="Tip" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/labelPercent"
+        android:gravity="center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/labelTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelTip"
+        android:text="Total" />
+
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/labelTotal"
+        android:layout_alignBottom="@+id/labelTotal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/labelDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelTotal"
+        android:gravity="center_horizontal"
+        android:text="__________________________" />
+
+    <TextView
+        android:id="@+id/labelRounding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelDevice"
+        android:text="Rounding" />
+
+    <RadioGroup
+        android:id="@+id/radioGr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelDevice"
+        android:layout_centerHorizontal="true">
+
+
+        <RadioButton
+            android:id="@+id/radiobtnNone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/radiobtnTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radiobtnNone"
+            android:text="Tip" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radiobtnTip"
+            android:text="Total" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGr"
+        android:text="Split bill" />
+
+    <Spinner
+        android:id="@+id/spinnerBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGr"
+        android:layout_centerHorizontal="true">
+
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/spinnerBill"
+        android:text="Per Person" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/spinnerBill"
+        android:text="0"
+        android:id="@+id/textView3" />
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
