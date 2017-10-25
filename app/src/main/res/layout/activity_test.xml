@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Bill Amount"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/txtBillAmount"
+        android:inputType="numberDecimal"/>
+
+
+    <TextView
+        android:id="@+id/txtPercentNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtBillAmount"
+        android:layout_below="@+id/edtBillAmount"
+        android:layout_marginTop="10dp"
+        android:text="15%"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtPercentNumber"
+        android:text="Percent"
+        android:textSize="25sp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtPercentNumber"
+        android:layout_toRightOf="@+id/txtPercentNumber" />
+
+    <TextView
+        android:id="@+id/txtTipNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPercentNumber"
+        android:layout_below="@+id/txtPercentNumber"
+        android:layout_marginTop="10dp"
+        android:text="$0.00"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/txtTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtTipNumber"
+        android:text="Tip"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtTotalNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPercentNumber"
+        android:layout_below="@+id/txtTipNumber"
+        android:layout_marginTop="10dp"
+        android:text="$0.00"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtTotalNumber"
+        android:text="Total"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txtTotalNumber"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#000" />
+
+    <TextView
+        android:id="@+id/txt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:text="Rounding"
+        android:textSize="25sp" />
+
+    <RadioGroup
+        android:id="@+id/radioG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtBillAmount"
+        android:layout_alignTop="@+id/txt7"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txt7">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="None" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioG"
+        android:layout_below="@+id/radioG"
+        android:layout_marginTop="10dp"></Spinner>
+
+    <TextView
+        android:id="@+id/txtSplitBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinner_way"
+        android:text="Split Bill?"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtPerPersonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_way"
+        android:layout_below="@id/spinner_way"
+        android:layout_marginTop="10dp"
+        android:text="đ 56"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtPerPersonNumber"
+        android:text="Per Person"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPerPersonNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:onClick="onCalcularClick"
+        android:text="Calulate"
+        android:textAllCaps="false"
+        android:textSize="25dp" />
+
+</RelativeLayout>
