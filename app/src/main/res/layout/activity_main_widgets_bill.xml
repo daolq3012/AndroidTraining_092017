@@ -7,33 +7,34 @@
         android:id="@+id/labelAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/editAmount"
-        android:layout_alignBottom="@+id/editAmount"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:padding="10dp"
         android:text="Bill Amount" />
 
     <EditText
         android:id="@+id/editAmount"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/labelAmount"
+        android:gravity="center"
         android:inputType="numberDecimal"
-        android:layout_toRightOf="@+id/labelAmount" />
+        android:padding="10dp" />
+
+    <requestFocus />
 
     <TextView
-        android:id="@+id/labelPercent"
+        android:id="@+id/percentLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/percentTextView"
+        android:layout_alignBottom="@+id/percentTextView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:padding="10dp"
         android:text="Percent" />
 
     <TextView
 
-        android:id="@+id/textView2"
+        android:id="@+id/percentTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/editAmount"
@@ -50,82 +51,95 @@
         android:layout_below="@+id/editAmount"
         android:layout_marginLeft="18dp"
         android:layout_marginStart="18dp"
-        android:layout_toRightOf="@+id/textView2" />
+        android:layout_toRightOf="@+id/percentTextView" />
 
     <TextView
         android:id="@+id/labelTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBarPercent"
+        android:padding="10dp"
         android:text="Tip" />
 
     <TextView
+        android:id="@+id/tipTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/labelPercent"
-        android:gravity="center"
-        android:text="0" />
+        android:layout_below="@+id/percentLabel"
+        android:text="0"
+        android:layout_alignLeft="@+id/percentTextView"
+        android:layout_alignStart="@+id/percentTextView"
+         />
 
     <TextView
         android:id="@+id/labelTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/labelTip"
+        android:padding="10dp"
         android:text="Total" />
 
     <TextView
         android:id="@+id/totalTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="0"
         android:layout_alignBaseline="@+id/labelTotal"
         android:layout_alignBottom="@+id/labelTotal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:gravity="center"
-        android:text="0" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/tipTextView"
+        android:layout_alignStart="@+id/tipTextView" />
 
-    <TextView
-        android:id="@+id/labelDevice"
+    <View
+        android:id="@+id/separatorLine"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/labelTotal"
-        android:gravity="center_horizontal"
-        android:text="__________________________" />
+        android:layout_height="1dp"
+        android:padding="10dp"
+        android:layout_alignLeft="@+id/labelTotal"
+        android:layout_below="@+id/labelTotal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/black"
+       />
 
     <TextView
         android:id="@+id/labelRounding"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/labelDevice"
+        android:layout_below="@id/separatorLine"
+        android:padding="10dp"
         android:text="Rounding" />
 
     <RadioGroup
-        android:id="@+id/radioGr"
+        android:id="@+id/roundingRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/labelDevice"
-        android:layout_centerHorizontal="true">
+        android:padding="10dp"
+
+        android:layout_below="@+id/separatorLine"
+        android:layout_alignLeft="@+id/totalTextView"
+        android:layout_alignStart="@+id/totalTextView">
 
 
         <RadioButton
-            android:id="@+id/radiobtnNone"
+            android:id="@+id/radioBtnNone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="None" />
 
         <RadioButton
-            android:id="@+id/radiobtnTip"
+            android:id="@+id/radioBtnTip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/radiobtnNone"
             android:text="Tip" />
 
         <RadioButton
+            android:id="@+id/radioBtnTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/radiobtnTip"
+            android:layout_below="@id/radioBtnTip"
             android:text="Total" />
 
     </RadioGroup>
@@ -133,14 +147,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/radioGr"
-        android:text="Split bill" />
+        android:padding="10dp"
+        android:text="Split bill"
+        android:layout_below="@+id/roundingRadioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView2" />
 
     <Spinner
         android:id="@+id/spinnerBill"
+        android:padding="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGr"
+        android:layout_below="@+id/roundingRadioGroup"
         android:layout_centerHorizontal="true">
 
     </Spinner>
@@ -149,23 +168,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
         android:layout_below="@+id/spinnerBill"
+        android:padding="10dp"
         android:text="Per Person" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/spinnerBill"
+        android:padding="10dp"
         android:text="0"
-        android:id="@+id/textView3" />
+        android:layout_below="@+id/spinnerBill"
+        android:layout_centerHorizontal="true" />
+
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate"
-        android:textAllCaps="false"
         android:layout_below="@+id/textView3"
-        android:layout_centerHorizontal="true" />
+        android:padding="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate"
+        android:textAllCaps="false" />
+
+
 </RelativeLayout>
