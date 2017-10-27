@@ -110,15 +110,18 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="45dp">
         <RadioButton
+            android:id="@+id/rdNone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="None"
             android:checked="true"/>
         <RadioButton
+            android:id="@+id/rdTip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tip"/>
         <RadioButton
+            android:id="@+id/rdTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Total"/>
