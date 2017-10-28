@@ -26,22 +26,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnDot;
     private Button mBtnEquals;
     private Button mBtnClear;
+    private Button mBtnBackspace;
 
     private TextView mTxtResult;
     private TextView mTxtDisplay;
 
     private String input = "";
     private String display = "";
-    private String calculation = "";
     private boolean newWave;
     private int result;
     private int number1;
     private int number2;
     private int flag = 1;
-    private char previousCalculation;
+    private char previousCalculation = ' ';
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)  {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_calculator);
 
@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnPercent = (Button) findViewById(R.id.btnPercent);
         mBtnDot = (Button) findViewById(R.id.btnDot);
         mBtnEquals = (Button) findViewById(R.id.btnEquals);
+        mBtnBackspace = (Button) findViewById(R.id.btnBackspace);
 
         mBtnClear = (Button) findViewById(R.id.btnClear);
 
@@ -95,6 +96,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnDivide.setOnClickListener(this);
 
         mBtnClear.setOnClickListener(this);
+        mBtnEquals.setOnClickListener(this);
+        mBtnBackspace.setOnClickListener(this);
     }
 
     @Override
@@ -103,56 +106,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnNumber0:
                 if (mTxtResult.getText().toString().equals("0")) {
                     input = "";
+                    mTxtResult.setText("0");
                 } else {
-                    input = input.concat(mBtnNumaber0.getText().toString());
-                    mTxtResult.setText(input);
-                    newWave = true;
+                    enterNumber(mBtnNumaber0);
                 }
                 break;
             case R.id.btnNumber1:
-                input = input.concat(mBtnNumaber1.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber1);
                 break;
             case R.id.btnNumber2:
-                input = input.concat(mBtnNumaber2.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber2);
                 break;
             case R.id.btnNumber3:
-                input = input.concat(mBtnNumaber3.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber3);
                 break;
             case R.id.btnNumber4:
-                input = mBtnNumaber4.getText().toString();
-                mTxtResult.setText(mBtnNumaber4.getText().toString());
-                newWave = true;
+                enterNumber(mBtnNumaber4);
                 break;
             case R.id.btnNumber5:
-                input = input.concat(mBtnNumaber5.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber5);
                 break;
             case R.id.btnNumber6:
-                input = input.concat(mBtnNumaber6.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber6);
                 break;
             case R.id.btnNumber7:
-                input = input.concat(mBtnNumaber7.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber7);
                 break;
             case R.id.btnNumber8:
-                input = input.concat(mBtnNumaber8.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber8);
                 break;
             case R.id.btnNumber9:
-                input = input.concat(mBtnNumaber9.getText().toString());
-                mTxtResult.setText(input);
-                newWave = true;
+                enterNumber(mBtnNumaber9);
                 break;
             case R.id.btnClear:
                 input = "";
@@ -162,141 +146,178 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 result = 0;
                 number1 = 0;
                 number2 = 0;
+                previousCalculation = ' ';
                 break;
-            case R.id.btnPlus:
-                display = mTxtDisplay.getText().toString();
-                calculation = display.charAt(display.length()-1)+"";
-                if(!newWave && (calculation.equals("+") || calculation.equals("-") || calculation.equals("*") || calculation.equals("/"))) {
-                    display = display.substring(0,display.length()-1);
-                    display = display.concat(mBtnPlus.getText().toString());
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                } else {
-                    if (flag == 1) {
-                        number1 = Integer.parseInt(input);
-                        flag = 2;
-                    } else {
-                        number2 = Integer.parseInt(input);
-                        flag = 1;
-                    }
-                    switch (previousCalculation){
-                        case '+':
-                            result = number1 + number2;
-                            mTxtResult.setText(result+"");
-                            if(flag == 2) {
-                                number1 = result;
-                            } else{
-                                number2 = result;
-                            }
-                            break;
-                        case '-':
-                            if (flag == 1) {
-                                result = number1 - number2;
-                            } else {
-                                result = number2 - number1;
-                            }
-                            mTxtResult.setText(result+"");
-                            if(flag == 2) {
-                                number1 = result;
-                            } else{
-                                number2 = result;
-                            }
-                            break;
-                    }
 
-                    display = display.concat(input.concat(mBtnPlus.getText().toString()));
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                }
+            case R.id.btnPlus:
+                calculateInput(mBtnPlus);
                 previousCalculation = '+';
                 break;
             case R.id.btnSub:
-                display = mTxtDisplay.getText().toString();
-                calculation = display.charAt(display.length()-1)+"";
-                if(!newWave && (calculation.equals("+") || calculation.equals("-") || calculation.equals("*") || calculation.equals("/"))) {
-                    display = display.substring(0,display.length()-1);
-                    display = display.concat(mBtnSub.getText().toString());
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                } else {
-                    if (flag == 1) {
-                        number1 = Integer.parseInt(input);
-                        flag = 2;
-                    } else {
-                        number2 = Integer.parseInt(input);
-                        flag = 1;
-                    }
-                    switch (display.charAt(display.length()-1)){
-                        case '+':
-                            result = number1 + number2;
-                            mTxtResult.setText(result+"");
-                            number1 = result;
-                            if(flag == 2) {
-                                number1 = result;
-                            } else{
-                                number2 = result;
-                            }
-                            break;
-                        case '-':
-                            if (flag == 1) {
-                                result = number1 - number2;
-                            } else {
-                                result = number2 - number1;
-                            }
-                            mTxtResult.setText(result+"");
-                            number1 = result;
-                            if(flag == 2) {
-                                number1 = result;
-                            } else{
-                                number2 = result;
-                            }
-                            break;
-                    }
-                    display = display.concat(input.concat(mBtnSub.getText().toString()));
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                }
+                calculateInput(mBtnSub);
                 previousCalculation = '-';
                 break;
             case R.id.btnMultiplication:
-                display = mTxtDisplay.getText().toString();
-                calculation = display.charAt(display.length()-1)+"";
-                if(!newWave && (calculation.equals("+") || calculation.equals("-") || calculation.equals("*") || calculation.equals("/"))) {
-                    display = display.substring(0,display.length()-1);
-                    display = display.concat(mBtnMultiplication.getText().toString());
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                } else {
-                    display = display.concat(input.concat(mBtnMultiplication.getText().toString()));
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                }
+                calculateInput(mBtnMultiplication);
+                previousCalculation = '*';
                 break;
             case R.id.btnDivide:
-                display = mTxtDisplay.getText().toString();
-                calculation = display.charAt(display.length()-1)+"";
-                if(!newWave && (calculation.equals("+") || calculation.equals("-") || calculation.equals("*") || calculation.equals("/"))) {
-                    display = display.substring(0,display.length()-1);
-                    display = display.concat(mBtnDivide.getText().toString());
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                } else {
-                    display = display.concat(input.concat(mBtnDivide.getText().toString()));
-                    mTxtDisplay.setText(display);
-                    input = "";
-                    newWave = false;
-                }
+                calculateInput(mBtnDivide);
+                previousCalculation = '/';
                 break;
-
             case R.id.btnEquals:
+                if (flag == 1) {
+                    number1 = Integer.parseInt(mTxtResult.getText().toString());
+                    flag = 2;
+                } else {
+                    number2 = Integer.parseInt(mTxtResult.getText().toString());
+                    flag = 1;
+                }
+                switch (display.charAt(display.length() - 1)) {
+                    case '+':
+                        result = number1 + number2;
+                        mTxtResult.setText(result + "");
+                        number1 = result;
+                        if (flag == 1) {
+                            number1 = result;
+                        } else {
+                            number2 = result;
+                        }
+                        break;
+                    case '-':
+                        if (flag == 2) {
+                            result = number2 - number1;
+                        } else {
+                            result = number1 - number2;
+                        }
+                        mTxtResult.setText(result + "");
+                        number1 = result;
+                        if (flag == 1) {
+                            number1 = result;
+                        } else {
+                            number2 = result;
+                        }
+                        break;
+                    case '*':
+                        result = number1 * number2;
+                        mTxtResult.setText(result + "");
+                        number1 = result;
+                        if (flag == 1) {
+                            number1 = result;
+                        } else {
+                            number2 = result;
+                        }
+                        break;
+                    case '/':
+                        if (flag == 2) {
+                            result = number2 / number1;
+                        } else {
+                            result = number1 / number2;
+                        }
+                        mTxtResult.setText(result + "");
+                        number1 = result;
+                        if (flag == 1) {
+                            number1 = result;
+                        } else {
+                            number2 = result;
+                        }
+                        break;
+                }
+                mTxtDisplay.setText(" ");
+                input = mTxtResult.getText().toString();
+                newWave = true;
+                previousCalculation = '=';
+                break;
+            case R.id.btnBackspace:
+                if(newWave && (input.length() > 1) && (previousCalculation != '=')) {
+                    input = input.substring(0,input.length()-1);
+                    mTxtResult.setText(input);
+                } else if(input.length() == 1) {
+                    input = "";
+                    mTxtResult.setText("0");
+                }
+        }
+    }
 
+    private void enterNumber(Button button) {
+        if(previousCalculation != '=') {
+            input = input.concat(button.getText().toString());
+            mTxtResult.setText(input);
+            newWave = true;
+        } else {
+            input = "";
+            input = input.concat(button.getText().toString());
+            mTxtResult.setText(input);
+            newWave = true;
+        }
+    }
+
+    private void calculateInput(Button button) {
+        display = mTxtDisplay.getText().toString();
+        if (!newWave) {
+            display = display.substring(0, display.length() - 1);
+            display = display.concat(button.getText().toString());
+            mTxtDisplay.setText(display);
+            input = "";
+            newWave = false;
+        } else {
+            if (flag == 1) {
+                number1 = Integer.parseInt(mTxtResult.getText().toString());
+                flag = 2;
+            } else {
+                number2 = Integer.parseInt(mTxtResult.getText().toString());
+                flag = 1;
+            }
+            switch (previousCalculation) {
+                case '+':
+                    result = number1 + number2;
+                    mTxtResult.setText(result + "");
+                    if (flag == 2) {
+                        number1 = result;
+                    } else {
+                        number2 = result;
+                    }
+                    break;
+                case '-':
+                    if (flag == 1) {
+                        result = number1 - number2;
+                    } else {
+                        result = number2 - number1;
+                    }
+                    mTxtResult.setText(result + "");
+                    if (flag == 2) {
+                        number1 = result;
+                    } else {
+                        number2 = result;
+                    }
+                    break;
+                case '*':
+                    result = number1 * number2;
+                    mTxtResult.setText(result + "");
+                    if (flag == 2) {
+                        number1 = result;
+                    } else {
+                        number2 = result;
+                    }
+                    break;
+                case '/':
+                    if (flag == 1) {
+                        result = number1 / number2;
+                    } else {
+                        result = number2 / number1;
+                    }
+                    mTxtResult.setText(result + "");
+                    if (flag == 2) {
+                        number1 = result;
+                    } else {
+                        number2 = result;
+                    }
+                    break;
+            }
+            display = display.concat(input.concat(button.getText().toString()));
+            mTxtDisplay.setText(display);
+            input = "";
+            newWave = false;
         }
     }
 }
