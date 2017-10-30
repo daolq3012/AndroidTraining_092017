@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/hinhnen"
+    android:orientation="vertical"
+    app:layout_constraintRight_toRightOf="parent"
+    tools:layout_editor_absoluteY="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/WELCOME"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:text="@string/welcome"
+            android:textColor="?attr/colorBackgroundFloating"
+            android:textSize="45sp" />
+
+        <EditText
+            android:id="@+id/usename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/WELCOME"
+            android:layout_alignStart="@+id/WELCOME"
+            android:layout_below="@+id/WELCOME"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Username"
+            android:textColor="@android:color/background_light" />
+
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/usename"
+            android:layout_alignStart="@+id/usename"
+            android:layout_below="@+id/usename"
+            android:layout_marginTop="@dimen/dp_24"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:text="@string/password"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pass"
+            android:layout_alignStart="@+id/pass"
+            android:layout_below="@+id/pass"
+            android:layout_marginTop="13dp"
+            android:text="Login"
+            android:textColor="@android:color/background_light"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/registerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/login"
+            android:layout_alignEnd="@+id/pass"
+            android:layout_alignRight="@+id/pass"
+            android:layout_alignTop="@+id/login"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_toRightOf="@+id/login"
+            android:elevation="1dp"
+            android:text="Regisrt"
+            android:textColor="@android:color/background_light"
+            android:textSize="36sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
