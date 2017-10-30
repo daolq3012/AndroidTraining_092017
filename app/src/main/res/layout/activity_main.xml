@@ -1,18 +1,187 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.sony.training.MainActivity">
+    style="@style/wrap_content_style" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        style="@style/wrap_content_style"
+        android:focusableInTouchMode="true"
+        android:padding="@dimen/dp_10" >
 
-</android.support.constraint.ConstraintLayout>
+        <!-- The bill amount -->
+
+        <TextView
+            android:id="@+id/billAmountLabel"
+            style="@style/wrap_content_style_10_20"
+            android:text="@string/bill_amount_label"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/billAmountEditText"
+            style="@style/wrap_content_style"
+            android:layout_alignBaseline="@+id/billAmountLabel"
+            android:layout_toRightOf="@+id/billAmountLabel"
+            android:ems="8"
+            android:inputType="numberDecimal"
+            android:text="@string/bill_amount"
+            android:textSize="@dimen/sp_20" >
+
+            <requestFocus />
+        </EditText>
+
+        <!-- The tip percent -->
+
+        <TextView
+            android:id="@+id/percentLabel"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignLeft="@+id/billAmountLabel"
+            android:layout_below="@+id/billAmountLabel"
+            android:text="@string/tip_percent_label"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/percentTextView"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/percentLabel"
+            android:padding="@dimen/dp_5"
+            android:text="@string/tip_percent"
+            android:textSize="@dimen/sp_20"
+            android:layout_toRightOf="@+id/billAmountLabel"
+            android:layout_toEndOf="@+id/billAmountLabel" />
+
+        <SeekBar
+            android:id="@+id/percentSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/percentLabel"
+            android:layout_toRightOf="@+id/percentTextView"
+            android:max="30"
+            android:padding="@dimen/dp_10"
+            android:progress="15" />
+
+        <!-- the tip amount -->
+
+        <TextView
+            android:id="@+id/tipLabel"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignLeft="@+id/percentLabel"
+            android:layout_below="@+id/percentLabel"
+            android:text="@string/tip_amount_label"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tipTextView"
+            style="@style/wrap_content_style"
+            android:layout_alignBaseline="@+id/tipLabel"
+            android:layout_alignLeft="@id/billAmountEditText"
+            android:padding="@dimen/dp_5"
+            android:text="@string/tip_amount"
+            android:textSize="@dimen/sp_20" />
+
+        <!-- the total -->
+
+        <TextView
+            android:id="@+id/totalLabel"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignLeft="@+id/tipLabel"
+            android:layout_below="@+id/tipLabel"
+            android:text="@string/total_amount_label"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalTextView"
+            style="@style/wrap_content_style"
+            android:layout_alignBaseline="@+id/totalLabel"
+            android:layout_alignLeft="@+id/tipTextView"
+            android:padding="@dimen/dp_5"
+            android:text="@string/total_amount"
+            android:textSize="@dimen/sp_20" />
+
+        <!-- the separator line -->
+
+        <View
+            android:id="@+id/separatorLine"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/totalLabel"
+            android:layout_below="@+id/totalLabel"
+            android:background="@android:color/black"
+            android:padding="@dimen/dp_5" />
+
+        <!-- rounding -->
+
+        <TextView
+            android:id="@+id/roundingLabel"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignLeft="@+id/separatorLine"
+            android:layout_below="@+id/separatorLine"
+            android:text="@string/round_label"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/roundingRadioGroup"
+            style="@style/wrap_content_style"
+            android:layout_below="@+id/totalLabel"
+            android:layout_toRightOf="@+id/billAmountLabel"
+            android:padding="@dimen/dp_10" >
+
+            <RadioButton
+                android:id="@+id/roundNoneRadioButton"
+                style="@style/wrap_content_style"
+                android:checked="true"
+                android:text="@string/round_no" />
+
+            <RadioButton
+                android:id="@+id/roundTipRadioButton"
+                style="@style/wrap_content_style"
+                android:text="@string/round_tip" />
+
+            <RadioButton
+                android:id="@+id/roundTotalRadioButton"
+                style="@style/wrap_content_style"
+                android:text="@string/round_total" />
+        </RadioGroup>
+
+        <!-- split -->
+
+        <TextView
+            android:id="@+id/splitLabel"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignLeft="@+id/roundingLabel"
+            android:layout_below="@+id/roundingRadioGroup"
+            android:text="@string/split_label"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/splitSpinner"
+            style="@style/wrap_content_style"
+            android:layout_alignLeft="@+id/perPersonTextView"
+            android:layout_alignTop="@+id/splitLabel" />
+
+        <TextView
+            android:id="@+id/perPersonLabel"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignLeft="@+id/splitLabel"
+            android:layout_below="@+id/splitLabel"
+            android:text="@string/per_person_label"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/perPersonTextView"
+            style="@style/wrap_content_style_10_20"
+            android:layout_alignBaseline="@+id/perPersonLabel"
+            android:layout_alignLeft="@+id/roundingRadioGroup"
+            android:text="@string/per_person" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            style="@style/wrap_content_style"
+            android:text="Calculate"
+            android:textAllCaps="false"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/perPersonTextView"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</ScrollView>
