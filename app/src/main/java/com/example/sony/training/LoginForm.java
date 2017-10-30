@@ -13,6 +13,7 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
     private EditText mEdtEmail, mEdtPassword;
     private Button mBtnLogin;
     private TextView mTxtRegister;
+    private FieldCheckValidate fieldCheckValidate = new FieldCheckValidate();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
         mEdtPassword = (EditText) findViewById(R.id.password_EditText);
         mBtnLogin = (Button) findViewById(R.id.login_Button);
         mTxtRegister = (TextView) findViewById(R.id.register_TextView);
+
     }
 
     private void initListeners(){
@@ -34,23 +36,13 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
         mTxtRegister.setOnClickListener(this);
     }
 
-    private void checkLogin(){
-        String email = mEdtEmail.getText().toString();
-        String password = mEdtPassword.getText().toString();
-        if (email.length() > 6 || password.length() > 6){
-            Toast.makeText(this, R.string.loginSuccess, Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, R.string.validateEmail_Password, Toast.LENGTH_SHORT).show();
-            mEdtEmail.setText("");
-            mEdtPassword.setText("");
-        }
-    }
+
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.login_Button:
-                checkLogin();
+                fieldCheckValidate.checkLogin(mEdtEmail,mEdtPassword,this);
                 break;
             case R.id.register_TextView:
                 startActivity(new Intent(this,RegisterForm.class));
