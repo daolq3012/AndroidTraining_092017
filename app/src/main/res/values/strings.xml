@@ -11,4 +11,7 @@
     <string name="password">Password</string>
     <string name="signup">Sign up</string>
     <string name="addPhoto">Add Photo</string>
+    <string name="welcome">Welcome</string>
+    <string name="loginSuccess">Login Success</string>
+    <string name="validateEmail_Password">Email or Password must > 6 characters</string>
 </resources>

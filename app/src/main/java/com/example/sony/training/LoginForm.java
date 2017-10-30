@@ -17,19 +17,19 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_form);
-        initView();
+        initViews();
 
-        initListener();
+        initListeners();
     }
 
-    private void initView(){
+    private void initViews(){
         mEdtEmail = (EditText) findViewById(R.id.email_EditText);
         mEdtPassword = (EditText) findViewById(R.id.password_EditText);
         mBtnLogin = (Button) findViewById(R.id.login_Button);
         mTxtRegister = (TextView) findViewById(R.id.register_TextView);
     }
 
-    private void initListener(){
+    private void initListeners(){
         mBtnLogin.setOnClickListener(this);
         mTxtRegister.setOnClickListener(this);
     }
@@ -38,9 +38,9 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
         String email = mEdtEmail.getText().toString();
         String password = mEdtPassword.getText().toString();
         if (email.length() > 6 || password.length() > 6){
-            Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.loginSuccess, Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Email or Password must > 6 characters.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.validateEmail_Password, Toast.LENGTH_SHORT).show();
             mEdtEmail.setText("");
             mEdtPassword.setText("");
         }
