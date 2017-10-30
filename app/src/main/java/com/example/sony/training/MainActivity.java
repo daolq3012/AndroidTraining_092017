@@ -54,18 +54,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initListeners();
     }
     private void initViews(){
-        mSpnSplit = (Spinner) findViewById(R.id.split_spinner);
-        mBtnCalculate = (Button) findViewById(R.id.calculate_Button);
-        mEdtBill = (EditText) findViewById(R.id.bill_EditText);
-        mTxtTotal = (TextView) findViewById(R.id.total_TextView);
-        mTxtTip = (TextView) findViewById(R.id.tip_TextView);
-        mRbTotal = (RadioButton) findViewById(R.id.total_RadioButton);
-        mRbNone = (RadioButton) findViewById(R.id.none_RadioButton);
-        mRbTip = (RadioButton) findViewById(R.id.tip_RadioButton);
-        mRground = (RadioGroup) findViewById(R.id.round_RadioGroup);
-        mSbPercent = (SeekBar) findViewById(R.id.percent_Seekbar);
-        mTxtPercent = (TextView) findViewById(R.id.percent_TextView);
-        mTxtPerPerson = (TextView) findViewById(R.id.perPerson_TextView);
+        mSpnSplit = (Spinner) findViewById(R.id.splitspinner);
+        mBtnCalculate = (Button) findViewById(R.id.calculateButton);
+        mEdtBill = (EditText) findViewById(R.id.billEditText);
+        mTxtTotal = (TextView) findViewById(R.id.totalTextView);
+        mTxtTip = (TextView) findViewById(R.id.tipTextView);
+        mRbTotal = (RadioButton) findViewById(R.id.totalRadioButton);
+        mRbNone = (RadioButton) findViewById(R.id.noneRadioButton);
+        mRbTip = (RadioButton) findViewById(R.id.tipRadioButton);
+        mRground = (RadioGroup) findViewById(R.id.roundRadioGroup);
+        mSbPercent = (SeekBar) findViewById(R.id.percentSeekbar);
+        mTxtPercent = (TextView) findViewById(R.id.percentTextView);
+        mTxtPerPerson = (TextView) findViewById(R.id.perPersonTextView);
 
 
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.arraySpinnerBill,android.R.layout.simple_spinner_item);
@@ -218,13 +218,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId){
-            case R.id.none_RadioButton:
+            case R.id.noneRadioButton:
                 rounding = ROUND_NONE;
                 break;
-            case R.id.tip_RadioButton:
+            case R.id.tipRadioButton:
                 rounding = ROUND_TIP;
                 break;
-            case R.id.total_RadioButton:
+            case R.id.totalRadioButton:
                 rounding = ROUND_TOTAL;
                 break;
         }
@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return true;
             case KeyEvent.KEYCODE_DPAD_RIGHT:
             case KeyEvent.KEYCODE_DPAD_LEFT:
-                if (v.getId() == R.id.percent_Seekbar){
+                if (v.getId() == R.id.percentSeekbar){
                     calculateAndDisplay();
                 }
                 break;
@@ -275,12 +275,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.calculate_Button:
+            case R.id.calculateButton:
                 String strbill = mEdtBill.getText().toString();
                 float floatbill = Float.parseFloat(strbill);
                 mTxtTotal.setText(getString(R.string.vietnam_currency) + (floatbill/2));
                 break;
-            case R.id.bill_EditText:
+            case R.id.billEditText:
                 mTxtTotal.setText(R.string.vietnam_currency + 0);
                 break;
         }
