@@ -7,170 +7,173 @@
 
     <TextView
         android:id="@+id/txtBill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Bill Amount"
-        android:textStyle="bold"
-        android:textSize="25sp"/>
+        style="@style/style_name"
+        android:text="@string/name_billamount" />
+
     <EditText
         android:id="@+id/edtBill"
+        style="@style/margin_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtBill"
         android:layout_toRightOf="@+id/txtBill"
-        android:layout_marginLeft="25dp"
-        android:inputType="number"/>
+        android:inputType="number" />
+
     <TextView
         android:id="@+id/txtPercent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/style_name"
         android:layout_below="@+id/txtBill"
-        android:text="Percent"
-        android:textStyle="bold"
-        android:textSize="25sp"
-        android:layout_marginTop="10dp"/>
+        android:text="@string/name_percent" />
+
     <TextView
         android:id="@+id/txtpt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_toRightOf="@+id/txtPercent"
-        android:text="0%"
         android:layout_below="@+id/txtBill"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="70dp"/>
+        android:layout_toEndOf="@+id/txtPercent"
+        android:layout_toRightOf="@+id/txtPercent"
+        android:text="@string/txt_pt"
+        android:textSize="20sp" />
+
     <SeekBar
         android:id="@+id/seekPercent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/edtBill"
-        android:layout_toRightOf="@+id/txtPercent"
+        android:layout_marginLeft="105dp"
+        android:layout_marginStart="105dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="105dp"/>
+        android:layout_toEndOf="@+id/txtPercent"
+        android:layout_toRightOf="@+id/txtPercent" />
+
     <TextView
         android:id="@+id/txtTip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tip"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        style="@style/style_name"
         android:layout_below="@+id/txtPercent"
-        android:layout_marginTop="10dp" />
+        android:text="@string/name_tip" />
+
     <TextView
         android:id="@+id/txtTip1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/txtTip"
         android:layout_below="@+id/txtPercent"
+        android:layout_marginLeft="120dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="10dp"
-        android:text="$ 0"
-        android:textSize="25sp"
-        android:layout_marginLeft="120dp"/>
+        android:layout_toEndOf="@+id/txtTip"
+        android:layout_toRightOf="@+id/txtTip"
+        android:text="@string/txt_usd"
+        android:textSize="25sp" />
+
     <TextView
         android:id="@+id/txtTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        style="@style/style_name"
         android:layout_below="@+id/txtTip"
-        android:layout_marginTop="10dp" />
+        android:text="@string/name_total" />
+
     <TextView
         android:id="@+id/txtTotal1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/txtTip"
         android:layout_below="@+id/txtTip1"
+        android:layout_marginLeft="120dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="10dp"
-        android:text="$ 0"
-        android:textSize="25sp"
-        android:layout_marginLeft="120dp"/>
+        android:layout_toEndOf="@+id/txtTip"
+        android:layout_toRightOf="@+id/txtTip"
+        android:text="@string/txt_usd"
+        android:textSize="25sp" />
+
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/txtTotal"
-        android:background="#000000"/>
+        android:layout_marginTop="10dp"
+        android:background="#000000" />
+
     <TextView
         android:id="@+id/txtRound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        style="@style/style_name"
         android:layout_below="@+id/view"
-        android:text="Rounding"
-        android:textSize="25sp"
-        android:textStyle="bold"/>
+        android:text="@string/name_rounding" />
+
     <RadioGroup
         android:id="@+id/radiogr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view"
-        android:layout_toRightOf="@+id/txtRound"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="45dp">
+        android:layout_toEndOf="@+id/txtRound"
+        android:layout_toRightOf="@+id/txtRound">
+
         <RadioButton
             android:id="@+id/rdNone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="None"
-            android:checked="true"/>
+            style="@style/radio"
+            android:checked="true"
+            android:text="@string/radio_none" />
+
         <RadioButton
             android:id="@+id/rdTip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tip"/>
+            style="@style/radio"
+            android:text="@string/radio_tip" />
+
         <RadioButton
             android:id="@+id/rdTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total"/>
+            style="@style/radio"
+            android:text="@string/radio_total" />
     </RadioGroup>
+
     <TextView
         android:id="@+id/txtSplit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Split Bill ?"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        style="@style/style_name"
         android:layout_below="@+id/radiogr"
-        android:layout_marginTop="10dp"/>
+        android:text="@string/name_splitbill" />
+
     <Spinner
         android:id="@+id/Spn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radiogr"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/txtSplit"
-        android:layout_marginLeft="50dp">
-    </Spinner>
+        android:layout_toEndOf="@+id/txtSplit"
+        android:layout_toRightOf="@+id/txtSplit"></Spinner>
+
     <TextView
         android:id="@+id/txtPer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Per Person"
-        android:textSize="25dp"
-        android:textStyle="bold"
+        style="@style/style_name"
         android:layout_below="@+id/txtSplit"
-        android:layout_marginTop="10dp"/>
+        android:text="@string/name_perperson" />
+
     <TextView
         android:id="@+id/txtPer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/txtPer"
         android:layout_below="@+id/Spn"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
-        android:text="$ 0"
-        android:textSize="25sp"
-        android:layout_marginLeft="40dp"/>
+        android:layout_toEndOf="@+id/txtPer"
+        android:layout_toRightOf="@+id/txtPer"
+        android:text="@string/txt_usd"
+        android:textSize="25sp" />
+
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Calculate"
         android:layout_below="@+id/txtPer"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_calculate"
+        android:textAllCaps="false" />
 
 
 </RelativeLayout>

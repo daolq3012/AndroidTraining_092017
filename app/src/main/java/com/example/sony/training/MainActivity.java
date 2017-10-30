@@ -4,9 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.IdRes;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ShareActionProvider;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -20,9 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.xml.sax.Parser;
 
 import java.text.NumberFormat;
 
@@ -59,7 +55,13 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
         setContentView(R.layout.layout);
 
         initViews();
+        initEvents();
 
+        //Shared
+        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
+    }
+
+    private void initEvents() {
         //Listen
         mBill.setOnClickListener(this);
         mBill.setOnKeyListener(this);
@@ -68,9 +70,6 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
         mRadioGr.setOnCheckedChangeListener(this);
         mRadioGr.setOnKeyListener(this);
         mSpinner.setOnItemSelectedListener(this);
-
-        //Shared
-        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
     }
 
     private void initViews() {
@@ -95,6 +94,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
     }
+
 
     @Override
     protected void onPause() {
