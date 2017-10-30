@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/bill_amount"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/bill_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="@integer/int_1"
+                android:inputType="numberDecimal"
+                android:layout_weight="@integer/int_4"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vietnam_currency"
+                android:gravity="end"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/percent"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/percent_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/percent_0"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"/>
+
+            <SeekBar
+                android:id="@+id/percent_Seekbar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:max="30"
+                android:layout_weight="@integer/int_1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/tip"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tip_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vietnam_currency"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/total"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vietnam_currency"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="1.2"/>
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_2"
+            android:background="@color/colorBlack"
+            />
+
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rounding"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
+            <RadioGroup
+                android:layout_weight="1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/none_RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_24"
+                    android:text="@string/none"/>
+                <RadioButton
+                    android:id="@+id/tip_RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_24"
+                    android:text="@string/tip"/>
+                <RadioButton
+                    android:id="@+id/total_RadioButton"
+                    android:textSize="@dimen/sp_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/splitbill"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
+            <Spinner
+                android:id="@+id/bill_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/int_1"
+                ></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/perPerson"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
+            <TextView
+                android:id="@+id/perPerson_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vietnam_currency"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_3"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/calculate_Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculator"
+            android:textSize="@dimen/sp_24"/>
+    </LinearLayout>
+
+</ScrollView>
