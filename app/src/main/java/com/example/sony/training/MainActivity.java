@@ -20,22 +20,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_bill);
-        initView();
+        initViews();
 
-        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.arraySpinnerBill,android.R.layout.simple_spinner_item);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpnBill.setAdapter(arrayAdapter);
-
-        initListener();
+        initListeners();
     }
-    private void initView(){
+    private void initViews(){
         mSpnBill = (Spinner) findViewById(R.id.bill_spinner);
         mBtnCalculate = (Button) findViewById(R.id.calculate_Button);
         mEdtBill = (EditText) findViewById(R.id.bill_EditText);
         mTxtTotal = (TextView) findViewById(R.id.total_TextView);
+
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.arraySpinnerBill,android.R.layout.simple_spinner_item);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpnBill.setAdapter(arrayAdapter);
     }
 
-    private void initListener(){
+    private void initListeners(){
         mBtnCalculate.setOnClickListener(this);
         mEdtBill.setOnClickListener(this);
     }
@@ -46,10 +46,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.calculate_Button:
                 String strbill = mEdtBill.getText().toString();
                 float floatbill = Float.parseFloat(strbill);
-                mTxtTotal.setText("đ " + (floatbill/2));
+                mTxtTotal.setText(getString(R.string.vietnam_currency) + (floatbill/2));
                 break;
             case R.id.bill_EditText:
-                mTxtTotal.setText("đ " + 0);
+                mTxtTotal.setText(R.string.vietnam_currency + 0);
                 break;
         }
     }
