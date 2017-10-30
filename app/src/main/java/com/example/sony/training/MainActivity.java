@@ -58,6 +58,22 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout);
 
+        initViews();
+
+        //Listen
+        mBill.setOnClickListener(this);
+        mBill.setOnKeyListener(this);
+        mSeek.setOnSeekBarChangeListener(this);
+        mSeek.setOnKeyListener(this);
+        mRadioGr.setOnCheckedChangeListener(this);
+        mRadioGr.setOnKeyListener(this);
+        mSpinner.setOnItemSelectedListener(this);
+
+        //Shared
+        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
+    }
+
+    private void initViews() {
         //widget
         mCalculate = (Button) findViewById(R.id.btnCalculate);
         mSpinner = (Spinner) findViewById(R.id.Spn);
@@ -78,18 +94,6 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
                 R.array.spinner1, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
-
-        //Listen
-        mBill.setOnClickListener(this);
-        mBill.setOnKeyListener(this);
-        mSeek.setOnSeekBarChangeListener(this);
-        mSeek.setOnKeyListener(this);
-        mRadioGr.setOnCheckedChangeListener(this);
-        mRadioGr.setOnKeyListener(this);
-        mSpinner.setOnItemSelectedListener(this);
-
-        //Shared
-        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
     }
 
     @Override
