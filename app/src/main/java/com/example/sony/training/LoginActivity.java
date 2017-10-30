@@ -24,12 +24,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        addControl();
-        addEvent();
+        initViews();
+        initEvents();
 
     }
 
-    private void addControl() {
+    private void initViews() {
         mEdtLoginUsername = (EditText) findViewById(R.id.edtLoginUsername);
         mEdtLoginPassword = (EditText) findViewById(R.id.edtLoginPassword);
         mEdtLoginPassword.setTypeface(Typeface.DEFAULT);
@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         builder = new AlertDialog.Builder(LoginActivity.this,R.style.MyDialogTheme);
     }
 
-    private void addEvent() {
+    private void initEvents() {
         mBtnLogin.setOnClickListener(this);
         mTxtLoginSignUp.setOnClickListener(this);
     }
@@ -49,9 +49,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btnLogin:
                 if(Validate.isPasswordWeak(mEdtLoginPassword)) {
-                    builder.setTitle("Weak");
-                    builder.setMessage("Password must more than 6 character");
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    builder.setTitle(R.string.password_error_title);
+                    builder.setMessage(R.string.password_error_message);
+                    builder.setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 

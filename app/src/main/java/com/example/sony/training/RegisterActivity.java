@@ -50,9 +50,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             case R.id.btnRegister:
                 String email = mEdtRegisterEmail.getText().toString();
                 if(!Validate.isEmailValid(email)) {
-                    builder.setTitle("Email Error");
-                    builder.setMessage("Email not valid format!");
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    builder.setTitle(R.string.email_error_title);
+                    builder.setMessage(R.string.email_error_message);
+                    builder.setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             mEdtRegisterEmail.setText("");
@@ -62,9 +62,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                     alertDialog.show();
                 }
                 if (Validate.isPasswordWeak(mEdtRegisterPassword)) {
-                    builder.setTitle("Weak");
-                    builder.setMessage("Password must more than 6 character");
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    builder.setTitle(R.string.password_error_title);
+                    builder.setMessage(R.string.password_error_message);
+                    builder.setPositiveButton(R.string.OK, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
