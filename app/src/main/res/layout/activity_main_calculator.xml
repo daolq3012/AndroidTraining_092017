@@ -4,159 +4,134 @@
     android:layout_height="match_parent"
     android:gravity="center">
 
-
     <EditText
         android:id="@+id/editText"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
-        android:background="#a6efd6"
-        android:hint="0"
-        android:textSize="40dp"
+        android:layout_width="@dimen/dp_330"
+        android:layout_height="@dimen/dp_100"
+        android:background="@color/colorTest"
+        android:hint="@string/number_0"
+        android:textSize="@dimen/sp_40"
         android:inputType="text"/>
 
     <Button
         android:id="@+id/number7"
-        android:layout_marginLeft="26dp"
         android:layout_below="@+id/editText"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="7"/>
+        style="@style/main_size_button_left"
+        android:text="@string/number_7"/>
     <Button
         android:id="@+id/number8"
         android:layout_below="@+id/editText"
-        android:layout_toRightOf="@+id/number7"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="8"/>
+        android:layout_toEndOf="@+id/number7"
+        style="@style/main_size_button"
+        android:text="@string/number_8"
+        android:layout_toRightOf="@+id/number7" />
     <Button
         android:id="@+id/number9"
         android:layout_below="@+id/editText"
         android:layout_toRightOf="@+id/number8"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="9"/>
+        android:layout_toEndOf="@+id/number8"
+        style="@style/main_size_button"
+        android:text="@string/number_9"/>
     <Button
         android:id="@+id/chia"
         android:layout_below="@+id/editText"
         android:layout_toRightOf="@+id/number9"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="/"/>
+        android:layout_toEndOf="@+id/number9"
+        style="@style/main_size_button"
+        android:text="@string/chia"/>
     <Button
         android:id="@+id/clear"
         android:layout_below="@+id/editText"
         android:layout_toRightOf="@+id/chia"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="C"/>
-
+        android:layout_toEndOf="@+id/chia"
+        style="@style/main_size_button"
+        android:text="@string/clear"/>
     <Button
         android:id="@+id/number4"
-        android:layout_marginLeft="26dp"
         android:layout_below="@+id/number7"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="4"/>
+        style="@style/main_size_button_left"
+        android:text="@string/number_4"/>
     <Button
         android:id="@+id/number5"
         android:layout_below="@+id/number8"
         android:layout_toRightOf="@+id/number4"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="5"/>
+        android:layout_toEndOf="@+id/number4"
+        style="@style/main_size_button"
+        android:text="@string/number_5"/>
     <Button
         android:id="@+id/number6"
         android:layout_below="@+id/number9"
         android:layout_toRightOf="@+id/number5"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="6"/>
+        android:layout_toEndOf="@+id/number5"
+        style="@style/main_size_button"
+        android:text="@string/number_6"/>
     <Button
         android:id="@+id/nhan"
         android:layout_below="@+id/chia"
         android:layout_toRightOf="@+id/number6"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="*"/>
+        android:layout_toEndOf="@+id/number6"
+        style="@style/main_size_button"
+        android:text="@string/nhan"/>
     <Button
         android:id="@+id/allClear"
         android:layout_below="@+id/clear"
         android:layout_toRightOf="@+id/nhan"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="23dp"
-        android:text="AC"/>
+        android:layout_toEndOf="@+id/nhan"
+        style="@style/main_size_button"
+        android:textSize="@dimen/sp_22"
+        android:text="@string/allClear"/>
     <Button
         android:id="@+id/number1"
-        android:layout_marginLeft="26dp"
         android:layout_below="@+id/number4"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="1"/>
+        style="@style/main_size_button_left"
+        android:text="@string/number_1"/>
     <Button
         android:id="@+id/number2"
         android:layout_below="@+id/number5"
         android:layout_toRightOf="@+id/number1"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="2"/>
+        android:layout_toEndOf="@+id/number1"
+        style="@style/main_size_button"
+        android:text="@string/number_2"/>
     <Button
         android:id="@+id/number3"
         android:layout_below="@+id/number6"
         android:layout_toRightOf="@+id/number2"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="3"/>
+        android:layout_toEndOf="@+id/number2"
+        style="@style/main_size_button"
+        android:text="@string/number_3"/>
     <Button
         android:id="@+id/tru"
         android:layout_below="@+id/nhan"
         android:layout_toRightOf="@+id/number3"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="35dp"
-        android:text="-"/>
+        android:layout_toEndOf="@+id/number3"
+        style="@style/main_size_button"
+        android:text="@string/tru"/>
     <Button
         android:id="@+id/tinh"
         android:layout_below="@+id/allClear"
         android:layout_toRightOf="@+id/tru"
-        android:layout_width="55dp"
-        android:layout_height="111dp"
-        android:textSize="35dp"
-        android:text="="/>
+        android:layout_toEndOf="@+id/tru"
+        style="@style/main_size_button_big1"
+        android:text="@string/bang"/>
     <Button
         android:id="@+id/number0"
-        android:layout_marginLeft="26dp"
+        android:layout_marginLeft="@dimen/dp_26"
+        android:layout_marginStart="@dimen/dp_26"
         android:layout_below="@+id/number1"
-        android:layout_width="111dp"
-        android:layout_height="55dp"
-        android:textSize="30dp"
-        android:text="0"/>
+        style="@style/main_size_button_big2"
+        android:text="@string/number_0"/>
     <Button
         android:id="@+id/cham"
         android:layout_below="@+id/number3"
         android:layout_toRightOf="@+id/number0"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="35dp"
-        android:text="."/>
+        android:layout_toEndOf="@+id/number0"
+        style="@style/main_size_button"
+        android:text="@string/cham"/>
     <Button
         android:id="@+id/cong"
         android:layout_below="@+id/tru"
         android:layout_toRightOf="@+id/cham"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:textSize="35dp"
-        android:text="+"/>
+        android:layout_toEndOf="@+id/cham"
+        style="@style/main_size_button"
+        android:text="@string/cong"/>
 </RelativeLayout>

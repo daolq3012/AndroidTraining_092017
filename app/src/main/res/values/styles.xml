@@ -7,5 +7,26 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="main_size_button">
+        <item name="android:layout_width">@dimen/dp_55</item>
+        <item name="android:layout_height">@dimen/dp_55</item>
+        <item name="android:textSize">@dimen/dp_30</item>
+    </style>
+    <style name="main_size_button_left">
+        <item name="android:layout_width">@dimen/dp_55</item>
+        <item name="android:layout_height">@dimen/dp_55</item>
+        <item name="android:layout_marginLeft">@dimen/dp_26</item>
+        <item name="android:textSize">@dimen/dp_30</item>
+    </style>
+    <style name="main_size_button_big1">
+        <item name="android:layout_width">@dimen/dp_55</item>
+        <item name="android:layout_height">@dimen/dp_110</item>
+        <item name="android:textSize">@dimen/dp_35</item>
+    </style>
+    <style name="main_size_button_big2">
+        <item name="android:layout_width">@dimen/dp_110</item>
+        <item name="android:layout_height">@dimen/dp_55</item>
+        <item name="android:textSize">@dimen/dp_35</item>
+    </style>
 
 </resources>

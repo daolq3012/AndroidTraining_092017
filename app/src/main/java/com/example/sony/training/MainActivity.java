@@ -1,7 +1,7 @@
 package com.example.sony.training;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button cham;
     private Button tinh;
-    private Button clear;
+//    private Button clear;
     private Button allClear;
 
     float so1,so2 ;
@@ -39,6 +39,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_calculator);
 
+        initViews();
+
+        initEvents();
+    }
+
+    private void initViews() {
         editText = (EditText) findViewById(R.id.editText);
 
         number0 = (Button) findViewById(R.id.number0);
@@ -59,9 +65,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         cham = (Button) findViewById(R.id.cham);
         tinh = (Button) findViewById(R.id.tinh);
-        clear = (Button) findViewById(R.id.clear);
+//        clear = (Button) findViewById(R.id.clear);
         allClear = (Button) findViewById(R.id.allClear);
+    }
 
+    private void initEvents(){
         number0.setOnClickListener(this);
         number1.setOnClickListener(this);
         number2.setOnClickListener(this);
@@ -146,16 +154,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tinh:
                 Float ketqua = null;
                 so2 = Float.parseFloat(editText.getText().toString());
-                if (tinhToan == "+"){
+                if (tinhToan.equals("+")){
                     ketqua = so1 + so2;
                 }
-                if (tinhToan == "-"){
+                if (tinhToan.equals("-")){
                     ketqua = so1 - so2;
                 }
-                if (tinhToan == "*"){
+                if (tinhToan.equals("*")){
                     ketqua = so1 * so2;
                 }
-                if (tinhToan == "/"){
+                if (tinhToan.equals("/")){
                     ketqua = so1 / so2;
                 }
                 editText.setText(String.valueOf(ketqua));
