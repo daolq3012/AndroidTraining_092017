@@ -17,6 +17,7 @@
     <string name="fourway">1 way</string>
     <string name="fiveway">1 way</string>
     <string name="sixway">1 way</string>
+    <string name="chuong">Chuong</string>
 
     <array name="arraySpinnerBill">
         <item>@string/oneway</item>

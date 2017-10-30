@@ -61,15 +61,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/percent_0"
-                android:textColor="#000"
-                android:textSize="24sp"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"/>
 
             <SeekBar
                 android:id="@+id/percent_Seekbar"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:max="30"
-                android:layout_weight="1"/>
+                android:layout_weight="@integer/int_1"/>
         </LinearLayout>
 
         <LinearLayout
@@ -168,7 +168,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:padding="10dp"
+            android:padding="@dimen/dp_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -217,4 +217,5 @@
             android:text="@string/calculator"
             android:textSize="@dimen/sp_24"/>
     </LinearLayout>
+
 </ScrollView>
