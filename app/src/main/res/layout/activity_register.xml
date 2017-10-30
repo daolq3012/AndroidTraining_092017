@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgscreen"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="com.example.sony.training.RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up!"
+        android:textStyle="bold"
+        android:textSize="40dp"
+        android:textColor="#FFF"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/edtRegisterUsername"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bgedittext"
+        android:gravity="center"
+        android:hint="Enter Username"
+        android:maxLines="1"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF" />
+
+    <EditText
+        android:id="@+id/edtRegisterEmail"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bgedittext"
+        android:gravity="center"
+        android:hint="Enter Email"
+        android:maxLines="1"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF" />
+
+    <EditText
+        android:id="@+id/edtRegisterPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bgedittext"
+        android:gravity="center"
+        android:hint="Enter Passord"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF" />
+
+    <EditText
+        android:id="@+id/edtRegisterConfirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bgedittext"
+        android:gravity="center"
+        android:hint="Confirm Passord"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:textColor="#FFF"
+        android:textColorHint="#FFF" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bgbutton"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        android:textSize="20sp" />
+
+</LinearLayout>
