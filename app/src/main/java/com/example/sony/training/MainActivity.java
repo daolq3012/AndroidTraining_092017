@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int rounding = ROUND_NONE;
     private int split = 1;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
