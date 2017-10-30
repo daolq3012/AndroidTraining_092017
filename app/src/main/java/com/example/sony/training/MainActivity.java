@@ -41,13 +41,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_calculator);
-        initView();
+        initViews();
 
         //TODO somebug need fix later
-        initListener();
+        initListeners();
     }
 
-    private void initView() {
+    private void initViews() {
         mTxtDisplay2 = (TextView) findViewById(R.id.display2_TextView);
         mTxtDisplay1 = (TextView) findViewById(R.id.display1_TextView);
         mBtnDelete = (Button) findViewById(R.id.delete_Button);
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnEqual = (Button) findViewById(R.id.equal_Button);
     }
 
-    private void initListener(){
+    private void initListeners(){
         mTxtDisplay2.setOnClickListener(this);
         mTxtDisplay1.setOnClickListener(this);
         mBtnDelete.setOnClickListener(this);
