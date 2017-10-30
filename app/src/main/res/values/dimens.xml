@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_10">10dp</dimen>
+    <string name="dp_20">20dp</string>
+    <string name="dp_10">10dp</string>
+    <string name="dp_5">5dp</string>
+    <string name="dp_1">1dp</string>
+    <string name="dp_42">42dp</string>
+    <string name="dp_30">30dp</string>
+    <string name="dp_25">25dp</string>
+    <string name="dp_15">15dp</string>
+    <string name="dp_18">18dp</string>
+    <string name="dp_13">13dp</string>
+    <string name="dp_50">50dp</string>
+</resources>

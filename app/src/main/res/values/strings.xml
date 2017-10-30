@@ -34,5 +34,47 @@
     <string name="split_label">Split Bill?</string>
     <string name="per_person_label">Per Person</string>
     <string name="per_person">$0.00</string>
+    <string name="input_number">Input Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="per_15">15%</string>
+    <string name="txt_0">0</string>
+    <string name="sBill_amount">Bill Amount</string>
+    <string name="split_bill">Split bill</string>
+    <string name="clear_All">CA</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+    <string name="btn_Bang">=</string>
+    <string name="txt_Exit">Exit</string>
+    <string name="txt_Welcome">Welcome</string>
+    <string name="text_NameAndSurname">Name and Surname</string>
+    <string name="text_EmailAddress">Email Address</string>
+    <string name="text_Phone">Phone</string>
+    <string name="text_Password">Password</string>
+    <string name="text_Register">Register</string>
+    <string name="text_Login">Login</string>
+    <string name="text_Intro">Lorem ipsum dolor sit amet, consecteturadipiscing elit.  Donec auctor neque sed pretium luctus.</string>
+    <string name="text_Total">Total</string>
+    <string name="text_Persent">Persent</string>
+    <string name="text_Tip">Tip</string>
+    <string name="text_Rouding">Rouding</string>
+    <string name="text_None">None</string>
+    <string name="text_Calculate">Calculate</string>
+    <string name="text_mCong">M+</string>
+    <string name="text_Mr">MR</string>
+    <string name="text_mTru">M-</string>
+    <string name="text_Clear">C</string>
+    <string name="text_PhanTram">%</string>
+    <string name="text_Nhan">*</string>
+    <string name="text_Chia">/</string>
+    <string name="text_Device">|</string>
+    <string name="text_Signup">Sign up</string>
+    <string name="text_Addphoto">Add  Photo</string>
 
 </resources>

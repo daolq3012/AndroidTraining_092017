@@ -3,21 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
         <EditText
             android:id="@+id/edit_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/dp_10"
             android:gravity="right"
-            android:hint="Input Number" />
+            android:hint="@string/input_number" />
 
         <TextView
             android:id="@+id/txtViewResult"
@@ -26,17 +18,16 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignTop="@+id/edit_input"
-            android:layout_marginTop="42dp"
+            android:layout_marginTop="@string/dp_42"
             android:gravity="right"
             android:textColor="@color/colorAccent"
-            android:textSize="30dp"
+            android:textSize="@string/dp_30"
             android:textStyle="bold" />
 
         <View
             android:id="@+id/separatorLine"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_alignLeft="@+id/labelTotal"
+            android:layout_height="@string/dp_5"
             android:layout_below="@+id/txtViewResult"
        
             android:background="@android:color/black"/>
@@ -46,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtViewResult"
-            android:text="M+" />
+            android:text="@string/text_mCong" />
 
         <Button
             android:id="@+id/buttonMR"
@@ -54,13 +45,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtViewResult"
             android:layout_toRightOf="@+id/buttonMC"
-            android:text="MR" />
+            android:text="@string/text_Mr" />
 
         <Button
             android:id="@+id/buttonClearAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CA"
+            android:text="@string/clear_All"
             android:layout_alignBaseline="@+id/buttonMR"
             android:layout_alignBottom="@+id/buttonMR"
             android:layout_toRightOf="@+id/buttonMR"
@@ -71,13 +62,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/buttonMC"
-            android:text="M-" />
+            android:text="@string/text_mTru" />
 
         <Button
             android:id="@+id/btnClearNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C"
+            android:text="@string/text_Clear"
             android:layout_below="@+id/buttonClearAll"
             android:layout_toRightOf="@+id/buttonMR"
             android:layout_toEndOf="@+id/buttonMR" />
@@ -86,7 +77,7 @@
             android:id="@+id/buttonPer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="%"
+            android:text="@string/text_PhanTram"
             android:layout_below="@+id/buttonClearAll"
             android:layout_toRightOf="@+id/buttonMmM"
             />
@@ -96,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button7"
-            android:text="4" />
+            android:text="@string/number_4" />
 
         <Button
             android:id="@+id/button5"
@@ -104,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button8"
             android:layout_toRightOf="@+id/button4"
-            android:text="5" />
+            android:text="@string/number_5" />
 
         <Button
             android:id="@+id/button6"
@@ -112,14 +103,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button9"
             android:layout_toRightOf="@+id/button5"
-            android:text="6" />
+            android:text="@string/number_6" />
 
         <Button
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/button4"
-            android:text="1" />
+            android:text="@string/number_1" />
 
         <Button
             android:id="@+id/button2"
@@ -127,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button5"
             android:layout_toRightOf="@+id/button1"
-            android:text="2" />
+            android:text="@string/number_2" />
 
         <Button
             android:id="@+id/button3"
@@ -135,14 +126,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button6"
             android:layout_toRightOf="@+id/button2"
-            android:text="3" />
+            android:text="@string/number_3" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/buttonMmM"
-            android:text="7" />
+            android:text="@string/number7" />
 
         <Button
             android:id="@+id/button8"
@@ -150,7 +141,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/btnClearNumber"
             android:layout_toRightOf="@+id/button7"
-            android:text="8" />
+            android:text="@string/number_8" />
 
         <Button
             android:id="@+id/button9"
@@ -158,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/buttonPer"
             android:layout_toRightOf="@+id/button8"
-            android:text="9" />
+            android:text="@string/number_9" />
 
         <Button
             android:id="@+id/btnCanBac2"
@@ -193,7 +184,7 @@
             android:layout_alignParentRight="true"
             android:layout_below="@+id/txtViewResult"
             android:text="+"
-            android:textSize="25dp"
+            android:textSize="@string/dp_25"
             android:layout_above="@+id/btnClearNumber" />
 
         <Button
@@ -201,7 +192,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
-            android:textSize="25dp"
+            android:textSize="@string/dp_25"
             android:layout_above="@+id/btnNhan"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
@@ -214,8 +205,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/buttonPer"
-            android:text="*"
-            android:textSize="20dp"
+            android:text="@string/text_Nhan"
+            android:textSize="@string/dp_20"
             android:layout_alignLeft="@+id/btnTru"
             android:layout_alignStart="@+id/btnTru" />
 
@@ -223,8 +214,8 @@
             android:id="@+id/btnChia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:textSize="15dp"
+            android:text="@string/text_Chia"
+            android:textSize="@string/dp_15"
             android:layout_below="@+id/btnNhan"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -238,8 +229,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/button6"
-            android:text="="
-            android:textSize="25dp"
+            android:text="@string/btn_Bang"
+            android:textSize="@string/dp_25"
             android:layout_alignLeft="@+id/btnChia"
             android:layout_alignStart="@+id/btnChia" />
 
@@ -249,7 +240,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/btnCanBac2"
-            android:layout_marginTop="18dp"
-            android:text="Exit" />
-    </RelativeLayout>
+            android:layout_marginTop="@string/dp_18"
+            android:text="@string/txt_Exit" />
+
 </RelativeLayout>

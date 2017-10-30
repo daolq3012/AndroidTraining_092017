@@ -26,49 +26,63 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener,
-                                 RadioGroup.OnCheckedChangeListener, AdapterView.OnItemSelectedListener,
-                                  SeekBar.OnSeekBarChangeListener, TextView.OnEditorActionListener {
+        RadioGroup.OnCheckedChangeListener, AdapterView.OnItemSelectedListener,
+        SeekBar.OnSeekBarChangeListener, TextView.OnEditorActionListener {
     private Button calculatorButton;
+
     private TextView totalTextView;
-    private Spinner spinnerBill;
+    private TextView percentTextView;
+    private TextView tipTextView;
+    private TextView perPersonLabel;
+    private TextView perPersonTextView;
+
     private EditText mEditAmount;
     private EditText billAmountEditText;
-    private TextView percentTextView;
+
     private SeekBar percentSeekBar;
-    private TextView tipTextView;
+
+    private Spinner sPlitSpinner;
+    private Spinner sPinnerBill;
+
     private RadioGroup roundingRadioGroup;
     private RadioButton roundNoneRadioButton;
     private RadioButton roundTipRadioButton;
     private RadioButton roundTotalRadioButton;
-    private Spinner splitSpinner;
-    private TextView perPersonLabel;
-    private TextView perPersonTextView;
+
 
     // xác định đối tượng SharedPreferences
     private SharedPreferences savedValues;
 
     // định nghĩa các hằng số làm tròn
-    private final int ROUND_NONE = 0;
-    private final int ROUND_TIP = 1;
-    private final int ROUND_TOTAL = 2;
+    private static final int ROUND_NONE = 0;
+    private static final int ROUND_TIP = 1;
+    private static final int ROUND_TOTAL = 2;
 
     // xác định các biến
     private String billAmountString = "";
     private float tipPercent = .15f;
-    private int rounding = ROUND_NONE;
-    private int split = 1;
+    private int mRounding = ROUND_NONE;
+    private int mSplit = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_widgets_bill);
 
+        initViews();
+        setEventClickViews();
+    }
+
+    private void initViews() {
         // get references to the widgets
         billAmountEditText = (EditText) findViewById(R.id.editAmount);
+
         percentTextView = (TextView) findViewById(R.id.percentTextView);
-        percentSeekBar = (SeekBar) findViewById(R.id.seekBarPercent);
         tipTextView = (TextView) findViewById(R.id.tipTextView);
         totalTextView = (TextView) findViewById(R.id.totalTextView);
+        perPersonLabel = (TextView) findViewById(R.id.percentLabel);
+        perPersonTextView = (TextView) findViewById(R.id.percentTextView);
+
         roundingRadioGroup = (RadioGroup)
                 findViewById(R.id.roundingRadioGroup);
         roundNoneRadioButton = (RadioButton)
@@ -77,17 +91,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 findViewById(R.id.radioBtnTip);
         roundTotalRadioButton = (RadioButton)
                 findViewById(R.id.radioBtnTotal);
-        splitSpinner = (Spinner) findViewById(R.id.spinnerBill);
-        perPersonLabel = (TextView) findViewById(R.id.percentLabel);
-        perPersonTextView = (TextView) findViewById(R.id.percentTextView);
+
+        sPlitSpinner = (Spinner) findViewById(R.id.spinnerBill);
+        percentSeekBar = (SeekBar) findViewById(R.id.seekBarPercent);
 
         // set array adapter for spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this, R.array.split_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(
                 android.R.layout.simple_spinner_dropdown_item);
-        splitSpinner.setAdapter(adapter);
+        sPlitSpinner.setAdapter(adapter);
+    }
 
+    public void setEventClickViews() {
         // set the listeners
         billAmountEditText.setOnEditorActionListener(this);
         billAmountEditText.setOnKeyListener(this);
@@ -95,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         percentSeekBar.setOnKeyListener(this);
         roundingRadioGroup.setOnCheckedChangeListener(this);
         roundingRadioGroup.setOnKeyListener(this);
-        splitSpinner.setOnItemSelectedListener(this);
+        sPlitSpinner.setOnItemSelectedListener(this);
 
         // get SharedPreferences object
         savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
@@ -124,8 +140,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // get the instance variables
         billAmountString = savedValues.getString("billAmountString", "");
         tipPercent = savedValues.getFloat("tipPercent", 0.15f);
-        rounding = savedValues.getInt("rounding", ROUND_NONE);
-        split = savedValues.getInt("split", 1);
+        mRounding = savedValues.getInt("rounding", ROUND_NONE);
+        mSplit = savedValues.getInt("mSplit", 1);
 
         // set the bill amount on its widget
         billAmountEditText.setText(billAmountString);
@@ -137,19 +153,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // set rounding on radio buttons
         // NOTE: this executes the onCheckedChanged method,
         // which executes the calculateAndDisplay method
-        if (rounding == ROUND_NONE) {
+        if (mRounding == ROUND_NONE) {
             roundNoneRadioButton.setChecked(true);
-        } else if (rounding == ROUND_TIP) {
+        } else if (mRounding == ROUND_TIP) {
             roundTipRadioButton.setChecked(true);
-        } else if (rounding == ROUND_TIP) {
+        } else if (mRounding == ROUND_TIP) {
             roundTotalRadioButton.setChecked(true);
         }
 
         // set split on spinner
         // NOTE: this executes the onItemSelected method,
         // which executes the calculateAndDisplay method
-        int position = split - 1;
-        splitSpinner.setSelection(position);
+        int position = mSplit - 1;
+        sPlitSpinner.setSelection(position);
     }
 
     public void calculateAndDisplay() {
@@ -169,14 +185,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // calculate tip and total
         float tipAmount = 0;
         float totalAmount = 0;
-        if (rounding == ROUND_NONE) {
+        if (mRounding == ROUND_NONE) {
             tipAmount = billAmount * tipPercent;
             totalAmount = billAmount + tipAmount;
-        } else if (rounding == ROUND_TIP) {
+        } else if (mRounding == ROUND_TIP) {
             tipAmount = StrictMath.round(billAmount * tipPercent);
             totalAmount = billAmount + tipAmount;
             tipPercent = tipAmount / billAmount;
-        } else if (rounding == ROUND_TOTAL) {
+        } else if (mRounding == ROUND_TOTAL) {
             float tipNotRounded = billAmount * tipPercent;
             totalAmount = StrictMath.round(billAmount + tipNotRounded);
             tipAmount = totalAmount - billAmount;
@@ -186,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // calculate split amount and show/hide split amount widgets
         float splitAmount = 0;
         // split - calculate amount and show widgets
-        splitAmount = totalAmount / split;
+        splitAmount = totalAmount / mSplit;
 
         // display the results with formatting
         NumberFormat currency = NumberFormat.getCurrencyInstance();
@@ -233,13 +249,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId) {
             case R.id.radioBtnNone:
-                rounding = ROUND_NONE;
+                mRounding = ROUND_NONE;
                 break;
             case R.id.radioBtnTip:
-                rounding = ROUND_TIP;
+                mRounding = ROUND_TIP;
                 break;
             case R.id.radioBtnTotal:
-                rounding = ROUND_TOTAL;
+                mRounding = ROUND_TOTAL;
                 break;
         }
         calculateAndDisplay();
@@ -251,7 +267,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onItemSelected(AdapterView<?> parent, View v, int position,
                                long id) {
-        split = position + 1;
+        mSplit = position + 1;
         calculateAndDisplay();
     }
 
@@ -289,7 +305,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // don't consume the event
         return false;
     }
-
 
 
 }

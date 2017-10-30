@@ -46,11 +46,11 @@ public class MainActivityCalculate extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_widgets_calculator);
-        initWidgetCalculate();
+        initViews();
         setEventClickViews();
     }
 
-    public void initWidgetCalculate() {
+    public void initViews() {
         editInput = (EditText) findViewById(R.id.edit_input);
         viewResult = (TextView) findViewById(R.id.txtViewResult);
 
