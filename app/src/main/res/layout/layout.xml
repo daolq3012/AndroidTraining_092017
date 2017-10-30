@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
+
+    <TextView
+        android:id="@+id/txtBill"
+        style="@style/style_name"
+        android:text="@string/name_billamount" />
+
+    <EditText
+        android:id="@+id/edtBill"
+        style="@style/margin_edt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/txtBill"
+        android:layout_toRightOf="@+id/txtBill"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtPercent"
+        style="@style/style_name"
+        android:layout_below="@+id/txtBill"
+        android:text="@string/name_percent" />
+
+    <TextView
+        android:id="@+id/txtpt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtBill"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtPercent"
+        android:layout_toRightOf="@+id/txtPercent"
+        android:text="@string/txt_pt"
+        android:textSize="20sp" />
+
+    <SeekBar
+        android:id="@+id/seekPercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtBill"
+        android:layout_marginLeft="105dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtPercent"
+        android:layout_toRightOf="@+id/txtPercent" />
+
+    <TextView
+        android:id="@+id/txtTip"
+        style="@style/style_name"
+        android:layout_below="@+id/txtPercent"
+        android:text="@string/name_tip" />
+
+    <TextView
+        android:id="@+id/txtTip1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPercent"
+        android:layout_marginLeft="120dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtTip"
+        android:layout_toRightOf="@+id/txtTip"
+        android:text="@string/txt_usd"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        style="@style/style_name"
+        android:layout_below="@+id/txtTip"
+        android:text="@string/name_total" />
+
+    <TextView
+        android:id="@+id/txtTotal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTip1"
+        android:layout_marginLeft="120dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtTip"
+        android:layout_toRightOf="@+id/txtTip"
+        android:text="@string/txt_usd"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/txtTotal"
+        android:layout_marginTop="10dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/txtRound"
+        style="@style/style_name"
+        android:layout_below="@+id/view"
+        android:text="@string/name_rounding" />
+
+    <RadioGroup
+        android:id="@+id/radiogr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtRound"
+        android:layout_toRightOf="@+id/txtRound">
+
+        <RadioButton
+            android:id="@+id/rdNone"
+            style="@style/radio"
+            android:checked="true"
+            android:text="@string/radio_none" />
+
+        <RadioButton
+            android:id="@+id/rdTip"
+            style="@style/radio"
+            android:text="@string/radio_tip" />
+
+        <RadioButton
+            android:id="@+id/rdTotal"
+            style="@style/radio"
+            android:text="@string/radio_total" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtSplit"
+        style="@style/style_name"
+        android:layout_below="@+id/radiogr"
+        android:text="@string/name_splitbill" />
+
+    <Spinner
+        android:id="@+id/Spn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiogr"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtSplit"
+        android:layout_toRightOf="@+id/txtSplit"></Spinner>
+
+    <TextView
+        android:id="@+id/txtPer"
+        style="@style/style_name"
+        android:layout_below="@+id/txtSplit"
+        android:text="@string/name_perperson" />
+
+    <TextView
+        android:id="@+id/txtPer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Spn"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/txtPer"
+        android:layout_toRightOf="@+id/txtPer"
+        android:text="@string/txt_usd"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/btn_calculate"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>

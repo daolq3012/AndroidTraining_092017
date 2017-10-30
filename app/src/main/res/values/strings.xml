@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="name_billamount">Bill Amount</string>
+    <string name="name_percent">Percent</string>
+    <string name="name_tip">Tip</string>
+    <string name="name_total">Total</string>
+    <string name="name_rounding">Rounding</string>
+    <string name="name_splitbill">Split Bill ?</string>
+    <string name="name_perperson">Per Person</string>
+
+    <string name="radio_none">None</string>
+    <string name="radio_tip">Tip</string>
+    <string name="radio_total">Total</string>
+    <string name="btn_calculate">Calculate</string>
+
+    <string name="txt_usd">$ 0</string>
+    <string name="txt_pt">0%</string>
+
+
+    <array name="spinner_email">
+        <item>Gmail</item>
+        <item>HotMail</item>
+        <item>AolMail</item>
+    </array>
+    <array name="spinner">
+        <item>2 ways</item>
+        <item>4 ways</item>
+        <item>6 ways</item>
+    </array>
+    <array name="spinner1">
+        <item>No</item>
+        <item>2 ways</item>
+        <item>4 ways</item>
+        <item>6 ways</item>
+    </array>
 </resources>
