@@ -48,15 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_bill);
-        initView();
+        initViews();
 
-        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.arraySpinnerBill,android.R.layout.simple_spinner_item);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mSpnSplit.setAdapter(arrayAdapter);
-
-        initListener();
+        initListeners();
     }
-    private void initView(){
+    private void initViews(){
         mSpnSplit = (Spinner) findViewById(R.id.split_spinner);
         mBtnCalculate = (Button) findViewById(R.id.calculate_Button);
         mEdtBill = (EditText) findViewById(R.id.bill_EditText);
@@ -69,9 +65,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSbPercent = (SeekBar) findViewById(R.id.percent_Seekbar);
         mTxtPercent = (TextView) findViewById(R.id.percent_TextView);
         mTxtPerPerson = (TextView) findViewById(R.id.perPerson_TextView);
+
+
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,R.array.arraySpinnerBill,android.R.layout.simple_spinner_item);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mSpnSplit.setAdapter(arrayAdapter);
+        // get SharedPreferences object
+        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
     }
 
-    private void initListener(){
+    private void initListeners(){
 
         mBtnCalculate.setOnClickListener(this);
         mEdtBill.setOnClickListener(this);
@@ -82,8 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mRground.setOnKeyListener(this);
         mSpnSplit.setOnItemSelectedListener(this);
 
-        // get SharedPreferences object
-        savedValues = getSharedPreferences("SavedValues", MODE_PRIVATE);
+
     }
 
     @Override
@@ -196,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //*****************************************************
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-        mTxtPercent.setText(progress + "%");
+        mTxtPercent.setText(progress + R.string.icon_percent);
     }
 
     @Override
@@ -275,10 +277,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.calculate_Button:
                 String strbill = mEdtBill.getText().toString();
                 float floatbill = Float.parseFloat(strbill);
-                mTxtTotal.setText("đ " + (floatbill/2));
+                mTxtTotal.setText(getString(R.string.vietnam_currency) + (floatbill/2));
                 break;
             case R.id.bill_EditText:
-                mTxtTotal.setText("đ " + 0);
+                mTxtTotal.setText(R.string.vietnam_currency + 0);
                 break;
         }
     }

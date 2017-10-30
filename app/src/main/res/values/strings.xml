@@ -1,12 +1,30 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
-    
+    <string name="vietnam_currency">đ </string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="percent">Percent</string>
+    <string name="percent_0">0%</string>
+    <string name="tip">Tip</string>
+    <string name="total">Total</string>
+    <string name="rounding">Rounding</string>
+    <string name="none">None</string>
+    <string name="splitbill">SplitBill?</string>
+    <string name="perPerson">Per Person</string>
+    <string name="calculator">Calculate</string>
+    <string name="oneway">1 way</string>
+    <string name="twoway">1 way</string>
+    <string name="threeway">1 way</string>
+    <string name="fourway">1 way</string>
+    <string name="fiveway">1 way</string>
+    <string name="sixway">1 way</string>
+    <string name="icon_percent">%</string>
+
     <array name="arraySpinnerBill">
-        <item>1 way</item>
-        <item>2 ways</item>
-        <item>3 ways</item>
-        <item>4 ways</item>
-        <item>5 ways</item>
-        <item>6 ways</item>
+        <item>@string/oneway</item>
+        <item>@string/twoway</item>
+        <item>@string/threeway</item>
+        <item>@string/fourway</item>
+        <item>@string/fiveway</item>
+        <item>@string/sixway</item>
     </array>
 </resources>

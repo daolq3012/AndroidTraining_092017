@@ -6,61 +6,61 @@
     android:layout_width="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="@dimen/dp_20">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="@dimen/dp_10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Bill Amount"
-                android:textColor="#000"
-                android:textSize="24sp"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/bill_amount"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/bill_EditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:lines="1"
+                android:lines="@integer/int_1"
                 android:inputType="numberDecimal"
-                android:layout_weight="4"/>
+                android:layout_weight="@integer/int_4"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="đ"
-                android:gravity="right"
-                android:textColor="#000"
-                android:textSize="24sp"/>
+                android:text="@string/vietnam_currency"
+                android:gravity="end"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="@dimen/dp_10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Percent"
-                android:textColor="#000"
-                android:textSize="24sp"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/percent"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/percent_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12%"
+                android:text="@string/percent_0"
                 android:textColor="#000"
                 android:textSize="24sp"/>
 
@@ -76,74 +76,73 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="@dimen/dp_10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Tip"
-                android:textColor="#000"
-                android:textSize="24sp"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/tip"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tip_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="đ 0"
-                android:textColor="#000"
-                android:textSize="24sp"
-                android:layout_weight="1"/>
+                android:text="@string/vietnam_currency"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="10dp">
+            android:padding="@dimen/dp_10">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Total"
-                android:textColor="#000"
-                android:textSize="24sp"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/total"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/total_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="đ 0"
-                android:textColor="#000"
-                android:textSize="24sp"
+                android:text="@string/vietnam_currency"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
                 android:layout_weight="1.2"/>
         </LinearLayout>
 
         <View
 
             android:layout_width="wrap_content"
-            android:layout_height="2dp"
-            android:background="#000"
+            android:layout_height="@dimen/dp_2"
+            android:background="@color/colorBlack"
             />
 
         <LinearLayout
-            android:padding="10dp"
+            android:padding="@dimen/dp_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rounding"
+                android:text="@string/rounding"
                 android:textStyle="bold"
-                android:textColor="#000"
-                android:textSize="24sp"
-                android:layout_weight="1"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
             <RadioGroup
-                android:id="@+id/round_RadioGroup"
                 android:layout_weight="1.5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -151,20 +150,20 @@
                     android:id="@+id/none_RadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:text="None"/>
+                    android:textSize="@dimen/sp_24"
+                    android:text="@string/none"/>
                 <RadioButton
                     android:id="@+id/tip_RadioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:text="Tip"/>
+                    android:textSize="@dimen/sp_24"
+                    android:text="@string/tip"/>
                 <RadioButton
                     android:id="@+id/total_RadioButton"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/sp_24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Total"/>
+                    android:text="@string/total"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -176,46 +175,46 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SplitBill?"
+                android:text="@string/splitbill"
                 android:textStyle="bold"
-                android:textColor="#000"
-                android:textSize="24sp"
-                android:layout_weight="1"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
             <Spinner
-                android:id="@+id/split_spinner"
+                android:id="@+id/bill_spinner"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="@integer/int_1"
                 ></Spinner>
         </LinearLayout>
 
         <LinearLayout
-            android:padding="10dp"
+            android:padding="@dimen/dp_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Per Person"
+                android:text="@string/perPerson"
                 android:textStyle="bold"
-                android:textColor="#000"
-                android:textSize="24sp"
-                android:layout_weight="1"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_1"/>
             <TextView
                 android:id="@+id/perPerson_TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="đ 0"
-                android:textColor="#000"
-                android:textSize="24sp"
-                android:layout_weight="3"/>
+                android:text="@string/vietnam_currency"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:layout_weight="@integer/int_3"/>
         </LinearLayout>
         <Button
             android:id="@+id/calculate_Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Calculate"
-            android:textSize="24sp"/>
+            android:text="@string/calculator"
+            android:textSize="@dimen/sp_24"/>
     </LinearLayout>
 </ScrollView>
