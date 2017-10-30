@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="@dimen/dp_10">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,24 +15,24 @@
             android:id="@+id/txtDisplay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="10dp"
-            android:paddingTop="5dp"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
             android:text=""
             android:maxLines="1"
             android:textAlignment="textEnd"
-            android:textSize="25sp" />
+            android:textSize="@dimen/sp_25" />
 
         <TextView
             android:id="@+id/txtResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:paddingRight="10dp"
-            android:text="0"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_10"
+            android:text="@string/number_0"
             android:maxLines="1"
             android:textStyle="bold"
             android:textAlignment="textEnd"
-            android:textSize="50sp" />
+            android:textSize="@dimen/sp_50" />
 
     </LinearLayout>
 
@@ -45,40 +45,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MC"
-            android:textSize="28dp"
+            android:text="@string/mc"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MR"
-            android:textSize="28dp"
+            android:text="@string/mr"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="MS"
-            android:textSize="28dp"
+            android:text="@string/ms"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="M+"
-            android:textSize="28dp"
+            android:text="@string/m_plus"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="M-"
-            android:textSize="28dp"
+            android:text="@string/m_sub"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -93,16 +93,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="←"
-            android:textSize="28dp"
+            android:text="@string/backspace"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="CE"
-            android:textSize="28dp"
+            android:layout_weight="@string/number_1"
+            android:text="@string/ce"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -110,24 +110,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="C"
-            android:textSize="28dp"
+            android:text="@string/c"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="±"
-            android:textSize="28dp"
+            android:text="@string/plussub"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="√"
-            android:textSize="28dp"
+            android:text="@string/sqrt"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -142,8 +142,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="7"
-            android:textSize="28dp"
+            android:text="@string/number_7"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -151,8 +151,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="8"
-            android:textSize="28dp"
+            android:text="@string/number_8"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -160,8 +160,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="9"
-            android:textSize="28dp"
+            android:text="@string/number_9"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -169,8 +169,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="/"
-            android:textSize="28dp"
+            android:text="@string/divide"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -178,8 +178,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="%"
-            android:textSize="28dp"
+            android:text="@string/percent"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -194,8 +194,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="4"
-            android:textSize="28dp"
+            android:text="@string/number_4"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -203,8 +203,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="5"
-            android:textSize="28dp"
+            android:text="@string/number_5"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -212,8 +212,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="6"
-            android:textSize="28dp"
+            android:text="@string/number_6"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
@@ -221,16 +221,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="*"
-            android:textSize="28dp"
+            android:text="@string/express"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="1/x"
-            android:textSize="28dp"
+            android:text="@string/dividex"
+            android:textSize="@dimen/sp_28"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -256,8 +256,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="1"
-                    android:textSize="28dp"
+                    android:text="@string/number_1"
+                    android:textSize="@dimen/sp_28"
                     android:textStyle="bold" />
 
                 <Button
@@ -265,8 +265,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="2"
-                    android:textSize="28dp"
+                    android:text="@string/number_2"
+                    android:textSize="@dimen/sp_28"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -275,8 +275,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0"
-                android:textSize="28dp"
+                android:text="@string/number_0"
+                android:textSize="@dimen/sp_28"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -298,8 +298,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="3"
-                    android:textSize="28dp"
+                    android:text="@string/number_3"
+                    android:textSize="@dimen/sp_28"
                     android:textStyle="bold" />
 
                 <Button
@@ -307,8 +307,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="."
-                    android:textSize="28dp"
+                    android:text="@string/dot"
+                    android:textSize="@dimen/sp_28"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -323,8 +323,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="-"
-                    android:textSize="28dp"
+                    android:text="@string/sub"
+                    android:textSize="@dimen/sp_28"
                     android:textStyle="bold" />
 
                 <Button
@@ -332,8 +332,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+"
-                    android:textSize="28dp"
+                    android:text="@string/plus"
+                    android:textSize="@dimen/sp_28"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -342,8 +342,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="="
-                android:textSize="28dp"
+                android:text="@string/equals"
+                android:textSize="@dimen/sp_28"
                 android:textStyle="bold" />
 
         </LinearLayout>

@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="number_0">0</string>
+    <string name="mc">MC</string>
+    <string name="mr">MR</string>
+    <string name="ms">MS</string>
+    <string name="m_plus">M+</string>
+    <string name="m_sub">M-</string>
+    <string name="backspace">←</string>
+    <string name="ce">CE</string>
+    <string name="c">C</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="number_6">6</string>
+    <string name="number_7">7</string>
+    <string name="number_8">8</string>
+    <string name="number_9">9</string>
+    <string name="divide">/</string>
+    <string name="percent">%</string>
+    <string name="express">*</string>
+    <string name="dividex">1/x</string>
+    <string name="dot">.</string>
+    <string name="sub">-</string>
+    <string name="plus">+</string>
+    <string name="equals">=</string>
+    <string name="plussub">±</string>
+    <string name="sqrt">√</string>
 </resources>
