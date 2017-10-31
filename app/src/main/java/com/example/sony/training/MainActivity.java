@@ -10,25 +10,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private EditText editText;
 
-    private Button number0;
-    private Button number1;
-    private Button number2;
-    private Button number3;
-    private Button number4;
-    private Button number5;
-    private Button number6;
-    private Button number7;
-    private Button number8;
-    private Button number9;
+    private Button zeroNumberButton;
+    private Button oneNumberButton;
+    private Button twoNumberButton;
+    private Button threeNumberButton;
+    private Button fourNumberButton;
+    private Button fiveNumberButton;
+    private Button sixNumberButton;
+    private Button sevenNumberButton;
+    private Button eightNumberButton;
+    private Button nineNumberButton;
 
-    private Button cong;
-    private Button tru;
-    private Button nhan;
-    private Button chia;
+    private Button addButton;
+    private Button subButton;
+    private Button multipleButton;
+    private Button divButton;
 
-    private Button cham;
-    private Button tinh;
-//    private Button clear;
+    private Button dotButton;
+    private Button byButton;
     private Button allClear;
 
     float so1,so2 ;
@@ -47,48 +46,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initViews() {
         editText = (EditText) findViewById(R.id.editText);
 
-        number0 = (Button) findViewById(R.id.number0);
-        number1 = (Button) findViewById(R.id.number1);
-        number2 = (Button) findViewById(R.id.number2);
-        number3 = (Button) findViewById(R.id.number3);
-        number4 = (Button) findViewById(R.id.number4);
-        number5 = (Button) findViewById(R.id.number5);
-        number6 = (Button) findViewById(R.id.number6);
-        number7 = (Button) findViewById(R.id.number7);
-        number8 = (Button) findViewById(R.id.number8);
-        number9 = (Button) findViewById(R.id.number9);
+        zeroNumberButton = (Button) findViewById(R.id.number0);
+        oneNumberButton = (Button) findViewById(R.id.number1);
+        twoNumberButton = (Button) findViewById(R.id.number2);
+        threeNumberButton = (Button) findViewById(R.id.number3);
+        fourNumberButton = (Button) findViewById(R.id.number4);
+        fiveNumberButton = (Button) findViewById(R.id.number5);
+        sixNumberButton = (Button) findViewById(R.id.number6);
+        sevenNumberButton = (Button) findViewById(R.id.number7);
+        eightNumberButton = (Button) findViewById(R.id.number8);
+        nineNumberButton = (Button) findViewById(R.id.number9);
 
-        cong = (Button) findViewById(R.id.cong);
-        tru = (Button) findViewById(R.id.tru);
-        nhan = (Button) findViewById(R.id.nhan);
-        chia = (Button) findViewById(R.id.chia);
+        addButton = (Button) findViewById(R.id.cong);
+        subButton = (Button) findViewById(R.id.tru);
+        multipleButton = (Button) findViewById(R.id.nhan);
+        divButton = (Button) findViewById(R.id.chia);
 
-        cham = (Button) findViewById(R.id.cham);
-        tinh = (Button) findViewById(R.id.tinh);
-//        clear = (Button) findViewById(R.id.clear);
+        dotButton = (Button) findViewById(R.id.cham);
+        byButton = (Button) findViewById(R.id.tinh);
         allClear = (Button) findViewById(R.id.allClear);
     }
 
     private void initEvents(){
-        number0.setOnClickListener(this);
-        number1.setOnClickListener(this);
-        number2.setOnClickListener(this);
-        number3.setOnClickListener(this);
-        number4.setOnClickListener(this);
-        number5.setOnClickListener(this);
-        number6.setOnClickListener(this);
-        number7.setOnClickListener(this);
-        number8.setOnClickListener(this);
-        number9.setOnClickListener(this);
+        zeroNumberButton.setOnClickListener(this);
+        oneNumberButton.setOnClickListener(this);
+        twoNumberButton.setOnClickListener(this);
+        threeNumberButton.setOnClickListener(this);
+        fourNumberButton.setOnClickListener(this);
+        fiveNumberButton.setOnClickListener(this);
+        sixNumberButton.setOnClickListener(this);
+        sevenNumberButton.setOnClickListener(this);
+        eightNumberButton.setOnClickListener(this);
+        nineNumberButton.setOnClickListener(this);
 
-        cong.setOnClickListener(this);
-        tru.setOnClickListener(this);
-        nhan.setOnClickListener(this);
-        chia.setOnClickListener(this);
+        addButton.setOnClickListener(this);
+        subButton.setOnClickListener(this);
+        multipleButton.setOnClickListener(this);
+        divButton.setOnClickListener(this);
 
-        cham.setOnClickListener(this);
-        tinh.setOnClickListener(this);
-//        clear.setOnClickListener(this);
+        dotButton.setOnClickListener(this);
+        byButton.setOnClickListener(this);
         allClear.setOnClickListener(this);
     }
 
