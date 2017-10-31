@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="10dp"
+    android:padding="@dimen/dp_10"
     android:shape="rectangle">
+
     <solid android:color="@color/colorPrimaryDark" />
+
     <corners
         android:bottomLeftRadius="@dimen/dp_35"
         android:bottomRightRadius="@dimen/dp_35"
@@ -10,5 +12,5 @@
         android:topRightRadius="@dimen/dp_35" />
     <stroke
         android:width="@dimen/dp_1"
-        android:color="@color/colorPrimaryDark" /> <!--#3D70E8-->
+        android:color="@color/colorPrimaryDark" />
 </shape>
