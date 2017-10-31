@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                style="@style/textview"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/bill_amount" />
+
+            <EditText
+                android:id="@+id/bill_EditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="@integer/int_1"
+                android:inputType="numberDecimal"
+                android:layout_weight="@integer/int_4"/>
+            <TextView
+                style="@style/textview"
+                android:text="@string/vietnam_currency"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/percent"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sp_24"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/percent_TextView"
+                style="@style/textview"
+                android:text="@string/percent_0"
+                android:textColor="@color/colorBlack"/>
+
+            <SeekBar
+                android:id="@+id/percent_Seekbar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:max="30"
+                android:layout_weight="@integer/int_1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                style="@style/textview"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/tip"/>
+
+            <TextView
+                style="@style/textview"
+                android:id="@+id/tip_TextView"
+                android:text="@string/vietnam_currency"
+                android:layout_weight="@integer/int_1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                style="@style/textview"
+                android:layout_weight="@integer/int_1"
+                android:text="@string/total"/>
+
+            <TextView
+                style="@style/textview"
+                android:id="@+id/total_TextView"
+                android:text="@string/vietnam_currency"
+                android:layout_weight="1.2"/>
+        </LinearLayout>
+
+        <View
+
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_2"
+            android:background="@color/colorBlack"
+            />
+
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/textview"
+                android:text="@string/rounding"
+                android:layout_weight="@integer/int_1"/>
+            <RadioGroup
+                android:layout_weight="1.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    style="@style/textview"
+                    android:id="@+id/none_RadioButton"
+                    android:text="@string/none"/>
+                <RadioButton
+                    android:id="@+id/tip_RadioButton"
+                    style="@style/textview"
+                    android:text="@string/tip"/>
+                <RadioButton
+                    android:id="@+id/total_RadioButton"
+                    style="@style/textview"
+                    android:text="@string/total"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/textview"
+                android:text="@string/splitbill"
+                android:layout_weight="@integer/int_1"/>
+            <Spinner
+                android:id="@+id/bill_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="@integer/int_1"
+                ></Spinner>
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/textview"
+                android:text="@string/perPerson"
+                android:layout_weight="@integer/int_1"/>
+            <TextView
+                style="@style/textview"
+                android:id="@+id/perPerson_TextView"
+                android:text="@string/vietnam_currency"
+                android:layout_weight="@integer/int_3"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/calculate_Button"
+            android:layout_width="match_parent"
+            android:text="@string/calculator"
+            style="@style/textview"/>
+    </LinearLayout>
+
+</ScrollView>
