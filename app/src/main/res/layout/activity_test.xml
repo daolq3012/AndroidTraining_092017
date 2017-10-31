@@ -7,13 +7,11 @@
 
     <TextView
         android:id="@+id/txtBillAmount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="@string/bill_amount"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/bill_amount" />
 
     <EditText
         android:id="@+id/edtBillAmount"
@@ -21,26 +19,22 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_10"
         android:layout_toRightOf="@+id/txtBillAmount"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal" />
 
 
     <TextView
         android:id="@+id/txtPercentNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignLeft="@+id/edtBillAmount"
         android:layout_below="@+id/edtBillAmount"
         android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/percent_15"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/percent_15" />
 
     <TextView
         android:id="@+id/txtPercent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignBottom="@id/txtPercentNumber"
-        android:text="@string/percent"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/percent" />
 
     <SeekBar
         android:layout_width="match_parent"
@@ -50,40 +44,32 @@
 
     <TextView
         android:id="@+id/txtTipNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignLeft="@+id/txtPercentNumber"
         android:layout_below="@+id/txtPercentNumber"
         android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/tip_number"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/tip_number" />
 
 
     <TextView
         android:id="@+id/txtTip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignBottom="@id/txtTipNumber"
-        android:text="@string/tip"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/tip" />
 
     <TextView
         android:id="@+id/txtTotalNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignLeft="@+id/txtPercentNumber"
         android:layout_below="@+id/txtTipNumber"
         android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/total_number"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/total_number" />
 
     <TextView
         android:id="@+id/txtTotal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignBottom="@id/txtTotalNumber"
-        android:text="@string/total"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/total" />
 
     <View
         android:id="@+id/line"
@@ -96,11 +82,9 @@
 
     <TextView
         android:id="@+id/txtRounding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_below="@id/line"
-        android:text="@string/rounding"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/rounding" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -130,47 +114,38 @@
 
     <Spinner
         android:id="@+id/spinner_way"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignLeft="@+id/radioGroup"
         android:layout_below="@+id/radioGroup"
         android:layout_marginTop="@dimen/dp_10"></Spinner>
 
     <TextView
         android:id="@+id/txtSplitBill"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignBottom="@+id/spinner_way"
-        android:text="@string/split_bill"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/split_bill" />
 
     <TextView
         android:id="@+id/txtPerPersonNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignLeft="@+id/spinner_way"
         android:layout_below="@id/spinner_way"
         android:layout_marginTop="@dimen/dp_10"
-        android:text="@string/vnd"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/vnd" />
 
     <TextView
         android:id="@+id/txtPerPerson"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_alignBottom="@id/txtPerPersonNumber"
-        android:text="@string/per_person"
-        android:textSize="@dimen/sp_25" />
+        android:text="@string/per_person" />
 
     <Button
         android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/ViewStyle"
         android:layout_below="@+id/txtPerPersonNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/dp_10"
         android:text="@string/calculate"
-        android:textAllCaps="false"
-        android:textSize="@dimen/sp_25" />
+        android:textAllCaps="false" />
 
 </RelativeLayout>
