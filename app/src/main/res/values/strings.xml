@@ -1,17 +1,30 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
-    <string name="hint_email">Email Address</string>
-    <string name="hint_name">Name or Surname</string>
-    <string name="hint_password">Password</string>
-    <string name="hint_phone">Phone</string>
-    <string name="describe_login">Login Form</string>
-    <string name="describe_register">Sign-up Form</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="password">Password</string>
-    <string name="signup">Sign up</string>
-    <string name="addPhoto">Add Photo</string>
-    <string name="welcome">Welcome</string>
-    <string name="loginSuccess">Login Success</string>
-    <string name="validateEmail_Password">Email or Password must > 6 characters</string>
+    <string name="vietnam_currency">đ </string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="percent">Percent</string>
+    <string name="percent_0">0%</string>
+    <string name="tip">Tip</string>
+    <string name="total">Total</string>
+    <string name="rounding">Rounding</string>
+    <string name="none">None</string>
+    <string name="splitbill">SplitBill?</string>
+    <string name="perPerson">Per Person</string>
+    <string name="calculator">Calculate</string>
+    <string name="oneway">1 way</string>
+    <string name="twoway">1 way</string>
+    <string name="threeway">1 way</string>
+    <string name="fourway">1 way</string>
+    <string name="fiveway">1 way</string>
+    <string name="sixway">1 way</string>
+    <string name="chuong">Chuong</string>
+
+    <array name="arraySpinnerBill">
+        <item>@string/oneway</item>
+        <item>@string/twoway</item>
+        <item>@string/threeway</item>
+        <item>@string/fourway</item>
+        <item>@string/fiveway</item>
+        <item>@string/sixway</item>
+    </array>
 </resources>
