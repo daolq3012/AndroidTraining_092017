@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_16">
+
+    <TextView
+        android:id="@+id/txtBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/bill_amount"
+        android:textSize="@dimen/sp_25" />
+
+    <EditText
+        android:id="@+id/edtBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/txtBillAmount"
+        android:inputType="numberDecimal"/>
+
+
+    <TextView
+        android:id="@+id/txtPercentNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtBillAmount"
+        android:layout_below="@+id/edtBillAmount"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/percent_15"
+        android:textSize="@dimen/sp_25" />
+
+    <TextView
+        android:id="@+id/txtPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtPercentNumber"
+        android:text="@string/percent"
+        android:textSize="@dimen/sp_25" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtPercentNumber"
+        android:layout_toRightOf="@+id/txtPercentNumber" />
+
+    <TextView
+        android:id="@+id/txtTipNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPercentNumber"
+        android:layout_below="@+id/txtPercentNumber"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/tip_number"
+        android:textSize="@dimen/sp_25" />
+
+
+    <TextView
+        android:id="@+id/txtTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtTipNumber"
+        android:text="@string/tip"
+        android:textSize="@dimen/sp_25" />
+
+    <TextView
+        android:id="@+id/txtTotalNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPercentNumber"
+        android:layout_below="@+id/txtTipNumber"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/total_number"
+        android:textSize="@dimen/sp_25" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtTotalNumber"
+        android:text="@string/total"
+        android:textSize="@dimen/sp_25" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_below="@+id/txtTotalNumber"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/txtRounding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:text="@string/rounding"
+        android:textSize="@dimen/sp_25" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtBillAmount"
+        android:layout_alignTop="@+id/txtRounding"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@id/txtRounding">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/none" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tip" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total" />
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_way"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/radioGroup"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="@dimen/dp_10"></Spinner>
+
+    <TextView
+        android:id="@+id/txtSplitBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spinner_way"
+        android:text="@string/split_bill"
+        android:textSize="@dimen/sp_25" />
+
+    <TextView
+        android:id="@+id/txtPerPersonNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinner_way"
+        android:layout_below="@id/spinner_way"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/vnd"
+        android:textSize="@dimen/sp_25" />
+
+    <TextView
+        android:id="@+id/txtPerPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/txtPerPersonNumber"
+        android:text="@string/per_person"
+        android:textSize="@dimen/sp_25" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPerPersonNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/calculate"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp_25" />
+
+</RelativeLayout>
