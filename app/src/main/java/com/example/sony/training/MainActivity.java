@@ -30,22 +30,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView tipTextView;
     private TextView perPersonLabel;
     private TextView perPersonTextView;
+    private RadioGroup roundingRadioGroup;
+    private RadioButton roundNoneRadioButton;
+    private RadioButton roundTipRadioButton;
+    private RadioButton roundTotalRadioButton;
     private EditText mEditAmount;
     private EditText billAmountEditText;
     private SeekBar percentSeekBar;
     private Spinner sPlitSpinner;
     private Spinner sPinnerBill;
-    private RadioGroup roundingRadioGroup;
-    private RadioButton roundNoneRadioButton;
-    private RadioButton roundTipRadioButton;
-    private RadioButton roundTotalRadioButton;
-
     private SharedPreferences savedValues;
-
     private static final int ROUND_NONE = 0;
     private static final int ROUND_TIP = 1;
     private static final int ROUND_TOTAL = 2;
-
     private String billAmountString = "";
     private float tipPercent = .15f;
     private int mRounding = ROUND_NONE;
@@ -108,14 +105,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.calculateButton:
                 //get the bill amount
-                String input = (mEditAmount.getText().toString());
+                String input = mEditAmount.getText().toString();
                 int so = Integer.parseInt(input);
                 int result = so / 2;
-                totalTextView.setText("$" + result);
-                Toast.makeText(this, "Click vao button calculator", Toast.LENGTH_LONG).show();
+                totalTextView.setText(result);
                 break;
-            case R.id.totalTextView:
-                Toast.makeText(this, "Click vao total textview", Toast.LENGTH_LONG).show();
+
         }
     }
 

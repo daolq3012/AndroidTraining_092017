@@ -64,8 +64,5 @@
                 style="@style/background_none_right"
                 android:text="@string/text_Register" />
         </LinearLayout>
-
     </RelativeLayout>
-
-
 </LinearLayout>
