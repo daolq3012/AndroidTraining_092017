@@ -17,97 +17,62 @@
         <TextView
             android:layout_marginTop="@dimen/dp_20"
             android:id="@+id/signup_TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/firstActivityTextView"
             android:text="@string/signup"
-            android:gravity="center"
-            android:textSize="@dimen/sp_50"
-            android:textColor="@color/colorWhite"/>
+            android:textSize="@dimen/sp_50"/>
         <TextView
+            style="@style/firstActivityTextView"
             android:layout_marginTop="@dimen/dp_10"
             android:id="@+id/describe_signup_TextView"
             android:layout_below="@+id/signup_TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:text="@string/describe_register"
-            android:gravity="center"
-            android:textColor="@color/colorWhite"
             android:textSize="@dimen/sp_15"/>
         <TextView
             android:layout_marginTop="@dimen/dp_10"
             android:id="@+id/addPhoto_TextView"
             android:layout_below="@+id/describe_signup_TextView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/addPhoto"
-            android:gravity="center"
-            android:textColor="@color/colorWhite"
+            style="@style/firstActivityTextView"
             android:textSize="@dimen/sp_20"
             android:width="@dimen/dp_100"
             android:height="@dimen/dp_100"
             android:layout_centerInParent="true"
             android:background="@drawable/circle_shape"/>
+
         <EditText
-            android:textColor="@color/colorWhite"
-            android:layout_marginTop="@dimen/dp_15"
-            android:padding="@dimen/dp_15"
-            android:background="@drawable/edittext_shape"
-            android:textAlignment="center"
+            style="@style/firstActivityEdittext"
             android:id="@+id/name_signup_EditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/addPhoto_TextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:textColorHint="@color/colorWhite"
-            android:hint="@string/hint_name"/>
+            android:layout_marginTop="13dp"
+            android:hint="@string/hint_name"
+            android:inputType="textEmailAddress" />
         <EditText
-            android:textColor="@color/colorWhite"
-            android:layout_marginTop="@dimen/dp_15"
-            android:padding="@dimen/dp_15"
-            android:background="@drawable/edittext_shape"
-            android:textAlignment="center"
+            style="@style/firstActivityEdittext"
             android:id="@+id/email_signup_EditText"
             android:layout_below="@+id/name_signup_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:textColorHint="@color/colorWhite"
             android:hint="@string/hint_email"/>
         <EditText
-            android:textColor="@color/colorWhite"
-            android:layout_marginTop="@dimen/dp_15"
-            android:padding="@dimen/dp_15"
-            android:background="@drawable/edittext_shape"
-            android:textAlignment="center"
-            android:textColorHint="@color/colorWhite"
+            style="@style/firstActivityEdittext"
             android:id="@+id/phone_signup_EditText"
             android:layout_below="@+id/email_signup_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="@string/hint_phone"/>
         <EditText
-            android:textColor="@color/colorWhite"
-            android:layout_marginTop="@dimen/sp_15"
-            android:padding="@dimen/dp_15"
-            android:background="@drawable/edittext_shape"
-            android:textAlignment="center"
-            android:textColorHint="@color/colorWhite"
+            style="@style/firstActivityEdittext"
             android:id="@+id/password_signup_EditText"
             android:layout_below="@+id/phone_signup_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:hint="@string/hint_password"/>
         <Button
-            android:layout_marginTop="@dimen/sp_15"
+            style="@style/firstActivityEdittext"
             android:text="@string/login"
-            android:textColor="@color/colorWhite"
             android:background="@drawable/button_shape"
             android:id="@+id/register_Button"
-            android:layout_below="@+id/password_signup_EditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_below="@+id/password_signup_EditText" />
 
     </RelativeLayout>
 </ScrollView>
