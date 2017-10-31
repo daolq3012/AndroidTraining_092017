@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgscreen"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context="com.example.sony.training.RegisterActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_40"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtRegisterUsername"
+        style="@style/EdittextStyle"
+        android:background="@drawable/bgedittext"
+        android:hint="@string/hint_username"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/edtRegisterEmail"
+        style="@style/EdittextStyle"
+        android:background="@drawable/bgedittext"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/edtRegisterPassword"
+        style="@style/EdittextStyle"
+        android:background="@drawable/bgedittext"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/edtRegisterConfirmPassword"
+        style="@style/EdittextStyle"
+        android:background="@drawable/bgedittext"
+        android:hint="@string/hint_confirm_password"
+        android:inputType="textPassword"
+        android:maxLines="1" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/ButtonStyle"
+        android:background="@drawable/bgbutton"
+        android:text="@string/btn_register"
+        android:textAllCaps="false" />
+
+</LinearLayout>

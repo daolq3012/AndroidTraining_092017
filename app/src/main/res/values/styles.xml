@@ -1,11 +1,34 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="EdittextStyle">
+        <item name="android:layout_width">@dimen/dp_300</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/dp_15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">@dimen/dp_300</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">@dimen/dp_15</item>
+        <item name="android:textSize">@dimen/sp_20</item>
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 
 </resources>
