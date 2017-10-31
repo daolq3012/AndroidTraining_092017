@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dp_10">10dp</dimen>
-    <dimen name="px_300">300px</dimen>
     <string name="dp_20">20dp</string>
     <string name="dp_10">10dp</string>
     <string name="dp_5">5dp</string>
@@ -26,4 +25,5 @@
     <string name="px_33">33px</string>
     <string name="dp_200">200dp</string>
     <string name="dp_40">40dp</string>
+    <dimen name="px_300">300px</dimen>
 </resources>
