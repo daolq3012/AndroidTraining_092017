@@ -2,7 +2,6 @@ package com.example.sony.training;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -20,45 +19,33 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.text.NumberFormat;
-import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener,
         RadioGroup.OnCheckedChangeListener, AdapterView.OnItemSelectedListener,
         SeekBar.OnSeekBarChangeListener, TextView.OnEditorActionListener {
     private Button calculatorButton;
-
     private TextView totalTextView;
     private TextView percentTextView;
     private TextView tipTextView;
     private TextView perPersonLabel;
     private TextView perPersonTextView;
-
     private EditText mEditAmount;
     private EditText billAmountEditText;
-
     private SeekBar percentSeekBar;
-
     private Spinner sPlitSpinner;
     private Spinner sPinnerBill;
-
     private RadioGroup roundingRadioGroup;
     private RadioButton roundNoneRadioButton;
     private RadioButton roundTipRadioButton;
     private RadioButton roundTotalRadioButton;
 
-
-    // xác định đối tượng SharedPreferences
     private SharedPreferences savedValues;
 
-    // định nghĩa các hằng số làm tròn
     private static final int ROUND_NONE = 0;
     private static final int ROUND_TIP = 1;
     private static final int ROUND_TOTAL = 2;
 
-    // xác định các biến
     private String billAmountString = "";
     private float tipPercent = .15f;
     private int mRounding = ROUND_NONE;
@@ -68,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_widgets_bill);
-
         initViews();
         setEventClickViews();
     }

@@ -25,10 +25,10 @@
     <string name="round_total">Total</string>
 
     <string-array name="split_array">
-        <item >No</item>
-        <item >2 ways</item>
-        <item >3 ways</item>
-        <item >4 ways</item>
+        <item>No</item>
+        <item>2 ways</item>
+        <item>3 ways</item>
+        <item>4 ways</item>
     </string-array>
 
     <string name="split_label">Split Bill?</string>
@@ -76,5 +76,7 @@
     <string name="text_Device">|</string>
     <string name="text_Signup">Sign up</string>
     <string name="text_Addphoto">Add  Photo</string>
+    <string name="test">TEST</string>
+
 
 </resources>

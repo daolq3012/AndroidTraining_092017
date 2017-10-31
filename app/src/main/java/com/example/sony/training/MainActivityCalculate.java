@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -161,9 +159,9 @@ public class MainActivityCalculate extends AppCompatActivity implements View.OnC
                 addOperation(editInput.getText().toString());
                 addNumber(editInput.getText().toString());
                 // Thuật toán tính toán biểu thức
-                if(arrOperation.size()>=arrNumber.size() ||arrOperation.size()<1){
+                if (arrOperation.size() >= arrNumber.size() || arrOperation.size() < 1) {
                     viewResult.setText("Lỗi định dạng");
-                }else {
+                } else {
                     for (int i = 0; i < (arrNumber.size() - 1); i++) {
                         switch (arrOperation.get(i)) {
                             case "+":
@@ -201,7 +199,6 @@ public class MainActivityCalculate extends AppCompatActivity implements View.OnC
                     viewResult.setText(df.format(result) + "");
                 }
         }
-
     }
 
     //Mảng chứa các phép tính +, - , x, /
@@ -212,7 +209,6 @@ public class MainActivityCalculate extends AppCompatActivity implements View.OnC
     //Lấy tất cả các phép tính lưu vào mảng arrOperation
     public int addOperation(String input) {
         arrOperation = new ArrayList<>();
-
         char[] cArray = input.toCharArray();
         for (int i = 0; i < cArray.length; i++) {
             switch (cArray[i]) {
