@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity /*implements View.OnClickListener*/ {
+public class MainActivity extends AppCompatActivity {
 
     private Button calculateButton;
     private TextView mTxtTotalNumber;
@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
         mTxtTotalNumber = (TextView) findViewById(R.id.txtTotalNumber);
         mEdtBillAmount = (EditText) findViewById(R.id.edtBillAmount);
 
-//        calculateButton.setOnClickListener(this);
         calculateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,15 +33,5 @@ public class MainActivity extends AppCompatActivity /*implements View.OnClickLis
             }
         });
     }
-
-//    @Override
-//    public void onClick(View v) {
-//        switch (v.getId()) {
-//            case R.id.calculateButton:
-//                String total = mEdtBillAmount.getText().toString();
-//                mTxtTotalNumber.setText(total);
-//                Toast.makeText(this,"Click vao button calculate",Toast.LENGTH_LONG).show();
-//        }
-//    }
 
 }
