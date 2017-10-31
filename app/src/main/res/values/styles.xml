@@ -3,9 +3,71 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="view_infor">
+        <item name="layout_width">wrap_content</item>
+        <item name="layout_height">wrap_content</item>
+    </style>
+
+    <style name="text_intro_views">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/text_Intro</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_below">@+id/txtWelcome</item>
+        <item name="android:layout_alignParentLeft">true</item>
+
+    </style>
+
+    <style name="background_views">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/duongvien_goctron</item>
+        <item name="android:layout_marginLeft">@string/px_85</item>
+        <item name="android:layout_marginRight">@string/px_85</item>
+        <item name="android:layout_marginBottom">@string/px_44</item>
+        <item name="android:textColor">@color/colorWhite</item>
+
+    </style>
+
+    <style name="background_none_center">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="background_views_none">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingRight">@string/px_33</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="background_none_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@string/px_33</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="background_logo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name=" android:textAlignment">center</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@string/px_300</item>
+        <item name="android:layout_marginBottom">@string/px_44</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@string/dp_50</item>
+    </style>
+
 
 </resources>

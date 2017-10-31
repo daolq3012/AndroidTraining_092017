@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            style="@style/background_logo"
+            android:text="@string/txt_Welcome" />
+
+        <TextView
+            android:id="@+id/txtIntroLogin"
+            style="@style/text_intro_views"
+            android:layout_marginBottom="@string/px_44" />
+
+        <EditText
+            android:id="@+id/edtEmailLogin"
+            style="@style/background_views"
+            android:layout_below="@+id/txtIntroLogin"
+            android:inputType="textEmailAddress"
+            android:text="@string/text_EmailAddress" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            style="@style/background_views"
+            android:layout_below="@+id/edtEmailLogin"
+            android:inputType="textPassword"
+            android:text="@string/text_Password" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/background_views"
+            android:layout_below="@+id/edtPassword"
+            android:background="@drawable/duongvien_goctronGreen"
+            android:text="@string/text_Login"
+            android:textAllCaps="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/px_300">
+
+            <TextView
+                android:id="@+id/btnPassword"
+                style="@style/background_views_none"
+                android:text="@string/text_Password" />
+
+            <TextView
+                android:id="@+id/viewCach"
+                style="@style/background_none_center"
+                android:text="@string/text_Device"
+                android:textSize="@string/dp_20" />
+
+            <TextView
+                android:id="@+id/btnRegister"
+                style="@style/background_none_right"
+                android:text="@string/text_Register" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
