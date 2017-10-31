@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="billamount">Bill Amount</string>
+    <string name="percent">Percent</string>
+    <string name="tip">Tip</string>
+    <string name="total">Total</string>
+    <string name="rounding">Rounding</string>
+    <string name="none">None</string>
+    <string name="splitbill">Split Bill</string>
+    <string name="person">Per Person</string>
+    <string name="calculator">Calculator</string>
+    <string name="$">$</string>
 </resources>

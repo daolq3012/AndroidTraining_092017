@@ -5,141 +5,155 @@
     android:gravity="center_horizontal">
 
     <TextView
-        android:id="@+id/mBill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="22dp"
-        android:text="Bill Amount"/>
+        android:id="@+id/billTextView"
+        style="@style/main_layout"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/billamount" />
+
     <EditText
         android:id="@+id/mEditbill"
-        android:layout_width="200dp"
+        android:layout_width="@dimen/dp_200"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/mBill"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_toEndOf="@+id/billTextView"
+        android:layout_toRightOf="@+id/billTextView"
+        android:hint="@string/$" />
+
     <TextView
         android:id="@+id/mPercent"
-        android:layout_below="@+id/mBill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/main_layout"
+        android:layout_below="@+id/billTextView"
         android:layout_marginTop="15dp"
-        android:textSize="22dp"
-        android:text="Percent"/>
+        android:text="@string/percent" />
+
     <SeekBar
         android:id="@+id/mSeekbar"
-        android:layout_toRightOf="@+id/mPercent"
-        android:layout_below="@id/mEditbill"
-        android:layout_marginLeft="47dp"
-        android:layout_width="200dp"
+        android:layout_width="@dimen/dp_200"
         android:layout_height="wrap_content"
-        />
+        android:layout_below="@id/mEditbill"
+        android:layout_marginLeft="@dimen/dp_47"
+        android:layout_marginStart="@dimen/dp_47"
+        android:layout_toEndOf="@+id/mPercent"
+        android:layout_toRightOf="@+id/mPercent" />
+
     <TextView
         android:id="@+id/mTip"
+        style="@style/main_layout"
         android:layout_below="@+id/mPercent"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22dp"
-        android:text="Tip"/>
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/tip" />
+
     <EditText
         android:id="@+id/mEditTip"
-        android:layout_toRightOf="@+id/mTip"
-        android:layout_below="@+id/mSeekbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="97dp"/>
+        android:layout_below="@+id/mSeekbar"
+        android:layout_marginLeft="@dimen/dp_97"
+        android:layout_marginStart="@dimen/dp_97"
+        android:layout_toEndOf="@+id/mTip"
+        android:layout_toRightOf="@+id/mTip"
+        android:hint="" />
+
     <TextView
         android:id="@+id/mTotal"
+        style="@style/main_layout"
         android:layout_below="@+id/mTip"
         android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22dp"
-        android:text="Total"/>
+        android:text="@string/total" />
+
     <EditText
         android:id="@+id/mEditTotal"
-        android:layout_toRightOf="@+id/mTotal"
-        android:layout_below="@+id/mEditTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="76dp"/>
+        android:layout_below="@+id/mEditTip"
+        android:layout_marginLeft="@dimen/dp_76"
+        android:layout_marginStart="@dimen/dp_76"
+        android:layout_toEndOf="@+id/mTotal"
+        android:layout_toRightOf="@+id/mTotal"
+        android:hint="" />
+
     <TextView
         android:id="@+id/mRounding"
+        style="@style/main_layout"
         android:layout_below="@+id/mTotal"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22dp"
-        android:text="Rounding"/>
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/rounding" />
+
     <RadioButton
         android:id="@+id/mRBNone"
-        android:layout_toRightOf="@+id/mRounding"
+        style="@style/main_layout"
         android:layout_below="@+id/mEditTotal"
-        android:layout_marginTop="13dp"
-        android:layout_marginLeft="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="None"/>
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_toEndOf="@+id/mRounding"
+        android:layout_toRightOf="@+id/mRounding"
+        android:text="@string/none" />
+
     <RadioButton
         android:id="@+id/mRBTip"
-        android:layout_toRightOf="@+id/mRounding"
+        style="@style/main_layout"
         android:layout_below="@+id/mRBNone"
-        android:layout_marginLeft="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Tip"/>
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_toEndOf="@+id/mRounding"
+        android:layout_toRightOf="@+id/mRounding"
+        android:text="@string/tip" />
+
     <RadioButton
         android:id="@+id/mRBTotal"
-        android:layout_toRightOf="@+id/mRounding"
+        style="@style/main_layout"
         android:layout_below="@+id/mRBTip"
-        android:layout_marginLeft="30dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="Total"/>
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginStart="@dimen/dp_30"
+        android:layout_toEndOf="@+id/mRounding"
+        android:layout_toRightOf="@+id/mRounding"
+        android:text="@string/total" />
+
     <TextView
         android:id="@+id/mSBill"
+        style="@style/main_layout"
         android:layout_below="@+id/mRBTotal"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22dp"
-        android:text="Split Bill"/>
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/splitbill" />
+
     <Spinner
         android:id="@+id/mSpinner"
-        android:layout_toRightOf="@+id/mSBill"
-        android:layout_below="@+id/mRBTotal"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="44dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mRBTotal"
+        android:layout_marginLeft="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_44"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_toEndOf="@+id/mSBill"
+        android:layout_toRightOf="@+id/mSBill" />
+
     <TextView
         android:id="@+id/mPerson"
+        style="@style/main_layout"
         android:layout_below="@+id/mSBill"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22dp"
-        android:text="Per Person"/>
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="@string/person" />
+
     <EditText
         android:id="@+id/mEditPerson"
-        android:layout_toRightOf="@+id/mPerson"
+        style="@style/main_layout"
         android:layout_below="@+id/mSpinner"
-        android:layout_marginLeft="22dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_toEndOf="@+id/mPerson"
+        android:layout_toRightOf="@+id/mPerson"
+        android:hint="" />
+
     <Button
         android:id="@+id/calculatorButton"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/mPerson"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15dp"
+        android:layout_below="@+id/mPerson"
         android:layout_centerHorizontal="true"
-        android:text="Calculator"/>
+        android:layout_marginTop="18dp"
+        android:text="@string/calculator"
+        android:textSize="@dimen/sp_15" />
 
 
 </RelativeLayout>

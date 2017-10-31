@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button calculatorButton;
+    private Button mCalculatorButton;
     private TextView mEditTotal;
     private EditText mEditbill;
 
@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_buoi4);
 
-        calculatorButton = (Button) findViewById(R.id.calculatorButton);
+        mCalculatorButton = (Button) findViewById(R.id.calculatorButton);
         mEditTotal = (TextView) findViewById(R.id.mEditTotal);
         mEditbill = (EditText) findViewById(R.id.mEditbill);
 
-        calculatorButton.setOnClickListener(this);
+        mCalculatorButton.setOnClickListener(this);
     }
 
     @Override
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.calculatorButton:
                 String input = mEditbill.getText().toString();
                 int so = Integer.parseInt(input)/2;
-                mEditTotal.setText("$"+so);
+                mEditTotal.setText(so);
                 break;
             case R.id.mTotal:
                 Toast.makeText(this,"Click vao total textview",Toast.LENGTH_LONG).show();
