@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/signin">
+
+        <TextView
+            android:id="@+id/txtSignUp"
+            style="@style/background_logo"
+            android:text="@string/text_Signup" />
+
+        <TextView
+            android:id="@+id/txtIntro"
+            style="@style/text_intro_views"
+            android:layout_below="@+id/txtSignUp"
+            android:layout_marginBottom="@string/px_44" />
+
+        <Button
+            android:id="@+id/btnAddPhoto"
+            style="@style/background_views"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/txtIntro"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vientron"
+            android:text="@string/text_Addphoto" />
+
+        <EditText
+            android:id="@+id/edtName"
+            style="@style/background_views"
+            android:layout_below="@+id/btnAddPhoto"
+            android:inputType="textEmailAddress"
+            android:text="@string/text_NameAndSurname" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            style="@style/background_views"
+            android:layout_below="@+id/edtName"
+            android:inputType="textEmailAddress"
+            android:text="@string/text_EmailAddress" />
+
+        <EditText
+            android:id="@+id/edtPhone"
+            style="@style/background_views"
+            android:layout_below="@+id/edtEmail"
+            android:text="@string/text_Phone" />
+
+        <EditText
+            android:id="@+id/edtPasswordSignup"
+            style="@style/background_views"
+            android:layout_below="@+id/edtPhone"
+            android:inputType="textPassword"
+            android:text="@string/text_Password" />
+
+        <Button
+            android:id="@+id/btnRegisterSignup"
+            style="@style/background_views"
+            android:layout_below="@+id/edtPasswordSignup"
+            android:background="@drawable/duongvien_goctron_green"
+            android:text="@string/text_Register" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dp_10">10dp</dimen>
+    <string name="dp_20">20dp</string>
+    <string name="dp_10">10dp</string>
+    <string name="dp_5">5dp</string>
+    <string name="dp_1">1dp</string>
+    <string name="dp_42">42dp</string>
+    <string name="dp_30">30dp</string>
+    <string name="dp_25">25dp</string>
+    <string name="dp_15">15dp</string>
+    <string name="dp_18">18dp</string>
+    <string name="dp_13">13dp</string>
+    <string name="dp_50">50dp</string>
+    <string name="px_300">300px</string>
+    <string name="px_40">40px</string>
+    <string name="dp_300">300dp</string>
+    <string name="px_44">44px</string>
+    <string name="px_1">1px</string>
+    <string name="dp_80">80dp</string>
+    <string name="dp_90dp">90dp</string>
+    <string name="dp_200dp">200dp</string>
+    <string name="dp_150dp">150dp</string>
+    <string name="px_85">85px</string>
+    <string name="px_33">33px</string>
+    <string name="dp_200">200dp</string>
+    <string name="dp_40">40dp</string>
+    <dimen name="px_300">300px</dimen>
+    <dimen name="px_100">100px</dimen>
+    <dimen name="dp_20">20dp</dimen>
+</resources>
