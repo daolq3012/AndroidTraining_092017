@@ -8,17 +8,4 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="textview">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">@dimen/dp_10</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="button">
-        <item name="android:layout_width">@dimen/dp_0</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/sp_24</item>
-    </style>
-
 </resources>
