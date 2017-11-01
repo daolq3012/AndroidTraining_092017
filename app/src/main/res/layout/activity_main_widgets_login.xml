@@ -37,7 +37,7 @@
             android:id="@+id/btnLogin"
             style="@style/background_views"
             android:layout_below="@+id/edtPassword"
-            android:background="@drawable/duongvien_goctronGreen"
+            android:background="@drawable/duongvien_goctron_green"
             android:text="@string/text_Login"
             android:textAllCaps="false" />
 
@@ -48,9 +48,10 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/px_300">
 
-            <TextView
+            <Button
                 android:id="@+id/btnPassword"
                 style="@style/background_views_none"
+                android:background="@drawable/none_background"
                 android:text="@string/text_Password" />
 
             <TextView
@@ -59,9 +60,10 @@
                 android:text="@string/text_Device"
                 android:textSize="@string/dp_20" />
 
-            <TextView
+            <Button
                 android:id="@+id/btnRegister"
                 style="@style/background_none_right"
+                android:background="@drawable/none_background"
                 android:text="@string/text_Register" />
         </LinearLayout>
     </RelativeLayout>

@@ -59,7 +59,7 @@
             android:id="@+id/btnRegisterSignup"
             style="@style/background_views"
             android:layout_below="@+id/edtPasswordSignup"
-            android:background="@drawable/duongvien_goctronGreen"
+            android:background="@drawable/duongvien_goctron_green"
             android:text="@string/text_Register" />
 
     </RelativeLayout>

@@ -9,8 +9,8 @@
     </style>
 
     <style name="view_infor">
-        <item name="layout_width">wrap_content</item>
-        <item name="layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
     <style name="text_intro_views">
@@ -60,7 +60,7 @@
     <style name="background_logo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name=" android:textAlignment">center</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:layout_marginTop">@string/px_300</item>
