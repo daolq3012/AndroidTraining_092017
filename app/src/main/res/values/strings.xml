@@ -11,4 +11,7 @@
         <item>4 ways</item>
         <item>6 ways</item>
     </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
