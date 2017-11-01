@@ -90,7 +90,7 @@ public class MainActivity extends Activity implements View.OnClickListener, Text
 
         //Spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.spinner1, android.R.layout.simple_spinner_item);
+                R.array.spinner, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mSpinner.setAdapter(adapter);
     }

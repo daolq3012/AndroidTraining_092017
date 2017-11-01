@@ -3,9 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp">
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10"
+    android:paddingTop="@dimen/dp_10">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,16 +14,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total"
-            android:textSize="25sp"
+            android:text="@string/name_total"
+            android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:text="$37.60"
-            android:textSize="25sp" />
+            android:text="@string/txt_tien"
+            android:textSize="@dimen/sp_25" />
     </LinearLayout>
 
     <View
@@ -38,8 +38,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rounding"
-            android:textSize="25sp"
+            android:text="@string/name_rounding"
+            android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
 
         <RadioGroup
@@ -72,8 +72,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Split Bill ?"
-            android:textSize="25sp"
+            android:text="@string/name_splitbill"
+            android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
 
         <Spinner
@@ -90,8 +90,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Per Person"
-            android:textSize="25sp"
+            android:text="@string/name_perperson"
+            android:textSize="@dimen/sp_25"
             android:textStyle="bold" />
 
         <TextView
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="$18.80"
-            android:textSize="25sp" />
+            android:textSize="@dimen/sp_25" />
     </LinearLayout>
 
     <Button
@@ -107,6 +107,6 @@
         android:layout_height="wrap_content"
         android:text="Apply"
         android:textAllCaps="false"
-        android:textSize="25sp" />
+        android:textSize="@dimen/sp_25" />
 
 </LinearLayout>
