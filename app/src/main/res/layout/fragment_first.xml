@@ -1,38 +1,27 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/firstFragmentParentLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:background="@color/colorGreen"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     tools:context="com.example.sony.training.FirstFragment">
 
-    <RelativeLayout
-        android:id="@+id/container_first_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/firstTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:background="@color/colorGreen"
-        android:gravity="center"
-        android:text="@string/first_fragment"
-        android:textColor="@color/colorWhite"
-        android:textSize="@dimen/px_100"
-        android:textStyle="bold" />
+        android:textColor="@color/colorAccent"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/dp_20"
+        android:text="@string/first_fragment"/>
 
     <Button
         android:id="@+id/firstButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@color/colorWhite"
-        android:text="@string/click"
-        android:textSize="@dimen/px_100"
-        android:background="@color/colorPrimaryDark"
         android:layout_below="@+id/firstTextView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/click"/>
 
 </RelativeLayout>

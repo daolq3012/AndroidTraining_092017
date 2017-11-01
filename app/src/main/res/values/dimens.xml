@@ -27,4 +27,5 @@
     <string name="dp_40">40dp</string>
     <dimen name="px_300">300px</dimen>
     <dimen name="px_100">100px</dimen>
+    <dimen name="dp_20">20dp</dimen>
 </resources>
