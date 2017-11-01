@@ -1,9 +1,9 @@
 package com.example.sony.training;
 
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +36,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener{
 
         mTxtHello = (TextView) v.findViewById(R.id.helloTextView);
         mBtnFirst = (Button) v.findViewById(R.id.firstButton);
-        relativeLayout = (RelativeLayout) v.findViewById(R.id.container_second_fragment);
+//        relativeLayout = (RelativeLayout) v.findViewById(R.id.container_second_fragment);
         mBtnFirst.setOnClickListener(this);
         return v;
     }

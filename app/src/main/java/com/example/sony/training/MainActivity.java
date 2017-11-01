@@ -1,34 +1,25 @@
 package com.example.sony.training;
 
-import android.app.Fragment;
+import android.app.FragmentManager;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-public class MainActivity extends AppCompatActivity implements FirstFragmentEventListener {
+
+import com.example.sony.training.adapter.TestPagerAdapter;
+
+public class MainActivity extends AppCompatActivity{
+
+    private ViewPager mVpTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FirstFragment firstFragment = new FirstFragment();
-        getFragmentManager().beginTransaction().add(R.id.container_first_fragment,firstFragment).commitAllowingStateLoss();
-        SecondFragment secondFragment = new SecondFragment();
-        getFragmentManager().beginTransaction().add(R.id.container_second_fragment,secondFragment).commitAllowingStateLoss();
+        mVpTest = (ViewPager) findViewById(R.id.testViewPager);
+        TestPagerAdapter testPagerAdapter = new TestPagerAdapter(getSupportFragmentManager());
+        mVpTest.setAdapter(testPagerAdapter);
 
-    }
-
-    @Override
-    public void onButtonClicked() {
-        if (isFirstFragmentAdded()){
-            return;
-        }
-        FirstFragment firstFragment = new FirstFragment();
-        getFragmentManager().beginTransaction().replace(R.id.container_second_fragment,firstFragment).commitAllowingStateLoss();
-    }
-
-    // hàm kiểm tra xem first fragment có thay thế cho second fragment hay chưa.
-    private boolean isFirstFragmentAdded(){
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.container_second_fragment);
-        return fragment instanceof  FirstFragment;
     }
 }
