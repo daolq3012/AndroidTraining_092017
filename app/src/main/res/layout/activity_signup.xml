@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_signup"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="52sp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:fontFamily="sans-serif-thin"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Donec auctor neque sed pretium luctus"
+        android:textColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_addphoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_circle"
+        android:gravity="center"
+        android:text="Add
+Photo"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-thin"
+
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/tv_name"
+        android:fontFamily="sans-serif-thin"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:gravity="center"
+        android:hint="Name and Surname"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/tv_email"
+        android:fontFamily="sans-serif-thin"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:gravity="center"
+        android:hint="Email Address"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/tv_phone"
+        android:fontFamily="sans-serif-thin"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:gravity="center"
+        android:hint="Phone"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/tv_password"
+        android:fontFamily="sans-serif-thin"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:gravity="center"
+        android:hint="Password"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+    <Button
+        android:id="@+id/btn_register"
+        android:fontFamily="sans-serif-thin"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_background"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+</LinearLayout>
