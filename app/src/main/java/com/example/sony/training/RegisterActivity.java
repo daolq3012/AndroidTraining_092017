@@ -23,11 +23,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        addControl();
-        addEvent();
+        initViews();
+        initEvents();
     }
 
-    private void addControl() {
+    private void initViews() {
         mEdtRegisterUsername = (EditText) findViewById(R.id.edtRegisterUsername);
         mEdtRegisterEmail = (EditText) findViewById(R.id.edtRegisterEmail);
         mEdtRegisterPassword = (EditText) findViewById(R.id.edtRegisterPassword);
@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         builder = new AlertDialog.Builder(RegisterActivity.this,R.style.MyDialogTheme);
     }
 
-    private void addEvent() {
+    private void initEvents() {
         mBtnRegister.setOnClickListener(this);
     }
 
