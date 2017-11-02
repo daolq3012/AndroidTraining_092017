@@ -1,8 +1,22 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
 
+    <string name="hint_email">Email Address</string>
+    <string name="hint_name">Name or Surname</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_phone">Phone</string>
+    <string name="describe_login">Login Form</string>
+    <string name="describe_register">Sign-up Form</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="signup">Sign up</string>
+    <string name="addPhoto">Add Photo</string>
+    <string name="welcome">Welcome</string>
+    <string name="loginSuccess">Login Success</string>
+    <string name="validateEmail_Password">Email or Password must > 6 characters</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="second_fragment">Second Fragment</string>
 
 </resources>

@@ -1,25 +1,74 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/background"
+    android:paddingLeft="@dimen/dp_50"
+    android:paddingRight="@dimen/dp_50"
     tools:context="com.example.sony.training.FirstFragment">
 
     <TextView
-        android:id="@+id/helloTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="@dimen/sp_20"
-        android:textStyle="bold"
-        android:textColor="@color/colorWhite"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_marginTop="@dimen/dp_100"
+        android:id="@+id/welcome_TextView"
+        style="@style/firstActivityTextView"
+        android:text="@string/welcome"
+        android:textSize="@dimen/sp_50" />
+    <TextView
+        style="@style/firstActivityTextView"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/describe_TextView"
+        android:layout_below="@+id/welcome_TextView"
+        android:text="@string/describe_login"
+        android:textSize="@dimen/sp_15"/>
+    <EditText
+        style="@style/firstActivityEdittext"
+        android:id="@+id/email_EditText"
+        android:layout_below="@+id/describe_TextView"
+        android:inputType="textEmailAddress"
+        android:hint="@string/hint_email"/>
+    <EditText
+        style="@style/firstActivityEdittext"
+        android:id="@+id/password_EditText"
+        android:layout_below="@+id/email_EditText"
+        android:inputType="textPassword"
+        android:hint="@string/hint_password"/>
     <Button
-        android:id="@+id/firstButton"
+        style="@style/firstActivityEdittext"
+        android:text="@string/login"
+        android:background="@drawable/button_shape"
+        android:id="@+id/login_Button"
+        android:layout_below="@+id/password_EditText" />
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/password_TextView"
+        android:layout_below="@+id/login_Button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/helloTextView"
-        android:layout_centerInParent="true"
-        android:text="Click"
+        style="@style/firstActivityTextView"
+        android:text="@string/password"
+        android:textSize="@dimen/sp_20"
+        android:layout_marginLeft="@dimen/dp_40"
         />
+    <TextView
+        android:layout_toRightOf="@+id/password_TextView"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/view"
+        android:layout_below="@+id/login_Button"
+        android:layout_width="wrap_content"
+        android:text="|"
+        style="@style/firstActivityTextView"
+        android:textSize="@dimen/sp_20"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"/>
+
+    <TextView
+        android:layout_toRightOf="@+id/view"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/register_TextView"
+        android:layout_below="@+id/login_Button"
+        android:layout_width="wrap_content"
+        android:text="@string/register"
+        style="@style/firstActivityTextView"
+        android:textSize="@dimen/sp_20"/>
+
 </RelativeLayout>

@@ -1,18 +1,29 @@
 package com.example.sony.training.adapter;
 
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.sony.training.FirstFragment;
+import com.example.sony.training.FirstFragmentEventListener;
+import com.example.sony.training.LoginSuccessFragment;
+import com.example.sony.training.MainActivity;
 import com.example.sony.training.SecondFragment;
 
 /**
  * Created by Administrator on 11/01/17.
  */
 
-public class TestPagerAdapter extends FragmentPagerAdapter {
-    public TestPagerAdapter(FragmentManager fm) {
+public class LoginRegisterPagerAdapter extends FragmentPagerAdapter  {
+
+    public LoginRegisterPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
@@ -30,4 +41,5 @@ public class TestPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 2;
     }
+
 }

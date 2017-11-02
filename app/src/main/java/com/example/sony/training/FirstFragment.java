@@ -8,8 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -17,11 +18,12 @@ import android.widget.TextView;
  */
 public class FirstFragment extends Fragment implements View.OnClickListener{
 
-    private TextView mTxtHello;
-    private Button mBtnFirst;
-    private boolean isClicked = false;
-    private RelativeLayout relativeLayout;
+    private EditText mEdtEmail, mEdtPassword;
+    private Button mBtnLogin;
+    private TextView mTxtRegister;
+    private FieldCheckValidate fieldCheckValidate = new FieldCheckValidate();
     private FirstFragmentEventListener firstFragmentEventListener;
+    private boolean isLoginSuccess = false;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -32,13 +34,34 @@ public class FirstFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_first, container, false);
+        if (!isLoginSuccess){
+            View v = inflater.inflate(R.layout.fragment_first, container, false);
+            initViews(v);
+            initListeners();
+            return v;
+        }else {
+            Toast.makeText(getContext(), "thanh cong", Toast.LENGTH_SHORT).show();
+            View v = inflater.inflate(R.layout.fragment_login_success, container, false);
+            return v;
+        }
 
-        mTxtHello = (TextView) v.findViewById(R.id.helloTextView);
-        mBtnFirst = (Button) v.findViewById(R.id.firstButton);
-//        relativeLayout = (RelativeLayout) v.findViewById(R.id.container_second_fragment);
-        mBtnFirst.setOnClickListener(this);
-        return v;
+
+
+
+
+    }
+
+    private void initViews(View v){
+        mEdtEmail = (EditText) v.findViewById(R.id.email_EditText);
+        mEdtPassword = (EditText) v.findViewById(R.id.password_EditText);
+        mBtnLogin = (Button) v.findViewById(R.id.login_Button);
+        mTxtRegister = (TextView) v.findViewById(R.id.register_TextView);
+
+    }
+
+    private void initListeners(){
+        mBtnLogin.setOnClickListener(this);
+        mTxtRegister.setOnClickListener(this);
     }
 
     // hàm liên kết tới activity cha, giao tiếp với activity
@@ -53,10 +76,11 @@ public class FirstFragment extends Fragment implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.firstButton:
-                firstFragmentEventListener.onButtonClicked();
-                isClicked = !isClicked ;
-                mTxtHello.setTextColor(getResources().getColor(isClicked ? android.R.color.holo_orange_dark : android.R.color.holo_purple));
+            case R.id.login_Button:
+                if (fieldCheckValidate.checkLogin(mEdtEmail, mEdtPassword,getContext())){
+                    isLoginSuccess = !isLoginSuccess;
+                    firstFragmentEventListener.onButtonClicked();
+                }
                 break;
             default:
                 break;

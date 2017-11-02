@@ -1,25 +1,31 @@
 package com.example.sony.training;
 
-import android.app.FragmentManager;
-import android.support.v4.view.PagerAdapter;
+
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
-import com.example.sony.training.adapter.TestPagerAdapter;
+import com.example.sony.training.adapter.LoginRegisterPagerAdapter;
 
-public class MainActivity extends AppCompatActivity{
-
-    private ViewPager mVpTest;
+public class MainActivity extends AppCompatActivity implements FirstFragmentEventListener{
+    private ViewPager mVpLoginRegister;
+    private LoginRegisterPagerAdapter loginRegisterPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mVpTest = (ViewPager) findViewById(R.id.testViewPager);
-        TestPagerAdapter testPagerAdapter = new TestPagerAdapter(getSupportFragmentManager());
-        mVpTest.setAdapter(testPagerAdapter);
+        mVpLoginRegister = (ViewPager) findViewById(R.id.loginRegisterViewPager);
+        loginRegisterPagerAdapter = new LoginRegisterPagerAdapter(getSupportFragmentManager());
+        mVpLoginRegister.setAdapter(loginRegisterPagerAdapter);
 
+    }
+
+    @Override
+    public void onButtonClicked() {
+        mVpLoginRegister.setAdapter(loginRegisterPagerAdapter);
+        Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
     }
 }
