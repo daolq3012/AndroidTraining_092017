@@ -1,25 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgscreen"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context="com.example.sony.training.RegisterActivity">
+    tools:context="com.example.sony.training.LoginFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up"
-        android:textStyle="bold"
-        android:textSize="@dimen/sp_40"
-        android:textColor="@color/colorWhite"
-        android:layout_marginBottom="@dimen/dp_25"
-        android:gravity="center"/>
+    <ImageView
+        android:layout_width="@dimen/dp_400"
+        android:layout_height="@dimen/dp_170"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_15"
+        android:contentDescription="@string/btn_register"
+        android:src="@drawable/logo" />
 
     <EditText
-        android:id="@+id/edtRegisterUsername"
+        android:id="@+id/edtLoginUsername"
         android:layout_width="@dimen/dp_300"
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="center"
@@ -32,21 +30,7 @@
         android:textColorHint="@color/colorWhite" />
 
     <EditText
-        android:id="@+id/edtRegisterEmail"
-        android:layout_width="@dimen/dp_300"
-        android:layout_height="@dimen/dp_50"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/dp_15"
-        android:background="@drawable/bgedittext"
-        android:gravity="center"
-        android:hint="@string/hint_email"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite" />
-
-    <EditText
-        android:id="@+id/edtRegisterPassword"
+        android:id="@+id/edtLoginPassword"
         android:layout_width="@dimen/dp_300"
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="center"
@@ -59,30 +43,25 @@
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite" />
 
-    <EditText
-        android:id="@+id/edtRegisterConfirmPassword"
-        android:layout_width="@dimen/dp_300"
-        android:layout_height="@dimen/dp_50"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/dp_15"
-        android:background="@drawable/bgedittext"
-        android:gravity="center"
-        android:hint="@string/hint_confirm_password"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:textColor="@color/colorWhite"
-        android:textColorHint="@color/colorWhite" />
-
     <Button
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnLogin"
         android:layout_width="@dimen/dp_300"
         android:layout_height="@dimen/dp_50"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/dp_15"
         android:background="@drawable/bgbutton"
-        android:text="@string/btn_register"
+        android:text="@string/btn_login"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/sp_20" />
+
+    <TextView
+        android:id="@+id/txtLoginSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/new_user"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/sp_18" />
 
 </LinearLayout>

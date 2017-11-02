@@ -1,15 +1,19 @@
 package com.example.sony.training;
 
+
 import android.content.DialogInterface;
 import android.graphics.Typeface;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+
+public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     private EditText mEdtRegisterUsername;
     private EditText mEdtRegisterEmail;
@@ -18,28 +22,30 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private Button mBtnRegister;
     private AlertDialog.Builder builder;
 
+    private View view;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
-
-        addControl();
-        addEvent();
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_register, container, false);
+        initViews();
+        initEvents();
+        return view;
     }
 
-    private void addControl() {
-        mEdtRegisterUsername = (EditText) findViewById(R.id.edtRegisterUsername);
-        mEdtRegisterEmail = (EditText) findViewById(R.id.edtRegisterEmail);
-        mEdtRegisterPassword = (EditText) findViewById(R.id.edtRegisterPassword);
+    private void initViews() {
+        mEdtRegisterUsername = (EditText) view.findViewById(R.id.edtRegisterUsername);
+        mEdtRegisterEmail = (EditText) view.findViewById(R.id.edtRegisterEmail);
+        mEdtRegisterPassword = (EditText) view.findViewById(R.id.edtRegisterPassword);
         mEdtRegisterPassword.setTypeface(Typeface.DEFAULT);
-        mEdtRegisterConfirmPassword = (EditText) findViewById(R.id.edtRegisterConfirmPassword);
+        mEdtRegisterConfirmPassword = (EditText) view.findViewById(R.id.edtRegisterConfirmPassword);
         mEdtRegisterConfirmPassword.setTypeface(Typeface.DEFAULT);
-        mBtnRegister = (Button) findViewById(R.id.btnRegister);
+        mBtnRegister = (Button) view.findViewById(R.id.btnRegister);
 
-        builder = new AlertDialog.Builder(RegisterActivity.this,R.style.MyDialogTheme);
+        builder = new AlertDialog.Builder(this.getContext(),R.style.MyDialogTheme);
     }
 
-    private void addEvent() {
+    private void initEvents() {
         mBtnRegister.setOnClickListener(this);
     }
 

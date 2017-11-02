@@ -6,11 +6,15 @@
     <string name="hint_email">Enter email</string>
     <string name="btn_login">Login</string>
     <string name="btn_register">Register</string>
-    <string name="new_user">New user? Sign up!</string>
+    <string name="new_user">New user? Swipe left to sign up!</string>
     <string name="sign_up">Sign Up!</string>
     <string name="password_error_message">Password must more than 6 character</string>
     <string name="OK">OK</string>
     <string name="password_error_title">Password Error</string>
     <string name="email_error_title">Email Error</string>
     <string name="email_error_message">Email not valid format!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_user">Hello, Truyen ! ! !</string>
 </resources>
