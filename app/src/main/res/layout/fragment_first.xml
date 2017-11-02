@@ -16,8 +16,8 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:textStyle="bold"
-        android:textColor="#FFF"
-        android:background="#7986CB"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBackground"
         android:layout_gravity="center_horizontal"/>
 
     <Button

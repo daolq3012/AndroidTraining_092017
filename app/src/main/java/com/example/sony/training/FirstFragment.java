@@ -20,7 +20,6 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
     private TextView mFirstTextView;
     private Button mFirstButton;
     private boolean isClicked = false;
-    private RelativeLayout relativeLayout;
 
     private FirstFragmentEventListener firstFragmentEventListener;
 
@@ -39,7 +38,6 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_first, container, false);
         mFirstTextView = (TextView) view.findViewById(R.id.firstTextView);
         mFirstButton = (Button) view.findViewById(R.id.firstButton);
-        relativeLayout = (RelativeLayout) view.findViewById(R.id.container_second_fragment);
         mFirstButton.setOnClickListener(this);
         return view;
     }
