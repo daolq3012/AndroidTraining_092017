@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+
+    <array name="spinner_email">
+        <item>Gmail</item>
+        <item>HotMail</item>
+        <item>AolMail</item>
+    </array>
+    <array name="spinner">
+        <item>2 ways</item>
+        <item>4 ways</item>
+        <item>6 ways</item>
+    </array>
+
+    <string name="tab1">Tab 1</string>
+    <string name="tab2">Tab 2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
