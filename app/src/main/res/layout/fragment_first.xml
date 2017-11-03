@@ -5,6 +5,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:paddingLeft="@dimen/dp_50"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:paddingRight="@dimen/dp_50"
     tools:context="com.example.sony.training.FirstFragment">
 
