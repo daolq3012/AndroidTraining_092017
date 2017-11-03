@@ -14,7 +14,6 @@ import com.bumptech.glide.Glide;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static int GALLERY_REQUEST_CODE = 100;
-    private static int GALLERY_REQUEST_OK = 100;
     private Button mBtnOpenCamera, mBtnOpenGoogle, mBtnOpenGallery, mBtnGoToActivity2;
     private EditText mEdtInput;
     private ImageView mImvAvatar;
