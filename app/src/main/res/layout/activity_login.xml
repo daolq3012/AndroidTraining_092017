@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< Updated upstream
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4268b3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/wap"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_70dp"
+
+
+            android:src="@drawable/hinhface" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/sp_25"
+        android:layout_marginRight="@dimen/sp_25"
+        android:layout_centerInParent="true">
+
+        <EditText
+
+            android:hint="@string/input_username"
+            style="@style/maulogin"
+            android:id="@+id/Username" />
+
+
+        <EditText
+            android:id="@+id/Password"
+            android:hint="@string/nhap_pasword"
+            android:inputType="textPassword"
+            style="@style/maulogin" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:background="#183063"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dangnhap"
+            android:layout_marginTop="@dimen/dp_15"
+            android:textColor="#ffff"
+            android:textSize="@dimen/sp_25"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_25"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_gravity="center_horizontal" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Sinup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dp_15"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/sp_25" />
+=======
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context="com.example.sony.training.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:textColor="#fff"
+            android:textSize="36sp"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ "
+            android:textColor="#fff"
+            android:textSize="15sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Donec auctor neque sed pretium luctus"
+            android:textColor="#fff"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+     <EditText
+         android:id="@+id/username"
+         android:hint="nhap username "
+         android:layout_weight="1"
+         style="@style/loginadmin"
+
+
+         />
+        <EditText
+            android:id="@+id/password"
+            android:hint="Nhap password "
+            android:layout_weight="1"
+           style="@style/loginadmin"
+
+            />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Login"
+            android:layout_marginTop="25dp"
+            android:background="#1b228f"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            />
+
+
+
+
+    </LinearLayout>
+>>>>>>> Stashed changes
+
+</RelativeLayout>
