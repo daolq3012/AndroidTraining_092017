@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sony.training.ThirdFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/blue" />
+
+        <TextView
+            android:id="@+id/textfirst"
+            style="@style/fragment_style"
+            android:gravity="center_horizontal"
+            android:text="@string/xin_chao"
+            android:textSize="@dimen/sp_20" />
+
+    </RelativeLayout>
+
+</FrameLayout>

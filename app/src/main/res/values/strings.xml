@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+
+    <string name="email_anddress">Email Address</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="user_name">User Name</string>
+    <string name="phone">Phone</string>
+    <string name="xin_chao">Login Thanh Cong</string>
+    <string name="new_pass">New Password</string>
+    <string name="age">Age</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="tab1">Tab 1</string>
+    <string name="tab2">Tab 2</string>
+
 </resources>
