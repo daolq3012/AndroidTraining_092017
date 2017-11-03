@@ -14,7 +14,7 @@
     <string name="email_error_title">Email Error</string>
     <string name="email_error_message">Email not valid format!</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_user">Hello, Truyen ! ! !</string>
+    <string name="tab1">Tab 1</string>
+    <string name="tab2">Tab 2</string>
 </resources>
