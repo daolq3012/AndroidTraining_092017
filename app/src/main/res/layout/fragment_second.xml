@@ -1,0 +1,57 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sony.training.SecondFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/blue" />
+
+        <EditText
+            android:id="@+id/editUserName"
+            style="@style/fragment_style"
+            android:background="@drawable/borderline"
+            android:hint="@string/user_name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editEmailAddressSecond"
+            style="@style/fragment_style"
+            android:layout_below="@+id/editUserName"
+            android:background="@drawable/borderline"
+            android:hint="@string/email_anddress"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editAge"
+            style="@style/fragment_style"
+            android:layout_below="@+id/editEmailAddressSecond"
+            android:background="@drawable/borderline"
+            android:hint="@string/age"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editPasswordSecond"
+            style="@style/fragment_style"
+            android:layout_below="@+id/editAge"
+            android:background="@drawable/borderline"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonLoginSecond"
+            style="@style/fragment_style"
+            android:layout_below="@+id/editPasswordSecond"
+            android:background="@drawable/borderline_button"
+            android:text="@string/login" />
+
+    </RelativeLayout>
+
+</FrameLayout>
