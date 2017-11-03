@@ -8,8 +8,8 @@ import com.example.sony.training.adapter.LoginRegisterPagerAdapter;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-public class MainActivity extends AppCompatActivity implements FirstFragmentEventListener{
-    private ViewPager mVpLoginRegister;
+public class MainActivity extends AppCompatActivity implements FirstFragmentEventListener {
+    private ViewPager mViewPager;
     private LoginRegisterPagerAdapter loginRegisterPagerAdapter;
     private BottomBar mBottomBar;
 
@@ -18,21 +18,23 @@ public class MainActivity extends AppCompatActivity implements FirstFragmentEven
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mVpLoginRegister = (ViewPager) findViewById(R.id.loginRegisterViewPager);
+        mViewPager = (ViewPager) findViewById(R.id.loginRegisterViewPager);
         mBottomBar = (BottomBar) findViewById(R.id.bottom_navigation);
 
         loginRegisterPagerAdapter = new LoginRegisterPagerAdapter(getSupportFragmentManager());
-        mVpLoginRegister.setAdapter(loginRegisterPagerAdapter);
+        mViewPager.setAdapter(loginRegisterPagerAdapter);
+
+        mViewPager.setOffscreenPageLimit(2);
 
         mBottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(int tabId) {
-                switch (tabId) {
-                    case R.id.tab_login:
-                        mVpLoginRegister.setCurrentItem(0);
+                switch (tabId){
+                    case R.id.tab1:
+                        mViewPager.setCurrentItem(0);
                         break;
-                    case R.id.tab_register:
-                        mVpLoginRegister.setCurrentItem(1);
+                    case R.id.tab2:
+                        mViewPager.setCurrentItem(1);
                         break;
                 }
             }
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements FirstFragmentEven
 
     @Override
     public void onButtonClicked() {
-        mVpLoginRegister.setAdapter(loginRegisterPagerAdapter);
+        mViewPager.setAdapter(loginRegisterPagerAdapter);
         Toast.makeText(this, "done", Toast.LENGTH_SHORT).show();
     }
 }

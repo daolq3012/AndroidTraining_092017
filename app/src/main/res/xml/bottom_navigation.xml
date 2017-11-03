@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <tabs>
     <tab
-        icon="@drawable/ic_home_black_24dp"
-        id="@+id/tab_login"
-        title="@string/login"/>
+        icon="@drawable/ic_home"
+        id="@+id/tab1"
+        title="@string/tab1"/>
+
     <tab
-        icon="@drawable/ic_account_circle_black_24dp"
-        id="@+id/tab_register"
-        title="@string/register"/>
+        icon="@drawable/ic_account"
+        id="@+id/tab2"
+        title="@string/tab2"/>
 </tabs>
