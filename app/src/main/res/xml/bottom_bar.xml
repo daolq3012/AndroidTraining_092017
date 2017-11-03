@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab icon="@drawable/ic_home"
+        id="@+id/tab1"
+        title="@string/tab1"/>
+    <tab icon="@drawable/ic_account"
+        id="@+id/tab2"
+        title="@string/tab2"/>
+</tabs>
