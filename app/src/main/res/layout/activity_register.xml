@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hinhnen"
+    tools:context="com.example.sony.training.RegisterActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+
+        android:layout_marginTop="17dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sing up"
+            android:textSize="@dimen/sp_37"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffff"
+
+          />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            android:textColor="#ffff"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/content"
+        android:weightSum="6"
+        android:layout_centerInParent="true">
+        <EditText
+
+           style="@style/Register"
+            android:layout_weight="1"
+
+            android:hint="Name and Surname"
+
+            />
+        <EditText
+
+
+            style="@style/Register"
+            android:hint="Email Address"
+
+
+            />
+        <EditText
+           style="@style/Register"
+            android:hint="Phone"
+
+            />
+
+        <EditText
+            android:id="@+id/editText"
+            style="@style/Register"
+            android:hint="Password"
+
+            android:inputType="textPassword" />
+
+        <Button
+              style="@style/Register"
+              android:text="Register"
+              android:background="#3930ba"
+              android:textColor="#fff"
+              android:textSize="@dimen/dp_30sp"
+              android:textAllCaps="false"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

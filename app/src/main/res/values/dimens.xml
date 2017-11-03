@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<<<<<<< Updated upstream
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="sp_25">25sp</dimen>
+    <dimen name="dp_70dp">70dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="sp_40">40sp</dimen>
+=======
+    <dimen name="dp_30sp">30sp</dimen>
+    <dimen name="sp_37">37sp</dimen>
+    >>>>>>> Stashed changes
+</resources>
