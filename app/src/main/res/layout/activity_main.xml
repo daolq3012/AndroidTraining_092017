@@ -7,11 +7,19 @@
     android:orientation="vertical"
     tools:context="com.example.sony.training.MainActivity">
 
-    <android.support.v4.view.ViewPager
+    <com.example.sony.training.widget.UnSwipeViewPager
         android:id="@+id/loginRegisterViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </com.example.sony.training.widget.UnSwipeViewPager>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        app:bb_tabXmlResource="@xml/bottom_navigation">
+    </com.roughike.bottombar.BottomBar>
 
 
 </LinearLayout>

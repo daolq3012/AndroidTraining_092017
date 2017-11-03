@@ -12,9 +12,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.sony.training.FirstFragment;
-import com.example.sony.training.FirstFragmentEventListener;
-import com.example.sony.training.LoginSuccessFragment;
-import com.example.sony.training.MainActivity;
 import com.example.sony.training.SecondFragment;
 
 /**
