@@ -24,6 +24,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public RecyclerViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        // them itemlayout vao  trong recycler. giup recycler biet dc view nao can the hien
         LayoutInflater layoutInflater = LayoutInflater.from(viewGroup.getContext());
         View itemView = layoutInflater.inflate(R.layout.item_layout, viewGroup, false);
         return new RecyclerViewHolder(itemView);
