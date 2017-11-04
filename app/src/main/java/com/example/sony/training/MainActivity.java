@@ -1,7 +1,9 @@
 package com.example.sony.training;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +16,7 @@ import com.bumptech.glide.Glide;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static int GALLERY_REQUEST_CODE = 100;
+    private static int CAMERA_REQUEST_CODE = 1;
     private Button mBtnOpenCamera, mBtnOpenGoogle, mBtnOpenGallery, mBtnGoToActivity2;
     private EditText mEdtInput;
     private ImageView mImvAvatar;
@@ -62,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void openCamera() {
+        Intent intent4 = new Intent();
+        intent4.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(intent4,CAMERA_REQUEST_CODE);
     }
 
     private void openGallery() {
@@ -95,6 +101,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // ham cua thu vien glide de load anh vao imageview
                 Glide.with(MainActivity.this).load(selectedImage).into(mImvAvatar);
 
+            }
+        } else if (requestCode == CAMERA_REQUEST_CODE){
+            if (data != null){
+                Uri selectedImage = data.getData();
+
+                // chuyen anh ve bitmap r set vo trong imv
+                Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+                mImvAvatar.setImageBitmap(bitmap);
             }
         }
     }
