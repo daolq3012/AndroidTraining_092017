@@ -100,12 +100,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 // ham cua thu vien glide de load anh vao imageview
                 Glide.with(MainActivity.this).load(selectedImage).into(mImvAvatar);
-
             }
         } else if (requestCode == CAMERA_REQUEST_CODE){
             if (data != null){
-                Uri selectedImage = data.getData();
-
                 // chuyen anh ve bitmap r set vo trong imv
                 Bitmap bitmap = (Bitmap) data.getExtras().get("data");
                 mImvAvatar.setImageBitmap(bitmap);
