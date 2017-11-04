@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     tools:context="com.example.sony.training.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/edtInput"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="@string/input"/>
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnGoToActivity2"
+        android:layout_below="@id/edtInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_activity_2"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btnOpenGoogle"
+        android:layout_below="@id/btnGoToActivity2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_google"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btnOpenGallery"
+        android:layout_below="@id/btnOpenGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_gallery"
+        android:textAllCaps="false"/>
+    <Button
+        android:id="@+id/btnOpenCamera"
+        android:layout_below="@id/btnOpenGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/open_camera"
+        android:textAllCaps="false"/>
+
+    <ImageView
+        android:id="@+id/imvAvatar"
+        android:layout_below="@id/btnOpenCamera"
+        android:layout_centerInParent="true"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150" />
+
+</RelativeLayout>
