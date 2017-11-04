@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab1"
+        title="@string/tab1"
+        icon="@drawable/ic_home"/>
+    <tab
+        id="@+id/tab2"
+        title="@string/tab2"
+        icon="@drawable/ic_account"/>
+</tabs>
