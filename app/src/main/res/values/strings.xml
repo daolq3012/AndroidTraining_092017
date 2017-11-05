@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="go_to_second_activity">Go to second activity</string>
+    <string name="open_google">Open google.com</string>
+    <string name="open_gallery">Open Gallery</string>
+    <string name="open_camera">Open camera</string>
+    <string name="hello_second_activity">Hello second activity</string>
 </resources>
