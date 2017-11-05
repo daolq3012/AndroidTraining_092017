@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="open_camera">open Camera</string>
+    <string name="open_gallery">open Gallery</string>
+    <string name="open_google">open Google.com</string>
+    <string name="open_activity2">open Activity 2</string>
 
     <array name="spinner_email">
         <item>Gmail</item>
