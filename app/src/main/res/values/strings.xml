@@ -13,4 +13,5 @@
     <string name="password_error_title">Password Error</string>
     <string name="email_error_title">Email Error</string>
     <string name="email_error_message">Email not valid format!</string>
+    <string name="add_avatar">Add\nAvatar</string>
 </resources>
