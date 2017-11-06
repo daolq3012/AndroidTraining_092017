@@ -18,6 +18,10 @@ android {
         }
     }
 }
+repositories {
+    mavenCentral()
+    maven { url 'http://maven.google.com' }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -26,5 +30,6 @@ dependencies {
     })
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.roughike:bottom-bar:2.3.1'
+    compile 'com.github.bumptech.glide:glide:4.3.0'
     testCompile 'junit:junit:4.12'
 }

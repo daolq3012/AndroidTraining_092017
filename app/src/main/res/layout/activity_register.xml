@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Sign Up"
+        android:textColor="#ffffff"
+        android:textSize="52sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Donec auctor neque sed pretium luctus"
+        android:textColor="#ffffff" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv_addphoto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_circle"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center"
+            android:text="Add
+Photo"
+            android:textColor="#ffffff"
+
+            android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_addphoto"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/bg_circle"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="center"
+                    android:text="Add
+Photo"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/tv_name"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:hint="Name and Surname"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/tv_email"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:hint="Email Address"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/tv_phone"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:hint="Phone"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/tv_password"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_background"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center"
+        android:hint="Password"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="sans-serif-thin"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+</LinearLayout>
