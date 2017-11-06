@@ -15,17 +15,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        pager= (ViewPager) findViewById(R.id.view_pager);
-        tabLayout= (TabLayout) findViewById(R.id.tab_layout);
+        pager = (ViewPager) findViewById(R.id.view_pager);
+        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
-        FragmentManager manager=getSupportFragmentManager();
-        PagerAdapter adapter=new PagerAdapter(manager);
+        FragmentManager manager = getSupportFragmentManager();
+        PagerAdapter adapter = new PagerAdapter(manager);
         pager.setAdapter(adapter);
-
         tabLayout.setupWithViewPager(pager);
         pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
         tabLayout.setTabsFromPagerAdapter(adapter);
     }
-    
+
 }

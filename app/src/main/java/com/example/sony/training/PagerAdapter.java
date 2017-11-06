@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
  * Created by phong on 11/05/17.
  */
 
-public class PagerAdapter  extends FragmentStatePagerAdapter {
+public class PagerAdapter extends FragmentStatePagerAdapter {
     public PagerAdapter(FragmentManager fm) {
         super(fm);
     }
@@ -16,34 +16,34 @@ public class PagerAdapter  extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        Fragment frag=null;
-        switch (position){
+        Fragment frag = null;
+        switch (position) {
             case 0:
-                frag=new TimelineFragment();
+                frag = new TimelineFragment();
                 break;
             case 1:
-                frag=new ProfileFragment();
+                frag = new ProfileFragment();
                 break;
-
         }
         return frag;
     }
+
     @Override
     public int getCount() {
         return 2;
     }
+
     @Override
     public CharSequence getPageTitle(int position) {
         String title = "";
-        switch (position){
+        switch (position) {
             case 0:
-                title="Timeline";
+                title = "Timeline";
                 break;
             case 1:
-                title="Profile";
+                title = "Profile";
                 break;
         }
-
         return title;
     }
 

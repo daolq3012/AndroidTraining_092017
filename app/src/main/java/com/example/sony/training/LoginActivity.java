@@ -14,37 +14,29 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public static final String KEY_EMAIL_TO_MAIN = "KEY_EMAIL_TO_MAIN";
     public static final String KEY_PASSWORD_TO_MAIN = "KEY_PASSWORD_TO_MAIN";
-
     public static final String KEY_EMAIL_FROM_REGISTER = "KEY_EMAIL_FROM_REGISTER";
-
     public static final int REQUEST_CODE_REGISTER = 1;
 
     private Context context;
-
     private EditText edtEmail;
     private EditText edtPass;
-
     private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         context = this;
-
         connectView();
     }
 
     private void connectView() {
         edtEmail = (EditText) findViewById(R.id.edt_email);
         edtPass = (EditText) findViewById(R.id.edt_password);
-
         progressBar = (ProgressBar) findViewById(R.id.login_progress);
 
         findViewById(R.id.btn_login).setOnClickListener(this);
         findViewById(R.id.txt_register).setOnClickListener(this);
-
     }
 
     @Override
