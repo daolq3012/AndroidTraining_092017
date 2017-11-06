@@ -32,9 +32,9 @@ public class ProfileFragment extends Fragment {
         initViews();
         mRecyclerViewProfile.setHasFixedSize(true);
         mRecyclerViewProfile.setNestedScrollingEnabled(false);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         mRecyclerViewProfile.setLayoutManager(layoutManager);
-        profileAdapter = new ProfileAdapter(Data.getListName(),getContext());
+        profileAdapter = new ProfileAdapter(Data.getListNames(),getContext());
         mRecyclerViewProfile.setAdapter(profileAdapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerViewProfile.getContext(),
                 DividerItemDecoration.VERTICAL);
