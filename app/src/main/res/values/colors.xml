@@ -4,4 +4,9 @@
     <color name="colorPrimaryDark">#30ad64</color>
     <color name="colorAccent">#FFF</color>
     <color name="colorWhite">#FFF</color>
+    <color name="colorText">#757575</color>
+    <color name="colorFb">#3b5998</color>
+    <color name="colorTitle">#000</color>
+    <color name="colorBio">#6E6E6E</color>
+    <color name="colorEditProfile">#5F76BF</color>
 </resources>

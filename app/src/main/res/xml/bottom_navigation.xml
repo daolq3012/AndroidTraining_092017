@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_timelines"
+        icon="@drawable/ic_home"
+        title="@string/timelines"
+        activeColor="@color/colorPrimaryDark"
+        />
+    <tab
+        id="@+id/tab_profile"
+        icon="@drawable/ic_person"
+        title="@string/profile"
+        activeColor="@color/colorPrimaryDark"
+        />
+</tabs>

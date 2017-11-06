@@ -48,6 +48,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnLogin:
+                String username = mEdtLoginUsername.getText().toString();
+                String password = mEdtLoginPassword.getText().toString();
                 if(Validate.isPasswordWeak(mEdtLoginPassword)) {
                     builder.setTitle(R.string.password_error_title);
                     builder.setMessage(R.string.password_error_message);
@@ -59,6 +61,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     });
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
+                }  else if (username.equals("tdtruyen") && password.equals("123456")){
+                    Intent intent = new Intent(this,MainActivity.class);
+                    startActivity(intent);
                 }
                 break;
             case R.id.txtLoginSignUp:

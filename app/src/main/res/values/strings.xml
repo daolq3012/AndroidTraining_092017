@@ -14,4 +14,17 @@
     <string name="email_error_title">Email Error</string>
     <string name="email_error_message">Email not valid format!</string>
     <string name="add_avatar">Add\nAvatar</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="timelines">TimeLines</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="content_line">This is content line</string>
+    <string name="time_line">This is time line</string>
+    <string name="name">Trần Truyền</string>
+    <string name="bio">I dont know the key to success, but the key to failure is trying to please everybody</string>
+    <string name="name_line">This is name line</string>
+    <string name="hello">Hello</string>
+
 </resources>

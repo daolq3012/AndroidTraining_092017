@@ -29,7 +29,8 @@
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/sp_20"
             android:text="@string/add_avatar"/>
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgAvatar"
             android:layout_width="@dimen/dp_100"
             android:layout_height="@dimen/dp_100"
             android:layout_gravity="center"
