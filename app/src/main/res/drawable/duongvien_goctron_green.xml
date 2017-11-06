@@ -4,14 +4,14 @@
     <solid android:color="@color/colorGreen" />
 
     <stroke
-        android:width="@string/px_1"
+        android:width="@dimen/px_1"
         android:color="@color/colorWhite" />
 
     <padding
-        android:bottom="@string/dp_10"
-        android:left="@string/dp_10"
-        android:right="@string/dp_10"
-        android:top="@string/dp_10" />
-    <corners android:radius="@string/dp_150dp" />
+        android:bottom="@dimen/dp_10"
+        android:left="@dimen/dp_10"
+        android:right="@dimen/dp_10"
+        android:top="@dimen/dp_10" />
+    <corners android:radius="@dimen/dp_150dp" />
 
 </shape>

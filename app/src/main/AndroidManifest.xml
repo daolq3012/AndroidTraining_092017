@@ -5,21 +5,19 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="[PhongCH]"
+        android:label="@string/admin"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivityCalculate" />
-        <activity android:name=".MainActivityRegister" />
-        <activity android:name=".MainActivityLogin" />
-        <activity android:name=".Test"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
     </application>
 
 </manifest>

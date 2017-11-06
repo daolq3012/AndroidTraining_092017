@@ -4,7 +4,7 @@
 
     <!-- đặt thuộc tính màu và độ rộng của đường viền -->
     <stroke
-        android:width="@string/px_1"
+        android:width="@dimen/px_1"
         android:color="@color/colorWhite" />
 
     <!-- các thuộc tính căn chỉnh-->
@@ -15,6 +15,6 @@
         android:top="10dp" />
 
     <!-- và đây là bán kính đường tròn ở 4 góc -->
-    <corners android:radius="@string/dp_150dp" />
+    <corners android:radius="@dimen/dp_150dp" />
 
 </shape>

@@ -1,66 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/signin"
+    tools:context="com.example.sony.training.RegisterActivity">
 
     <RelativeLayout
+        android:id="@+id/login_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/signin">
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtSignUp"
-            style="@style/background_logo"
-            android:text="@string/text_Signup" />
-
-        <TextView
-            android:id="@+id/txtIntro"
-            style="@style/text_intro_views"
-            android:layout_below="@+id/txtSignUp"
-            android:layout_marginBottom="@string/px_44" />
-
-        <Button
-            android:id="@+id/btnAddPhoto"
-            style="@style/background_views"
+            android:id="@+id/txt_signup"
+            style="@style/text_title_views"
             android:layout_width="wrap_content"
-            android:layout_below="@+id/txtIntro"
-            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_signup"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/px_200" />
+
+        <TextView
+            android:id="@+id/txt_intro"
+            style="@style/text_intro_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txt_signup"
+            android:layout_marginBottom="@dimen/dp_20" />
+
+        <TextView
+            android:id="@+id/txt_addimage"
+            style="@style/background_views"
             android:background="@drawable/vientron"
-            android:text="@string/text_Addphoto" />
+            android:layout_below="@+id/txt_intro"
+            android:text="@string/txt_addphoto"
+            android:textColor="@color/colorWhite" />
 
         <EditText
-            android:id="@+id/edtName"
+            android:id="@+id/edt_nameregister"
             style="@style/background_views"
-            android:layout_below="@+id/btnAddPhoto"
-            android:inputType="textEmailAddress"
-            android:text="@string/text_NameAndSurname" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_addimage"
+            android:text="@string/txt_nameregister" />
 
         <EditText
-            android:id="@+id/edtEmail"
+            android:id="@+id/edt_emailregister"
             style="@style/background_views"
-            android:layout_below="@+id/edtName"
-            android:inputType="textEmailAddress"
-            android:text="@string/text_EmailAddress" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_nameregister"
+            android:text="@string/txt_email" />
 
         <EditText
-            android:id="@+id/edtPhone"
+            android:id="@+id/edt_phone"
             style="@style/background_views"
-            android:layout_below="@+id/edtEmail"
-            android:text="@string/text_Phone" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_emailregister"
+            android:text="@string/txt_phone" />
 
         <EditText
-            android:id="@+id/edtPasswordSignup"
+            android:id="@+id/edt_passregister"
             style="@style/background_views"
-            android:layout_below="@+id/edtPhone"
-            android:inputType="textPassword"
-            android:text="@string/text_Password" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_phone"
+            android:text="@string/txt_passregister" />
 
         <Button
-            android:id="@+id/btnRegisterSignup"
             style="@style/background_views"
-            android:layout_below="@+id/edtPasswordSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_passregister"
             android:background="@drawable/duongvien_goctron_green"
-            android:text="@string/text_Register" />
-
+            android:text="Register" />
     </RelativeLayout>
-</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

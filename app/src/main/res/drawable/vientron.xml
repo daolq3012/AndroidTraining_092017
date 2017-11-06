@@ -3,7 +3,7 @@
     android:shape="oval">
 
     <stroke
-        android:width="@string/px_1"
+        android:width="@dimen/px_1"
         android:color="@color/colorWhite" >
     </stroke>
 

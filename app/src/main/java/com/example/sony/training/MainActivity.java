@@ -1,34 +1,31 @@
 package com.example.sony.training;
 
-import android.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity implements FirstFragmentEventListener{
+public class MainActivity extends AppCompatActivity {
+    ViewPager pager;
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+        pager= (ViewPager) findViewById(R.id.view_pager);
+        tabLayout= (TabLayout) findViewById(R.id.tab_layout);
 
-        FirstFragment firstFragment = new FirstFragment();
-        getFragmentManager().beginTransaction().add(R.id.container_first_fragment,firstFragment).commitAllowingStateLoss();
+        FragmentManager manager=getSupportFragmentManager();
+        PagerAdapter adapter=new PagerAdapter(manager);
+        pager.setAdapter(adapter);
 
-        SecondFragment secondFragment = new SecondFragment();
-        getFragmentManager().beginTransaction().add(R.id.container_second_fragment, secondFragment).commitAllowingStateLoss();
+        tabLayout.setupWithViewPager(pager);
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        tabLayout.setTabsFromPagerAdapter(adapter);
     }
-
-    @Override
-    public void onButtonClicked() {
-        if (isFirstFragmentAdded()){
-            return;
-        }
-        FirstFragment firstFragment = new FirstFragment();
-        getFragmentManager().beginTransaction().replace(R.id.container_second_fragment, firstFragment).commitAllowingStateLoss();
-    }
-
-    private boolean isFirstFragmentAdded(){
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.container_second_fragment);
-        return fragment instanceof FirstFragment;
-    }
+    
 }

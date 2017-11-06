@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Base.TextAppearance.AppCompat.Menu">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
@@ -19,9 +19,16 @@
         <item name="android:gravity">center</item>
         <item name="android:text">@string/text_Intro</item>
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:layout_below">@+id/txtWelcome</item>
         <item name="android:layout_alignParentLeft">true</item>
 
+    </style>
+
+    <style name="text_title_views">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/dp_60</item>
+        <item name="android:layout_marginTop">@dimen/px_100</item>
+        <item name="android:layout_marginBottom">@dimen/px_20</item>
+        <item name="android:layout_centerHorizontal">true</item>
     </style>
 
     <style name="background_views">
@@ -29,9 +36,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/duongvien_goctron</item>
-        <item name="android:layout_marginLeft">@string/px_85</item>
-        <item name="android:layout_marginRight">@string/px_85</item>
-        <item name="android:layout_marginBottom">@string/px_44</item>
+        <item name="android:layout_marginLeft">@dimen/px_85</item>
+        <item name="android:layout_marginRight">@dimen/px_85</item>
+        <item name="android:textSize">@dimen/dp_30</item>
+        <item name="android:layout_marginBottom">@dimen/px_44</item>
         <item name="android:textColor">@color/colorWhite</item>
 
     </style>
@@ -45,7 +53,7 @@
     <style name="background_views_none">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingRight">@string/px_33</item>
+        <item name="android:paddingRight">@dimen/px_33</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
@@ -53,21 +61,60 @@
     <style name="background_none_right">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingLeft">@string/px_33</item>
+        <item name="android:paddingLeft">@dimen/px_33</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/colorWhite</item>
     </style>
+
     <style name="background_logo">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textAlignment">center</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_centerHorizontal">true</item>
-        <item name="android:layout_marginTop">@string/px_300</item>
-        <item name="android:layout_marginBottom">@string/px_44</item>
+        <item name="android:layout_marginTop">@dimen/px_300</item>
+        <item name="android:layout_marginBottom">@dimen/px_44</item>
         <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textSize">@string/dp_50</item>
+        <item name="android:textSize">@dimen/dp_50</item>
     </style>
 
+    <style name="edtEmailLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/txt_email</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginBottom">@dimen/dp_10</item>
+        <item name="android:layout_marginLeft">@dimen/px_200</item>
+        <item name="android:layout_marginRight">@dimen/px_200</item>
+        <item name="android:background">@drawable/duongvien_goctron</item>
+
+    </style>
+
+    <style name="edtPassLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/px_200</item>
+        <item name="android:layout_marginRight">@dimen/px_200</item>
+        <item name="android:background">@drawable/duongvien_goctron</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/txt_passlogin</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="firstActivityEdittext" parent="firstActivityTextView">
+        <item name="android:layout_marginTop">@dimen/dp_15</item>
+        <item name="android:padding">@dimen/dp_15</item>
+        <item name="android:background">@drawable/duongvien_goctron</item>
+        <item name="android:textColorHint">@color/colorWhite</item>
+    </style>
+
+    <style name="firstActivityTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <item name="txtWelcome" type="id">Welcome</item>
 
 </resources>
