@@ -37,7 +37,7 @@
             android:width="@dimen/dp_100"
             android:height="@dimen/dp_100"
             android:layout_centerInParent="true"/>
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatarImageView"
             style="@style/firstActivityTextView"
             android:layout_width="@dimen/dp_100"
