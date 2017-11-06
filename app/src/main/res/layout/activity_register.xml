@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signin"
+    tools:context="com.example.sony.training.RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_signup"
+            style="@style/text_title_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_signup"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/px_200" />
+
+        <TextView
+            android:id="@+id/txt_intro"
+            style="@style/text_intro_views"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txt_signup"
+            android:layout_marginBottom="@dimen/dp_20" />
+
+        <TextView
+            android:id="@+id/txt_addimage"
+            style="@style/background_views"
+            android:layout_below="@+id/txt_intro"
+            android:background="@drawable/vientron"
+            android:text="@string/txt_addphoto"
+            android:textColor="@color/colorWhite" />
+
+        <EditText
+            android:id="@+id/edt_nameregister"
+            style="@style/background_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_addimage"
+            android:text="@string/txt_nameregister" />
+
+        <EditText
+            android:id="@+id/edt_emailregister"
+            style="@style/background_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_nameregister"
+            android:text="@string/txt_email" />
+
+        <EditText
+            android:id="@+id/edt_phone"
+            style="@style/background_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_emailregister"
+            android:text="@string/txt_phone" />
+
+        <EditText
+            android:id="@+id/edt_passregister"
+            style="@style/background_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_phone"
+            android:text="@string/txt_passregister" />
+
+        <Button
+            style="@style/background_views"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_passregister"
+            android:background="@drawable/duongvien_goctron_green"
+            android:text="Register" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
