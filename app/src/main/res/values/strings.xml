@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="name_line">This is name line</string>
+    <string name="phone_number_line">This is phone number line</string>
 </resources>
