@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -43,14 +42,14 @@
             android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
-            android:text="@string/email_address" />
+            android:hint="@string/email_address" />
 
         <EditText
             android:id="@+id/edt_password"
             style="@style/background_views"
             android:layout_below="@+id/edt_email"
             android:layout_centerHorizontal="true"
-            android:text="@string/text_Password" />
+            android:hint="@string/text_Password" />
 
         <Button
             android:id="@+id/btn_login"
