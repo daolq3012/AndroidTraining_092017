@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context="com.example.sony.training.MainActivity">
+    tools:context="com.example.sony.training.LoginActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
-        android:textSize="@dimen/sp_30"
         android:layout_centerInParent="true"
-        android:textStyle="bold"
-        android:textColor="@color/colorBlack"/>
+        android:text="@string/login"
+        android:onClick="OnButtonLoginClick"
+        android:textAllCaps="false"/>
 
 </RelativeLayout>
