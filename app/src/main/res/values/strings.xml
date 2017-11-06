@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="hello">Xin chào</string>
+    <string name="login_success">Login Success</string>
 </resources>
