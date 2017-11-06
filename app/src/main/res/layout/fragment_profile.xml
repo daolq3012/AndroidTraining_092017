@@ -17,7 +17,7 @@
         <ImageView
             android:layout_marginTop="40dp"
             android:layout_centerHorizontal="true"
-            android:id="@+id/avatarProfileImageView"
+            android:id="@+id/avatarProfile"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:background="@drawable/daidien"/>
@@ -29,8 +29,8 @@
             android:text="@string/userName"
             android:textColor="#000000"
             android:textSize="30sp"
-            android:layout_below="@+id/avatarProfileImageView"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_below="@+id/avatarProfile" />
         <TextView
             android:id="@+id/statusTextView"
             android:background="#e1d1d1"
@@ -39,8 +39,8 @@
             android:text="@string/status"
             android:textColor="#000000"
             android:textSize="20sp"
-            android:layout_below="@id/userNameTextView"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_below="@id/userNameTextView"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/profileRecyclerView"
