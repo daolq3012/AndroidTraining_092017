@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab icon="@drawable/home.png"
+        title = "trangchu"
+        id = "@+id/usename"/>
+    <tab
+        icon = "">
+
+
+
+    </tab>
+
+
+
+</tabs>

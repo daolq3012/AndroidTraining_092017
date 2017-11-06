@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="photo">Photo</string>
+    <string name="nhap_user_name">nhap User name</string>
+    <string name="login">Login</string>
+    <string name="wel_com">Wel com</string>
 </resources>
