@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.example.sony.training.MainActivity">
+    tools:context="com.example.sony.training.LoginSuccessActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
+        android:text="@string/login_success"
         android:textSize="@dimen/sp_20"/>
 
 </LinearLayout>
