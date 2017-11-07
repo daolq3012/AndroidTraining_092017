@@ -1,6 +1,7 @@
 package com.example.sony.training;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,7 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
     private EditText mEdtEmail, mEdtPassword;
     private Button mBtnLogin;
     private TextView mTxtRegister;
+    private SharedPreferences  mPreferences;
     private FieldCheckValidate fieldCheckValidate = new FieldCheckValidate();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,11 @@ public class LoginForm extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()){
             case R.id.login_Button:
                 if (fieldCheckValidate.checkLogin(mEdtEmail,mEdtPassword,this)){
+                    mPreferences = getApplicationContext().getSharedPreferences(Constant.SHARE_PREF_NAME, MODE_PRIVATE);
+                    SharedPreferences.Editor editor = mPreferences.edit();
+                    editor.putBoolean(Constant.SHARE_PREF_LOGIN_SUCCESS, true);
+                    editor.commit();
+                    finish();
                     startActivity(new Intent(this, MainActivity.class));
                 }
                 break;

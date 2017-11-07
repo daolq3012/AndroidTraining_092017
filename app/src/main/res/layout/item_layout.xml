@@ -22,6 +22,7 @@
             android:padding="@dimen/dp_5"
             android:textStyle="bold"
             android:textSize="@dimen/sp_24"
+            android:text="Chuong"
             android:textColor="@color/colorBlack"
             android:layout_weight="1"/>
         <TextView
@@ -29,6 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/dp_5"
+            android:text="hello"
             android:textStyle="bold"
             android:textSize="@dimen/sp_24"
             android:textColor="@color/colorBlack"

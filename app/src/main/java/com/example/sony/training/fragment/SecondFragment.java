@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.sony.training.ProfileRecyclerViewAdapter;
+import com.example.sony.training.adapter.ProfileRecyclerViewAdapter;
 import com.example.sony.training.R;
 import com.example.sony.training.User;
 
@@ -51,6 +51,7 @@ public class SecondFragment extends Fragment {
 
     private List<User> createData(){
         users = new ArrayList<>();
+        users.add(new User("ITEM_TYPE_HEADER",""));
         users.add(new User("Chuong","Hello"));
         users.add(new User("Truyen","Hello"));
         users.add(new User("Nguyen","Hi"));
