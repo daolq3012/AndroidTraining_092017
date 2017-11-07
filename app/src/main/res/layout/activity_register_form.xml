@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.sony.training.RegisterForm">
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/dp_50"
+        android:paddingRight="@dimen/dp_50"
+        android:paddingBottom="@dimen/dp_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_marginTop="@dimen/dp_20"
+            android:id="@+id/signupTextView"
+            style="@style/firstActivityTextView"
+            android:text="@string/signup"
+            android:textSize="@dimen/sp_50"/>
+        <TextView
+            style="@style/firstActivityTextView"
+            android:layout_marginTop="@dimen/dp_10"
+            android:id="@+id/describeSignupTextView"
+            android:layout_below="@+id/signupTextView"
+            android:text="@string/describe_register"
+            android:textSize="@dimen/sp_15"/>
+        <TextView
+            android:id="@+id/addPhotoTextView"
+            android:layout_below="@+id/describeSignupTextView"
+            android:layout_width="wrap_content"
+            android:text="@string/addPhoto"
+            style="@style/firstActivityTextView"
+            android:textSize="@dimen/sp_20"
+            android:width="@dimen/dp_100"
+            android:height="@dimen/dp_100"
+            android:layout_centerInParent="true"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarImageView"
+            style="@style/firstActivityTextView"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_below="@id/describeSignupTextView"
+            android:background="@drawable/circle_shape"
+            android:layout_centerInParent="true"
+            />
+
+        <EditText
+            style="@style/firstActivityEdittext"
+            android:id="@+id/nameSignupEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/addPhotoTextView"
+            android:layout_marginTop="13dp"
+            android:hint="@string/hint_name"
+            android:inputType="textEmailAddress" />
+        <EditText
+            style="@style/firstActivityEdittext"
+            android:id="@+id/emailSignupEditText"
+            android:layout_below="@+id/nameSignupEditText"
+            android:inputType="textEmailAddress"
+            android:hint="@string/hint_email"/>
+        <EditText
+            style="@style/firstActivityEdittext"
+            android:id="@+id/phoneSignupEditText"
+            android:layout_below="@+id/emailSignupEditText"
+            android:inputType="textPassword"
+            android:hint="@string/hint_phone"/>
+        <EditText
+            style="@style/firstActivityEdittext"
+            android:id="@+id/passwordSignupEditText"
+            android:layout_below="@+id/phoneSignupEditText"
+            android:inputType="textPassword"
+            android:hint="@string/hint_password"/>
+        <Button
+            style="@style/firstActivityEdittext"
+            android:text="@string/login"
+            android:background="@drawable/button_shape"
+            android:id="@+id/register_Button"
+            android:layout_below="@+id/passwordSignupEditText" />
+
+    </RelativeLayout>
+</ScrollView>
