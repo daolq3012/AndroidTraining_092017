@@ -51,7 +51,7 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileH
 
             public ProfileHolder(View itemView) {
                 super(itemView);
-                name = (TextView) itemView.findViewById(R.id.item_time);
+                name = (TextView) itemView.findViewById(R.id.item_content);
             }
         }
 }

@@ -33,13 +33,12 @@ public class TimelinesFragment extends Fragment {
 
         mRecyclerViewTimelines.setHasFixedSize(true);
         mRecyclerViewTimelines.setNestedScrollingEnabled(false);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerViewTimelines.setLayoutManager(layoutManager);
         timelinesAdapter = new TimelinesAdapter(Data.getListTimeline(),getContext());
         mRecyclerViewTimelines.setAdapter(timelinesAdapter);
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(mRecyclerViewTimelines.getContext(),
-                DividerItemDecoration.VERTICAL);
-        mRecyclerViewTimelines.addItemDecoration(dividerItemDecoration);
+
         return view;
     }
 

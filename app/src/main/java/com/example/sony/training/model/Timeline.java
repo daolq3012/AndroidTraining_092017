@@ -5,33 +5,33 @@ package com.example.sony.training.model;
  */
 
 public class Timeline {
-    private int avatar;
-    private String content;
+    private int androidImages;
+    private String nameVersion;
     private String time;
 
     public Timeline() {
     }
 
-    public Timeline(int avatar, String content, String time) {
-        this.avatar = avatar;
-        this.content = content;
+    public Timeline(int androidImages, String nameVersion, String time) {
+        this.androidImages = androidImages;
+        this.nameVersion = nameVersion;
         this.time = time;
     }
 
-    public int getAvatar() {
-        return avatar;
+    public int getAndroidImages() {
+        return androidImages;
     }
 
-    public void setAvatar(int avatar) {
-        this.avatar = avatar;
+    public void setAndroidImages(int androidImages) {
+        this.androidImages = androidImages;
     }
 
-    public String getContent() {
-        return content;
+    public String getNameVersion() {
+        return nameVersion;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setNameVersion(String nameVersion) {
+        this.nameVersion = nameVersion;
     }
 
     public String getTime() {

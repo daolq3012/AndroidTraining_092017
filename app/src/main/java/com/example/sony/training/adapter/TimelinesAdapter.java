@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -41,9 +42,8 @@ public class TimelinesAdapter extends RecyclerView.Adapter<TimelinesAdapter.Time
     @Override
     public void onBindViewHolder(TimelinesHolder holder, int position) {
         Timeline timeline = listItem.get(position);
-        Glide.with(context).load(timeline.getAvatar()).into(holder.avatar);
-        holder.content.setText(timeline.getContent());
-        holder.time.setText(timeline.getTime());
+        Glide.with(context).load(timeline.getAndroidImages()).into(holder.mImgAndroidImage);
+        holder.mTxtNameVersion.setText(timeline.getNameVersion());
     }
 
     @Override
@@ -52,15 +52,14 @@ public class TimelinesAdapter extends RecyclerView.Adapter<TimelinesAdapter.Time
     }
 
     class TimelinesHolder extends RecyclerView.ViewHolder {
-        private CircleImageView avatar;
-        private TextView time,content;
+        private ImageView mImgAndroidImage;
+        private TextView mTxtNameVersion;
 
         public TimelinesHolder(View itemView) {
             super(itemView);
 
-            avatar = (CircleImageView) itemView.findViewById(R.id.item_avatar);
-            content = (TextView) itemView.findViewById(R.id.item_content);
-            time = (TextView) itemView.findViewById(R.id.item_time);
+            mImgAndroidImage = (ImageView) itemView.findViewById(R.id.item_android_image);
+            mTxtNameVersion = (TextView) itemView.findViewById(R.id.item_name_version);
         }
     }
 }

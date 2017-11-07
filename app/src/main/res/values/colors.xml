@@ -9,4 +9,5 @@
     <color name="colorTitle">#000</color>
     <color name="colorBio">#6E6E6E</color>
     <color name="colorEditProfile">#5F76BF</color>
+    <color name="splash">#00C853</color>
 </resources>

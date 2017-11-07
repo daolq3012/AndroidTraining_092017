@@ -1,7 +1,9 @@
 package com.example.sony.training;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -18,6 +20,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private Button mBtnLogin;
     private TextView mTxtLoginSignUp;
     private AlertDialog.Builder builder;
+
+    private SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mTxtLoginSignUp = (TextView) findViewById(R.id.txtLoginSignUp);
 
         builder = new AlertDialog.Builder(LoginActivity.this,R.style.MyDialogTheme);
+        mSharedPreferences = getSharedPreferences(Constants.SHARE_PREF_NAME, Context.MODE_PRIVATE);
     }
 
     private void initEvents() {
@@ -62,8 +67,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     AlertDialog alertDialog = builder.create();
                     alertDialog.show();
                 }  else if (username.equals("tdtruyen") && password.equals("123456")){
+                    SharedPreferences.Editor editor = mSharedPreferences.edit();
+                    editor.putBoolean(Constants.SHARE_PREF_KEY_LOGIN,true);
+                    editor.commit();
+
                     Intent intent = new Intent(this,MainActivity.class);
                     startActivity(intent);
+
+                    finish();
                 }
                 break;
             case R.id.txtLoginSignUp:
