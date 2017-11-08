@@ -9,5 +9,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        new FetchDataFromUrl().execute("https://api.github.com/search/users?per_page=2&q=abc");
     }
 }
