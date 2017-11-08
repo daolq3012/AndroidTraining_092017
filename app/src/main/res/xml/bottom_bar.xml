@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab icon="@drawable/ic_home"
+        id="@+id/timelines"
+        title="@string/time_lines"/>
+    <tab icon="@drawable/ic_account"
+        id="@+id/profile"
+        title="@string/profile"/>
+</tabs>

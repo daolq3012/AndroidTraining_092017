@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#565353">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relatver">
+
+        <ImageView
+            android:id="@+id/coverImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_150"
+            android:background="@drawable/background"/>
+        <ImageView
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/avatarProfile"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_150"
+            android:background="@drawable/daidien"/>
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:background="#eae0e0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/userName"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_30"
+            android:gravity="center"
+            android:layout_below="@+id/avatarProfile" />
+        <TextView
+            android:id="@+id/statusTextView"
+            android:background="#e1d1d1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            android:textColor="#000000"
+            android:textSize="@dimen/sp_20"
+            android:gravity="center"
+            android:layout_below="@id/userNameTextView"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relatver">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/profileRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>

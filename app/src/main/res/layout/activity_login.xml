@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/welcome"
+        android:textColor="#ffffff"
+        android:textSize="62sp"/>
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/longtext"
+        android:fontFamily="sans-serif-thin"
+
+        android:textColor="#ffffff" />
+
+    <EditText
+        android:id="@+id/tv_lg_email"
+        android:layout_width="320dp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_height="66dp"
+        android:inputType="textEmailAddress"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_background"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/tv_lg_pass"
+        android:layout_width="320dp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_height="66dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edt_background"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:hint="@string/pass"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="320dp"
+        android:layout_height="66dp"
+        android:fontFamily="sans-serif-thin"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_background"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin" />
+        <View
+            android:id="@+id/view"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_pass"
+            android:layout_width="2dp"
+            android:layout_height="27dp"
+            android:background="#ffffff" />
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_toRightOf="@+id/view"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
