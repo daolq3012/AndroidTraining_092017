@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.sony.training.OnRecyclerViewItemClickListener;
 import com.example.sony.training.R;
-import com.example.sony.training.model.User;
+import com.example.sony.training.model.Item;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class GitHubUserAdapter extends RecyclerView.Adapter {
 
     private Context mContext;
     private OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener;
-    private List<User> mUsers = new ArrayList<>();
+    private List<Item> mUsers = new ArrayList<>();
 
     public GitHubUserAdapter(Context context) {
         mContext = context;
@@ -48,7 +48,7 @@ public class GitHubUserAdapter extends RecyclerView.Adapter {
         mOnRecyclerViewItemClickListener = onRecyclerViewItemClickListener;
     }
 
-    public void updateData(List<User> users) {
+    public void updateData(List<Item> users) {
         if (users == null) {
             return;
         }
@@ -59,7 +59,7 @@ public class GitHubUserAdapter extends RecyclerView.Adapter {
     static class ItemNewFeedViewHolder extends RecyclerView.ViewHolder {
 
         private OnRecyclerViewItemClickListener mOnRecyclerViewItemClickListener;
-        private User mUser;
+        private Item mUser;
         private TextView userIdTextView, userNameTextView;
 
         public ItemNewFeedViewHolder(View itemView,
@@ -76,7 +76,7 @@ public class GitHubUserAdapter extends RecyclerView.Adapter {
             });
         }
 
-        public void fillData(User user) {
+        public void fillData(Item user) {
             mUser = user;
             userIdTextView.setText(user.getId().toString());
             userNameTextView.setText(user.getLogin());

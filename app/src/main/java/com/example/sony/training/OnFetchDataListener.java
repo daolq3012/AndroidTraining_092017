@@ -1,6 +1,6 @@
 package com.example.sony.training;
 
-import com.example.sony.training.model.User;
+import com.example.sony.training.model.Item;
 import java.util.List;
 
 /**
@@ -8,5 +8,5 @@ import java.util.List;
  */
 
 public interface OnFetchDataListener {
-    void onFetchDataSuccess(List<User> users);
+    void onFetchDataSuccess(List<Item> users);
 }

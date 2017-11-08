@@ -7,7 +7,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.sony.training.Constant;
 import com.example.sony.training.R;
-import com.example.sony.training.model.User;
+import com.example.sony.training.model.Item;
 
 public class UserDetailActivity extends Activity {
 
@@ -23,7 +23,7 @@ public class UserDetailActivity extends Activity {
         mGitHubUrlTextView = (TextView) findViewById(R.id.githubUrlTextView);
         mAvatarImageView = (ImageView) findViewById(R.id.avatarImageView);
 
-        User user = getIntent().getParcelableExtra(Constant.EXTRA_USER);
+        Item user = getIntent().getParcelableExtra(Constant.EXTRA_USER);
 
         mUserNameTextView.setText(user.getLogin());
         mGitHubUrlTextView.setText(user.getHtmlUrl());

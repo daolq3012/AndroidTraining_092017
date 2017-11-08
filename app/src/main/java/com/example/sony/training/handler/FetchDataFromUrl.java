@@ -2,8 +2,8 @@ package com.example.sony.training.handler;
 
 import android.os.AsyncTask;
 import com.example.sony.training.OnFetchDataListener;
-import com.example.sony.training.model.User;
-import com.example.sony.training.model.UsersList;
+import com.example.sony.training.model.GithubUser;
+import com.example.sony.training.model.Item;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,7 @@ import org.json.JSONException;
  * Created by daolq on 11/7/17.
  */
 
-public class FetchDataFromUrl extends AsyncTask<String, Void, List<User>> {
+public class FetchDataFromUrl extends AsyncTask<String, Void, List<Item>> {
 
     private OnFetchDataListener mOnFetchDataListener;
 
@@ -31,11 +31,11 @@ public class FetchDataFromUrl extends AsyncTask<String, Void, List<User>> {
     }
 
     @Override
-    protected List<User> doInBackground(String... strings) {
+    protected List<Item> doInBackground(String... strings) {
 
         try {
-            String json = getJSONObjectFromURL(strings[0]);
-            UsersList usersList = new Gson().fromJson(json,UsersList.class);
+            String json = getJSONStringFromURL(strings[0]);
+            GithubUser usersList = new Gson().fromJson(json,GithubUser.class);
             return usersList.getItems();
         } catch (IOException e) {
             e.printStackTrace();
@@ -46,12 +46,12 @@ public class FetchDataFromUrl extends AsyncTask<String, Void, List<User>> {
     }
 
     @Override
-    protected void onPostExecute(List<User> users) {
+    protected void onPostExecute(List<Item> users) {
         super.onPostExecute(users);
         mOnFetchDataListener.onFetchDataSuccess(users);
     }
 
-    private String getJSONObjectFromURL(String urlString) throws IOException, JSONException {
+    private String getJSONStringFromURL(String urlString) throws IOException, JSONException {
 
         HttpURLConnection urlConnection = null;
 
