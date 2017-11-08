@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="keyword">Từ khoá</string>
+    <string name="soluong">Số lượng hiển thị</string>
+    <string name="search">Search</string>
 
     <array name="spinner_email">
         <item>Gmail</item>
