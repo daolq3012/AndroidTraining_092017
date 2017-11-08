@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="keyword">Keyword</string>
+    <string name="limit_number">Limit Number</string>
+    <string name="search">Search</string>
 </resources>
