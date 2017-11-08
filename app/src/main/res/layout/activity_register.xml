@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textColor="#ffffff"
         android:textSize="52sp" />
 
@@ -21,8 +21,7 @@
         android:gravity="center"
         android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-thin"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Donec auctor neque sed pretium luctus"
+        android:text="@string/longtext"
         android:textColor="#ffffff" />
 
     <RelativeLayout
@@ -32,15 +31,14 @@
 
         <TextView
             android:id="@+id/tv_addphoto"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="@dimen/dp_15"
             android:background="@drawable/bg_circle"
             android:fontFamily="sans-serif-thin"
             android:gravity="center"
-            android:text="Add
-Photo"
+            android:text="@string/addphoto"
             android:textColor="#ffffff"
 
             android:textSize="20sp" />
@@ -54,79 +52,77 @@ Photo"
                     android:background="@drawable/bg_circle"
                     android:fontFamily="sans-serif-thin"
                     android:gravity="center"
-                    android:text="Add
-Photo"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
     </RelativeLayout>
 
     <EditText
         android:id="@+id/tv_name"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="@dimen/dp_50"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/edt_background"
         android:fontFamily="sans-serif-thin"
         android:gravity="center"
         android:hint="Name and Surname"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
-        android:textSize="25sp" />
+        android:textSize="@dimen/sp_25" />
 
     <EditText
         android:id="@+id/tv_email"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="@dimen/dp_50"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/edt_background"
         android:fontFamily="sans-serif-thin"
         android:gravity="center"
-        android:hint="Email Address"
+        android:hint="@string/email"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
-        android:textSize="25sp" />
+        android:textSize="@dimen/sp_25" />
 
     <EditText
         android:id="@+id/tv_phone"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="@dimen/dp_50"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/edt_background"
         android:fontFamily="sans-serif-thin"
         android:gravity="center"
-        android:hint="Phone"
+        android:hint="@string/phone"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
-        android:textSize="25sp" />
+        android:textSize="@dimen/sp_25" />
 
     <EditText
         android:id="@+id/tv_password"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="@dimen/dp_50"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/edt_background"
         android:fontFamily="sans-serif-thin"
         android:gravity="center"
-        android:hint="Password"
+        android:hint="@string/pass"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
-        android:textSize="25sp" />
+        android:textSize="@dimen/sp_25" />
 
     <Button
         android:id="@+id/btn_register"
-        android:layout_width="320dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/dp_320"
+        android:layout_height="@dimen/dp_50"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dp_10"
         android:background="@drawable/btn_background"
         android:fontFamily="sans-serif-thin"
         android:text="Register"
         android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:textSize="25sp" />
+        android:textSize="@dimen/sp_25" />
 
 </LinearLayout>

@@ -1,6 +1,8 @@
 package com.example.sony.training;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +16,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText mPassword;
     private Button mLogin;
     private TextView mRegister;
-    private View v;
+    private SharedPreferences mSharedPreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void initViews() {
+        mSharedPreferences = getApplicationContext().getSharedPreferences(Constants.SHARE_PREF_NAME, Context.MODE_PRIVATE);
+
         mEmail = (EditText) findViewById(R.id.tv_lg_email);
         mPassword = (EditText) findViewById(R.id.tv_lg_pass);
         mLogin = (Button) findViewById(R.id.btn_login);
@@ -58,6 +63,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String pass = mPassword.getText().toString();
         if (mail.equals("thanhthang@gmail.com")
                 && pass.equals("thanhthang")){
+            SharedPreferences.Editor editor = mSharedPreferences.edit();
+            editor.putBoolean(Constants.SHARE_KEY_PREF_LOGIN, true);
+            editor.commit();
+
+            finish();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         } else {
