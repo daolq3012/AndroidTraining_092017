@@ -1,5 +1,6 @@
 package com.example.sony.training.model;
 
+import android.content.Context;
 import com.example.sony.training.R;
 
 import java.util.ArrayList;
@@ -39,8 +40,15 @@ public class Data {
         return listItem;
     }
 
-    public static List<Person> getListNames() {
-        List<Person> listItem = new ArrayList<>();
+    public static UserProfile getUserProfile() {
+        UserProfile userProfile = new UserProfile(R.drawable.cover, R.drawable.avt5, "Trần Truyền",
+                "I dont know the key to success, but the key to failure is trying to please everybody");
+        return userProfile;
+    }
+
+    public static List<Object> getListItem() {
+        List<Object> listItem = new ArrayList<>();
+        listItem.add(getUserProfile());
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < listNames.length; j++) {
                 Person item = new Person();
