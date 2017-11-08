@@ -24,7 +24,7 @@ public class SecondFragment extends Fragment {
 
     private RecyclerView mRvProfile;
     private ProfileRecyclerViewAdapter profileRecyclerViewAdapter;
-    private List<User> users;
+    private List<Object> users;
 
     public SecondFragment() {
         // Required empty public constructor
@@ -49,9 +49,9 @@ public class SecondFragment extends Fragment {
         return v;
     }
 
-    private List<User> createData(){
+    private List<Object> createData(){
         users = new ArrayList<>();
-        users.add(new User("ITEM_TYPE_HEADER",""));
+        users.add(new String("ITEM_TYPE_HEADER"));
         users.add(new User("Chuong","Hello"));
         users.add(new User("Truyen","Hello"));
         users.add(new User("Nguyen","Hi"));

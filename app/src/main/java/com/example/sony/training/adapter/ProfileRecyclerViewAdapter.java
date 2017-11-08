@@ -16,10 +16,10 @@ import java.util.List;
  */
 
 public class ProfileRecyclerViewAdapter extends RecyclerView.Adapter<ProfileRecyclerViewAdapter.RecyclerViewHolder> {
-    private List<User> users =  new ArrayList<>();
+    private List<Object> users =  new ArrayList<>();
     public static final int ITEM_TYPE_NORMAL = 0;
     public static final int ITEM_TYPE_HEADER = 1;
-    public ProfileRecyclerViewAdapter(List<User> users) {
+    public ProfileRecyclerViewAdapter(List<Object> users) {
         this.users = users;
     }
 
@@ -40,8 +40,9 @@ public class ProfileRecyclerViewAdapter extends RecyclerView.Adapter<ProfileRecy
         final int itemType = getItemViewType(position);
 
         if (itemType == ITEM_TYPE_NORMAL) {
-            holder.mTxtName.setText(users.get(position).getName());
-            holder.mTxtHello.setText(users.get(position).getHello());
+            User user = (User) users.get(position);
+            holder.mTxtName.setText(user.getName());
+            holder.mTxtHello.setText(user.getHello());
         }
 
     }
@@ -53,7 +54,7 @@ public class ProfileRecyclerViewAdapter extends RecyclerView.Adapter<ProfileRecy
 
     @Override
     public int getItemViewType(int position) {
-        if (users.get(position).getName().equals("ITEM_TYPE_HEADER")) {
+        if (users.get(position) instanceof String) {
             return ITEM_TYPE_HEADER;
         } else {
             return ITEM_TYPE_NORMAL;
