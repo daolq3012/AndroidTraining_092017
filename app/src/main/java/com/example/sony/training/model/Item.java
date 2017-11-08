@@ -1,9 +1,11 @@
 package com.example.sony.training.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Item {
+public class Item implements Parcelable {
 
     @SerializedName("login")
     @Expose
@@ -59,6 +61,85 @@ public class Item {
     @SerializedName("score")
     @Expose
     private Double score;
+
+    protected Item(Parcel in) {
+        login = in.readString();
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readInt();
+        }
+        avatarUrl = in.readString();
+        gravatarId = in.readString();
+        url = in.readString();
+        htmlUrl = in.readString();
+        followersUrl = in.readString();
+        followingUrl = in.readString();
+        gistsUrl = in.readString();
+        starredUrl = in.readString();
+        subscriptionsUrl = in.readString();
+        organizationsUrl = in.readString();
+        reposUrl = in.readString();
+        eventsUrl = in.readString();
+        receivedEventsUrl = in.readString();
+        type = in.readString();
+        byte tmpSiteAdmin = in.readByte();
+        siteAdmin = tmpSiteAdmin == 0 ? null : tmpSiteAdmin == 1;
+        if (in.readByte() == 0) {
+            score = null;
+        } else {
+            score = in.readDouble();
+        }
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(login);
+        if (id == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeInt(id);
+        }
+        dest.writeString(avatarUrl);
+        dest.writeString(gravatarId);
+        dest.writeString(url);
+        dest.writeString(htmlUrl);
+        dest.writeString(followersUrl);
+        dest.writeString(followingUrl);
+        dest.writeString(gistsUrl);
+        dest.writeString(starredUrl);
+        dest.writeString(subscriptionsUrl);
+        dest.writeString(organizationsUrl);
+        dest.writeString(reposUrl);
+        dest.writeString(eventsUrl);
+        dest.writeString(receivedEventsUrl);
+        dest.writeString(type);
+        dest.writeByte((byte) (siteAdmin == null ? 0 : siteAdmin ? 1 : 2));
+        if (score == null) {
+            dest.writeByte((byte) 0);
+        } else {
+            dest.writeByte((byte) 1);
+            dest.writeDouble(score);
+        }
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Item> CREATOR = new Creator<Item>() {
+        @Override
+        public Item createFromParcel(Parcel in) {
+            return new Item(in);
+        }
+
+        @Override
+        public Item[] newArray(int size) {
+            return new Item[size];
+        }
+    };
 
     public String getLogin() {
         return login;
