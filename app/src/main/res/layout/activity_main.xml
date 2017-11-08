@@ -1,63 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4762da"
-
     tools:context="com.example.sony.training.MainActivity">
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/layouttop"
+        android:id="@+id/recycler_view"
+        ></android.support.v7.widget.RecyclerView>
 
-        >
-        <ImageView
-            android:id="@+id/hinhdaidien"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:weightSum="4"
-        android:layout_centerInParent="true"
-        android:id="@+id/layouttong">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="googel.com"
-            android:id="@+id/google"
-            />
-        <Button
-            android:id="@+id/photo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/photo"
-            />
-        <Button
-            android:id="@+id/laydulieu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="lay du lieu "/>
-        <Button
-            android:id="@+id/camera"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Camera"/>
-
-
-
-
-    </LinearLayout>
-
-
-
-</RelativeLayout>
+</LinearLayout>
