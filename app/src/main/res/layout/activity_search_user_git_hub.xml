@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_10"
+    tools:context="com.example.sony.training.SearchUserGitHubActivity"
+    >
+
+    <TextView
+        android:id="@+id/keyWordTextView"
+        android:text="@string/keyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        />
+    <EditText
+        android:id="@+id/keyWordEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/keyWordTextView"
+        android:hint="@string/username"/>
+    <TextView
+        android:id="@+id/numberDisplayTextView"
+        android:layout_below="@+id/keyWordEdittext"
+        android:text="@string/number_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"
+        />
+    <EditText
+        android:id="@+id/numberDisplayEdittext"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberDisplayTextView"
+        android:hint="@string/username"/>
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/numberDisplayEdittext"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_24"/>
+
+
+</RelativeLayout>

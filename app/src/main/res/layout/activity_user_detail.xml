@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sony.training.UserDetailActivity"
+    >
+    
+    <TextView
+        android:id="@+id/userNameDetailTextView"
+        android:layout_marginTop="@dimen/dp_100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:text="@string/username"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/githubUrlDetailTextView"
+        android:layout_below="@id/userNameDetailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_24"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        />
+    <ImageView
+        android:id="@+id/avatarDetailImageView"
+        android:layout_below="@id/githubUrlDetailTextView"
+        android:layout_width="@dimen/dp_200"
+        android:layout_height="@dimen/dp_200"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
