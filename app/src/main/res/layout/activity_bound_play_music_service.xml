@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="com.example.sony.training.BoundPlayMusicServiceActivity">
+
+    <Button
+        android:id="@+id/boundServiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bound_service"/>
+    <Button
+        android:id="@+id/playMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/boundServiceButton"
+        android:text="@string/play_music"/>
+    <Button
+        android:id="@+id/pauseMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause_music"
+        android:layout_below="@id/playMusicButton"/>
+    <Button
+        android:id="@+id/resumeMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pauseMusicButton"
+        android:text="@string/resume_music"/>
+    <Button
+        android:id="@+id/stopMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resumeMusicButton"
+        android:text="@string/stop_music"/>
+    <Button
+        android:id="@+id/unboundServiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stopMusicButton"
+        android:text="@string/unbound_service"/>
+
+</RelativeLayout>
