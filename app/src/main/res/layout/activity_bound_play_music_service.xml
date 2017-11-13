@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sony.training.BoundPlayMusicServiceActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/boundServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/bound_service" />
+
+        <Button
+            android:id="@+id/playMusicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boundServiceBtn"
+            android:layout_centerHorizontal="true"
+            android:text="@string/play_music" />
+
+        <Button
+            android:id="@+id/pauseMusicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/playMusicButton"
+            android:layout_centerHorizontal="true"
+            android:text="@string/pause_music" />
+
+        <Button
+            android:id="@+id/stopMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pauseMusicBtn"
+            android:layout_centerHorizontal="true"
+            android:text="@string/stop_music" />
+
+        <Button
+            android:id="@+id/resumeMusic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stopMusic"
+            android:layout_centerHorizontal="true"
+            android:text="@string/resume_music" />
+
+        <Button
+            android:id="@+id/unboundMucsicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resumeMusic"
+            android:layout_centerHorizontal="true"
+            android:text="@string/unbound_music" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
