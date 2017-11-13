@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.sony.training.BoundPlayMusicServiceActivity"
+    >
+
+    <Button
+        android:id="@+id/boundServiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bound_service"
+        />
+
+    <Button
+        android:id="@+id/playMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play_music"
+        />
+
+    <Button
+        android:id="@+id/pauseMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause_music"
+        />
+
+    <Button
+        android:id="@+id/resumeMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resume_music"
+        />
+
+    <Button
+        android:id="@+id/stopMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_music"
+        />
+
+    <Button
+        android:id="@+id/unboundServiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unbound_service"
+        />
+
+</LinearLayout>
