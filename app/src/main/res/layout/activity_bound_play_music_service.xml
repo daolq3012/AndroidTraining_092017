@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sony.training.BoundPlayMusicServiceActivity"
+    >
+
+    <Button
+        android:id="@+id/boundServiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bound_service"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/playMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play_music"
+        app:layout_constraintLeft_toLeftOf="@+id/boundServiceButton"
+        app:layout_constraintTop_toBottomOf="@+id/boundServiceButton"
+        />
+    <Button
+        android:id="@+id/pauseMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pause_music"
+        app:layout_constraintLeft_toLeftOf="@+id/playMusic"
+        app:layout_constraintTop_toBottomOf="@+id/playMusic"
+        />
+
+    <Button
+        android:id="@+id/resumMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resume_music"
+        app:layout_constraintLeft_toLeftOf="@+id/pauseMusic"
+        app:layout_constraintTop_toBottomOf="@+id/pauseMusic"
+        />
+
+    <Button
+        android:id="@+id/stopMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_music"
+        app:layout_constraintLeft_toLeftOf="@+id/resumMusic"
+        app:layout_constraintTop_toBottomOf="@+id/resumMusic"
+        />
+
+    <Button
+        android:id="@+id/unboundService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/unbound_service"
+        app:layout_constraintLeft_toLeftOf="@+id/stopMusic"
+        app:layout_constraintTop_toBottomOf="@+id/stopMusic"
+        />
+</android.support.constraint.ConstraintLayout>
