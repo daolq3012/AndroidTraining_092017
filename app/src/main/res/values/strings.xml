@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="start_service">Start service</string>
+    <string name="stop_service">Stop service</string>
+    <string name="bound_service">Bound service</string>
+    <string name="play_music">Play music</string>
+    <string name="stop_music">Stop music</string>
+    <string name="pause_music">Pause music</string>
+    <string name="unpause_music">Unpause music</string>
+    <string name="resume_music">Resume music</string>
+    <string name="unbound_service">Unbound service</string>
 </resources>
