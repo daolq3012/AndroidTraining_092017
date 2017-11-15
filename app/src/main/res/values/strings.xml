@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="insert">Insert</string>
+    <string name="getAll">GetAll</string>
 
     <array name="spinner_email">
         <item>Gmail</item>
