@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="insert">Insert</string>
+    <string name="getAll">GetAll</string>
+
+    <array name="spinner_email">
+        <item>Gmail</item>
+        <item>HotMail</item>
+        <item>AolMail</item>
+    </array>
+    <array name="spinner">
+        <item>2 ways</item>
+        <item>4 ways</item>
+        <item>6 ways</item>
+    </array>
 </resources>
