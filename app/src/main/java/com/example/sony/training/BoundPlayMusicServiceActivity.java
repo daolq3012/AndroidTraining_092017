@@ -3,20 +3,30 @@ package com.example.sony.training;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.os.Handler;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import com.example.sony.training.service.BoundPlayMusicService;
 
-public class BoundPlayMusicServiceActivity extends AppCompatActivity implements
-        View.OnClickListener {
+public class BoundPlayMusicServiceActivity extends AppCompatActivity
+        implements View.OnClickListener, SeekBar.OnSeekBarChangeListener {
 
-    private Button mBtnBoundService, mBtnPlayMusic, mBtnPauseMusic, mBtnResumeMusic, mBtnStopMusic,
-            mBtnUnboundService;
+    private ImageView mBtnPlayMusic, mBtnNextSong, mBtnPreviousSong;
+    private SeekBar mSeekBar;
+
+    private TextView mTxtMaxLengthSong, mTxtCurrentDuration;
 
     private boolean isBound;
+    private boolean isPlaying = false;
+
+    private Handler mHandler;
+    private Runnable mRunnable;
 
     private BoundPlayMusicService mBoundPlayMusicService;
 
@@ -39,55 +49,114 @@ public class BoundPlayMusicServiceActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bound_play_music_service);
 
-        initViews();
+        mHandler = new Handler();
 
-        mBtnBoundService.setOnClickListener(this);
-        mBtnPlayMusic.setOnClickListener(this);
-        mBtnPauseMusic.setOnClickListener(this);
-        mBtnResumeMusic.setOnClickListener(this);
-        mBtnStopMusic.setOnClickListener(this);
-        mBtnUnboundService.setOnClickListener(this);
+        initViews();
+        initEvents();
+
+        Intent intent = new Intent(this, BoundPlayMusicService.class);
+        bindService(intent, mServiceConnection, BIND_AUTO_CREATE);
+
+        mRunnable = new Runnable() {
+            @Override
+            public void run() {
+                int currentPosition = mBoundPlayMusicService.getMediaPlayer().getCurrentPosition();
+                int duration = mBoundPlayMusicService.getMediaPlayer().getDuration();
+                String currentTime = Utils.milliSecondsToTimer(currentPosition);
+                String totalTime = Utils.milliSecondsToTimer(duration);
+                mTxtCurrentDuration.setText(currentTime);
+                mSeekBar.setProgress(currentPosition);
+                if (currentTime.equals(totalTime)) {
+                    mSeekBar.setProgress(0);
+                    mBoundPlayMusicService.nextSong();
+                    mSeekBar.setMax(mBoundPlayMusicService.getMediaPlayer().getDuration());
+                    mTxtMaxLengthSong.setText(Utils.milliSecondsToTimer(
+                            mBoundPlayMusicService.getMediaPlayer().getDuration()));
+                    mBtnPlayMusic.setImageResource(R.drawable.ic_pause_black_24dp);
+                }
+                mHandler.postDelayed(mRunnable, 100);
+            }
+        };
     }
 
     private void initViews() {
-        mBtnBoundService = (Button) findViewById(R.id.boundServiceButton);
-        mBtnPlayMusic = (Button) findViewById(R.id.playMusicButton);
-        mBtnPauseMusic = (Button) findViewById(R.id.pauseMusicButton);
-        mBtnResumeMusic = (Button) findViewById(R.id.resumeMusicButton);
-        mBtnStopMusic = (Button) findViewById(R.id.stopMusicButton);
-        mBtnUnboundService = (Button) findViewById(R.id.unboundServiceButton);
+        mSeekBar = (SeekBar) findViewById(R.id.seekBar);
+        mBtnPlayMusic = (ImageView) findViewById(R.id.playMusicButton);
+        mBtnNextSong = (ImageView) findViewById(R.id.nextSong);
+        mBtnPreviousSong = (ImageView) findViewById(R.id.previousSong);
+        mTxtMaxLengthSong = (TextView) findViewById(R.id.txtMaxLengthSong);
+        mTxtCurrentDuration = (TextView) findViewById(R.id.txtCurrentDuration);
+    }
+
+    private void initEvents() {
+        mBtnPlayMusic.setOnClickListener(this);
+        mBtnNextSong.setOnClickListener(this);
+        mBtnPreviousSong.setOnClickListener(this);
+        mSeekBar.setOnSeekBarChangeListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.boundServiceButton: //Chay service
-                Intent intent = new Intent(this,BoundPlayMusicService.class);
-                bindService(intent,mServiceConnection,BIND_AUTO_CREATE);
-                break;
+        switch (v.getId()) {
             case R.id.playMusicButton:
                 if (isBound) {
-                    mBoundPlayMusicService.playMusic();
+                    if (!isPlaying) {
+                        mBoundPlayMusicService.playMusic();
+                        mSeekBar.setMax(mBoundPlayMusicService.getMediaPlayer().getDuration());
+                        mTxtMaxLengthSong.setText(Utils.milliSecondsToTimer(
+                                mBoundPlayMusicService.getMediaPlayer().getDuration()));
+                        mBtnPlayMusic.setImageResource(R.drawable.ic_pause_black_24dp);
+                        isPlaying = !isPlaying;
+                    } else {
+                        mBoundPlayMusicService.pauseMusic();
+                        mBtnPlayMusic.setImageResource(R.drawable.ic_play);
+                        isPlaying = !isPlaying;
+                    }
                 }
                 break;
-            case R.id.pauseMusicButton:
-                if(isBound) {
-                    mBoundPlayMusicService.pauseMusic();
-                }
-                break;
-            case R.id.resumeMusicButton:
-                if(isBound) {
-                    mBoundPlayMusicService.resumeMusic();
-                }
-                break;
-            case R.id.stopMusicButton:
+            case R.id.nextSong:
                 if (isBound) {
-                    mBoundPlayMusicService.stopMusic();
+                    mBoundPlayMusicService.nextSong();
+                    mTxtCurrentDuration.setText("0:00");
+                    mSeekBar.setProgress(0);
+                    mSeekBar.setMax(mBoundPlayMusicService.getMediaPlayer().getDuration());
+                    mTxtMaxLengthSong.setText(Utils.milliSecondsToTimer(
+                            mBoundPlayMusicService.getMediaPlayer().getDuration()));
+                    mBtnPlayMusic.setImageResource(R.drawable.ic_pause_black_24dp);
                 }
                 break;
-            case R.id.unboundServiceButton:
-                unbindService(mServiceConnection);
+            case R.id.previousSong:
+                if (isBound) {
+                    mTxtCurrentDuration.setText("0:00");
+                    mSeekBar.setProgress(0);
+                    mBoundPlayMusicService.previousSong();
+                    mSeekBar.setMax(mBoundPlayMusicService.getMediaPlayer().getDuration());
+                    mTxtMaxLengthSong.setText(Utils.milliSecondsToTimer(
+                            mBoundPlayMusicService.getMediaPlayer().getDuration()));
+                    mBtnPlayMusic.setImageResource(R.drawable.ic_pause_black_24dp);
+                }
                 break;
         }
+    }
+
+    @Override
+    public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+        if (fromUser) {
+            mBoundPlayMusicService.seekTo(progress);
+            seekBar.setProgress(progress);
+        } else {
+            mHandler.removeCallbacks(mRunnable);
+            mHandler.postDelayed(mRunnable, 1000);
+        }
+    }
+
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) {
+
     }
 }

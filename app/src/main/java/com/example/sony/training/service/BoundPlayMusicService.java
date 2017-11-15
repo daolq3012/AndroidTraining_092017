@@ -8,12 +8,17 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import com.example.sony.training.R;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Admin on 11/13/17.
  */
 
 public class BoundPlayMusicService extends Service {
+
+    private List<Integer> listSongs = new ArrayList<>();
+    private int position = 0;
 
     private MediaPlayer mMediaPlayer;
 
@@ -30,7 +35,12 @@ public class BoundPlayMusicService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mMediaPlayer = MediaPlayer.create(this, R.raw.ngay_mai_em_di);
+
+        listSongs.add(R.raw.cry_on_my_shoulder);
+        listSongs.add(R.raw.closer);
+        listSongs.add(R.raw.kem_duyen);
+
+        mMediaPlayer = MediaPlayer.create(this, listSongs.get(position));
     }
 
     @Override
@@ -41,7 +51,7 @@ public class BoundPlayMusicService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        playMusic();
+        //playMusic(); //Start service thi nhac se chay luon
         return mIBinder;
     }
 
@@ -55,15 +65,15 @@ public class BoundPlayMusicService extends Service {
     }
 
     public void pauseMusic() {
-        if(mMediaPlayer.isPlaying()) {
-//            mediaLengthWhenPause = mMediaPlayer.getCurrentPosition();
+        if (mMediaPlayer.isPlaying()) {
+            //            mediaLengthWhenPause = mMediaPlayer.getCurrentPosition();
             mMediaPlayer.pause();
         }
     }
 
     public void resumeMusic() {
-        if(!mMediaPlayer.isPlaying()) {
-//            mMediaPlayer.seekTo(mediaLengthWhenPause);
+        if (!mMediaPlayer.isPlaying()) {
+            //            mMediaPlayer.seekTo(mediaLengthWhenPause);
             mMediaPlayer.start();
         }
     }
@@ -76,5 +86,41 @@ public class BoundPlayMusicService extends Service {
         } catch (IOException | IllegalStateException e) {
             e.printStackTrace();
         }
+    }
+
+    public void nextSong() {
+        mMediaPlayer.stop();
+        mMediaPlayer.release();
+        position++;
+        if (position < listSongs.size()) {
+            mMediaPlayer = MediaPlayer.create(this, listSongs.get(position));
+        } else {
+            position = 0;
+            mMediaPlayer = MediaPlayer.create(this, listSongs.get(position));
+        }
+        mMediaPlayer.start();
+    }
+
+    public void previousSong() {
+        mMediaPlayer.stop();
+        mMediaPlayer.release();
+        position--;
+        if (position >= 0) {
+            mMediaPlayer = MediaPlayer.create(this, listSongs.get(position));
+        } else {
+            position = listSongs.size() - 1;
+            mMediaPlayer = MediaPlayer.create(this, listSongs.get(position));
+        }
+        mMediaPlayer.start();
+    }
+
+    public void seekTo(int currentDuration) {
+        if (mMediaPlayer.isPlaying()) {
+            mMediaPlayer.seekTo(currentDuration);
+        }
+    }
+
+    public MediaPlayer getMediaPlayer() {
+        return mMediaPlayer;
     }
 }

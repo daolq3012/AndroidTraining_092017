@@ -8,46 +8,58 @@
     tools:context="com.example.sony.training.BoundPlayMusicServiceActivity"
     >
 
-    <Button
-        android:id="@+id/boundServiceButton"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bound_service"
-        />
-
-    <Button
-        android:id="@+id/playMusicButton"
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
+        >
+        <TextView
+            android:id="@+id/txtCurrentDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/min"
+            />
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/txtMaxLengthSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/min"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/play_music"
-        />
-
-    <Button
-        android:id="@+id/pauseMusicButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pause_music"
-        />
-
-    <Button
-        android:id="@+id/resumeMusicButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/resume_music"
-        />
-
-    <Button
-        android:id="@+id/stopMusicButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/stop_music"
-        />
-
-    <Button
-        android:id="@+id/unboundServiceButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/unbound_service"
-        />
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10"
+        >
+        <ImageView
+            android:id="@+id/previousSong"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:src="@drawable/ic_skip_previous"
+            />
+        <ImageView
+            android:id="@+id/playMusicButton"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:src="@drawable/ic_play"
+            />
+        <ImageView
+            android:id="@+id/nextSong"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:src="@drawable/ic_skip_next"
+            />
+    </LinearLayout>
 
 </LinearLayout>

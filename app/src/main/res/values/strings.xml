@@ -8,4 +8,5 @@
     <string name="resume_music">Resume music</string>
     <string name="stop_music">Stop music</string>
     <string name="unbound_service">unbound service</string>
+    <string name="min">0:00</string>
 </resources>
