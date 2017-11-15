@@ -24,7 +24,6 @@ public class BoundPlayMusicService extends Service {
 
     private IBinder mIbinder = new LocalBinder();
     private int mediaLengthWhenPause;
-    private int position;
     private int numberSong = 1;
     private boolean isPause = false;
 
