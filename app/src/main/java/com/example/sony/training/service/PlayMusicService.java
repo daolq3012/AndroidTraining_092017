@@ -18,7 +18,7 @@ public class PlayMusicService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        mMediaPlayer = MediaPlayer.create(this, R.raw.ngay_mai_em_di);
+        mMediaPlayer = MediaPlayer.create(this, R.raw.cry_on_my_shoulder);
 
         mMediaPlayer.getDuration();
     }
