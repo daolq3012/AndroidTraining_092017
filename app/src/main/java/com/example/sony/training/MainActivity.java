@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Handler mHandler = new Handler();
 
     private Boolean isBound;
-    private Boolean isPlay = true;
+    private Boolean isPlay = false;
 
 
     private BoundPlayMusicService mBoundPlayMusicService;
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void initEvents() {
         previousMusicButton.setOnClickListener(this);
         stopMusicButton.setOnClickListener(this);
-        playPauseMusicButton.setBackgroundResource(R.drawable.ic_pause);
+        //playPauseMusicButton.setBackgroundResource(R.drawable.ic_play);
         playPauseMusicButton.setOnClickListener(this);
         nextMusicButton.setOnClickListener(this);
         lengthMusicSeekBar.setOnSeekBarChangeListener(this);
@@ -88,23 +88,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.stopMusicButton:
-                if (isBound) {
+                if (!isBound) {
                     mBoundPlayMusicService.stopMusic();
                 }
                 break;
             case R.id.play_pauseMusicButton:
 
-                if (!isBound) {
+                if (isBound) {
                     mBoundPlayMusicService.playMusic();
                     lengthMusicSeekBar.setMax(getProgressMedia());
                 } else {
                     mBoundPlayMusicService.pauseMusic();
                 }
                 isBound = !isBound;
-                if (isPlay) {
-                    v.setBackgroundResource(R.drawable.ic_play);
-                } else {
+                if (!isPlay) {
                     v.setBackgroundResource(R.drawable.ic_pause);
+                } else {
+                    v.setBackgroundResource(R.drawable.ic_play);
 
                 }
                 isPlay = !isPlay;

@@ -48,7 +48,6 @@ public class BoundPlayMusicService extends Service {
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
-        playMusic();
         return mIbinder;
     }
 
