@@ -91,7 +91,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     private int getProgessMedia() {
-        Toast.makeText(this, "" + mService.getPlayer().getDuration(), Toast.LENGTH_SHORT).show();
         return mService.getPlayer().getDuration();
     }
 
