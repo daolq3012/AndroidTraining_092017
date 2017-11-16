@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="insert">Insert</string>
+    <string name="get_all_list">Get List User</string>
+    <string name="Username">Username</string>
+    <string name="Age">Age</string>
+    <string name="insert_user">Insert User</string>
+    <string name="ok">OK</string>
+    <string name="list_user">List Member</string>
+    <string name="list_member">List Member</string>
+    <string name="insert_member">Insert Member</string>
+    <string name="detail">Detail</string>
 </resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp_10"
+    tools:context="com.example.sony.training.InsertUserActivity"
+    >
+    <TextView
+        android:id="@+id/TextView"
+        android:text="@string/insert_member"
+        android:textSize="@dimen/dp_30"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/colorBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/userNameEdittext"
+        android:layout_below="@+id/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:hint="@string/Username"
+        />
+    <EditText
+        android:id="@+id/ageEdittext"
+        android:layout_below="@+id/userNameEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:hint="@string/Age"
+        />
+    <Button
+        android:id="@+id/okButton"
+        android:layout_below="@+id/ageEdittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_250"
+        android:text="@string/ok"
+        />
+
+</RelativeLayout>
