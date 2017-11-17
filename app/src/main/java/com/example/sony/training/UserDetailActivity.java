@@ -33,7 +33,6 @@ public class UserDetailActivity extends AppCompatActivity {
         mMainApplication = (MainApplication) getApplication();
         mUserDatabase = mMainApplication.getUserDatabase();
         mSelectListUserFromDatabase = new SelectListUserFromDatabase(this);
-        int id = getIntent().getIntExtra(Constant.EXTRA_USER, 0);
         mSelectListUserFromDatabase.execute();
         getUser();
     }

@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.example.sony.training.entity.UserEntity;
 
+import java.util.Random;
+
 public class InsertUserActivity extends AppCompatActivity implements View.OnClickListener, OnInsertDataListener {
 
     private EditText userEditText, ageEditText;
@@ -50,6 +52,7 @@ public class InsertUserActivity extends AppCompatActivity implements View.OnClic
         String username = userEditText.getText().toString();
         int age = Integer.valueOf(ageEditText.getText().toString());
         UserEntity userEntity = new UserEntity();
+        userEntity.setID(new Random().nextInt());
         userEntity.setUserName(username);
         userEntity.setAge(age);
         new InsertUserToDatabase(mUserDatabase, this).execute(userEntity);

@@ -14,7 +14,6 @@ import java.util.List;
 public class SelectListUserFromDatabase extends AsyncTask<Void, Void, List<UserEntity>>{
 
     private UserDatabase mUserDataBase;
-    private OnGetDataListener mOnGetDataListener;
     private MainApplication mMainApplication;
     private Activity mContext;
 
