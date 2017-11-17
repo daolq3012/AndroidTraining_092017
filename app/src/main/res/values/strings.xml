@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="insert_user">Insert User</string>
+    <string name="user_name">User Name</string>
+    <string name="age">Age</string>
+    <string name="insert">Insert</string>
+    <string name="welcome">Welcome</string>
+    <string name="list_user">List User</string>
+    <string name="detail">Detail</string>
 
     <array name="spinner_email">
         <item>Gmail</item>
