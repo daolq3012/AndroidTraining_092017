@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="insert">Insert</string>
+    <string name="get_all_user">Get all user</string>
 </resources>
