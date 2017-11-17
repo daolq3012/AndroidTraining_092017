@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sony.training.CreateMemberActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_40"
+        android:text="@string/title_create_member_name"
+        android:textSize="@dimen/dp_40"
+        tools:ignore="SpUsage" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/member_name"
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10">
+
+        <EditText
+            android:id="@+id/edt_Member_Name"
+            android:layout_width="@dimen/dp_400"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/edtInputMemberName"
+            android:paddingRight="@dimen/dp_24"
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/member_age"
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10">
+
+        <EditText
+            android:id="@+id/edt_Member_Age"
+            android:layout_width="@dimen/dp_400"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/edtInputMemberAge"
+            android:inputType="number"
+            android:paddingRight="@dimen/dp_24"
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/btn_Insert_LayoutCreateMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/Insert"
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+</LinearLayout>
