@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#979494"
+    tools:context="com.example.sony.training.InsertUserActivity">
+
+    <TextView
+        android:id="@+id/insertUserTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        android:text="@string/insert_user"
+        android:textSize="@dimen/sp_40"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/userEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_below="@id/insertUserTextView"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginLeft="@dimen/sp_10"
+        android:layout_marginRight="@dimen/sp_10"
+        android:hint="@string/user_name"
+        android:paddingLeft="@dimen/sp_10"
+        android:background="#ffffff"/>
+
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_35"
+        android:layout_below="@id/userEditText"
+        android:background="#ffffff"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/sp_10"
+        android:layout_marginRight="@dimen/sp_10"
+        android:hint="@string/age"
+        android:paddingLeft="@dimen/sp_10"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:id="@+id/insertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ageEditText"
+        android:layout_marginTop="@dimen/dp_35"
+        android:text="@string/insert"/>
+
+</RelativeLayout>

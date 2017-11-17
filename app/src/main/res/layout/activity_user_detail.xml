@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#979494"
+    tools:context="com.example.sony.training.UserDetailActivity"
+    >
+    <TextView
+        android:id="@+id/DetailTextView"
+        android:text="@string/detail"
+        android:textSize="@dimen/dp_30"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:layout_below="@id/DetailTextView"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/nameDetailTextView"
+            android:textStyle="bold"
+            android:textSize="@dimen/dp_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:gravity="center"
+            android:id="@+id/ageDetailTextView"
+            android:textSize="@dimen/dp_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
