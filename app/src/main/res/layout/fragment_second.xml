@@ -1,0 +1,53 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.sony.training.fragment.SecondFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/coverImageView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/dp_150"-->
+            <!--android:background="@drawable/background"/>-->
+        <!--<ImageView-->
+            <!--android:layout_marginTop="@dimen/dp_40"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:id="@+id/avatarProfileImageView"-->
+            <!--android:layout_width="@dimen/dp_150"-->
+            <!--android:layout_height="@dimen/dp_150"-->
+            <!--android:background="@drawable/avatar"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/userNameTextView"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/userName"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/sp_30"-->
+            <!--android:layout_below="@id/avatarProfileImageView"-->
+            <!--android:gravity="center"/>-->
+        <!--<TextView-->
+            <!--android:id="@+id/statusTextView"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/status"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--android:textSize="@dimen/sp_20"-->
+            <!--android:layout_below="@id/userNameTextView"-->
+            <!--android:gravity="center"/>-->
+        <!--android:layout_below="@+id/statusTextView"-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/profileRecyclerView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+</ScrollView>
