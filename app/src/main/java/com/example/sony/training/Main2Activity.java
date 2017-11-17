@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
@@ -31,6 +32,9 @@ public class Main2Activity extends AppCompatActivity {
 
         IntentFilter mIntentFilter = new IntentFilter(Constant.TEST_ACTION);
         registerReceiver(mReceiver, mIntentFilter);
+    }
+    public void OnSendBroadCastIsClick(View view) {
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     @Override

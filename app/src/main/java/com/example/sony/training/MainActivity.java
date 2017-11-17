@@ -16,7 +16,5 @@ public class MainActivity extends AppCompatActivity {
         sendBroadcast(intent);
     }
 
-    public void OnSendBroadCastIsClick(View view) {
-        startActivity(new Intent(this, Main2Activity.class));
-    }
+
 }

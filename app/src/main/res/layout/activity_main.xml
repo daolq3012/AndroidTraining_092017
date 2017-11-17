@@ -7,16 +7,5 @@
     tools:context="com.example.sony.training.MainActivity"
     >
 
-    <Button
-        android:id="@+id/btnSendBroadCast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sent_broadcast"
-        android:onClick="OnSendBroadCastIsClick"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
 
 </android.support.constraint.ConstraintLayout>
