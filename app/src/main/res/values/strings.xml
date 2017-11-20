@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="keyword">Keyword</string>
+    <string name="limit">Limit</string>
+    <string name="search">Search</string>
+    <string name="detail_user">Detail User</string>
+    <string name="title_listView">List Users View</string>
+    <string name="id_text">ID:</string>
 </resources>
