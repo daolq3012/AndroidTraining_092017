@@ -3,7 +3,7 @@
     package="com.example.sony.training">
 
     <application
-
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Room DB[bPCH]"
@@ -18,6 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreateMemberActivity" />
+        <activity android:name=".ListMemberActivity" />
+        <activity android:name=".MemberDetailActivity"/>
     </application>
 
 </manifest>

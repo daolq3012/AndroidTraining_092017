@@ -13,9 +13,12 @@ import java.util.List;
 @Dao
 public interface MemberDao {
 
-    @Query("SELECT * FROM member")
-    List<Member> getAllMembers();
-
     @Insert
-    void insertAll(Member... members);
+    void insertMember(Member member);
+
+    @Query("SELECT * FROM members")
+    List<Member> getListMember();
+
+    @Query("SELECT * FROM members WHERE id = :id")
+    Member getMemberWithID(int id);
 }

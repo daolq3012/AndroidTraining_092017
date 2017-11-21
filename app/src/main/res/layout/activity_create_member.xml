@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context="com.example.sony.training.CreateMemberActivity">
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +69,7 @@
             android:inputType="number"
             android:paddingRight="@dimen/dp_24"
             android:textSize="@dimen/dp_24"
-            tools:ignore="SpUsage" />
+            tools:ignore="RtlSymmetry,SpUsage" />
     </LinearLayout>
 
     <LinearLayout

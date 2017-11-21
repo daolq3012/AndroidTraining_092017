@@ -35,7 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/user_input"
-            android:textSize="@dimen/dp_24" />
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
 
     </LinearLayout>
 
@@ -52,7 +53,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/list_member"
-            android:textSize="@dimen/dp_24" />
+            android:textSize="@dimen/dp_24"
+            tools:ignore="SpUsage" />
 
     </LinearLayout>
 
