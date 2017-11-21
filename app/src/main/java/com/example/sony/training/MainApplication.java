@@ -9,6 +9,7 @@ import com.example.sony.training.service.config.ServiceGenerators;
  */
 
 public class MainApplication extends Application {
+
     private static GitHubApi mGitHubApi;
 
     @Override
@@ -20,6 +21,6 @@ public class MainApplication extends Application {
     }
 
     public static GitHubApi getGitHubApi() {
-        return  mGitHubApi;
+        return mGitHubApi;
     }
 }

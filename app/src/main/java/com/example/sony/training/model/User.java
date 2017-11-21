@@ -1,5 +1,7 @@
 package com.example.sony.training.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -7,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by Admin on 11/17/17.
  */
 
-public class User {
+public class User implements Parcelable {
 
     @SerializedName("login")
     @Expose
@@ -63,6 +65,48 @@ public class User {
     @SerializedName("score")
     @Expose
     private Double score;
+
+    protected User(Parcel in) {
+        login = in.readString();
+        if (in.readByte() == 0) {
+            id = null;
+        } else {
+            id = in.readInt();
+        }
+        avatarUrl = in.readString();
+        gravatarId = in.readString();
+        url = in.readString();
+        htmlUrl = in.readString();
+        followersUrl = in.readString();
+        followingUrl = in.readString();
+        gistsUrl = in.readString();
+        starredUrl = in.readString();
+        subscriptionsUrl = in.readString();
+        organizationsUrl = in.readString();
+        reposUrl = in.readString();
+        eventsUrl = in.readString();
+        receivedEventsUrl = in.readString();
+        type = in.readString();
+        byte tmpSiteAdmin = in.readByte();
+        siteAdmin = tmpSiteAdmin == 0 ? null : tmpSiteAdmin == 1;
+        if (in.readByte() == 0) {
+            score = null;
+        } else {
+            score = in.readDouble();
+        }
+    }
+
+    public static final Creator<User> CREATOR = new Creator<User>() {
+        @Override
+        public User createFromParcel(Parcel in) {
+            return new User(in);
+        }
+
+        @Override
+        public User[] newArray(int size) {
+            return new User[size];
+        }
+    };
 
     public String getLogin() {
         return login;
@@ -208,4 +252,40 @@ public class User {
         this.score = score;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(login);
+        if (id == null) {
+            parcel.writeByte((byte) 0);
+        } else {
+            parcel.writeByte((byte) 1);
+            parcel.writeInt(id);
+        }
+        parcel.writeString(avatarUrl);
+        parcel.writeString(gravatarId);
+        parcel.writeString(url);
+        parcel.writeString(htmlUrl);
+        parcel.writeString(followersUrl);
+        parcel.writeString(followingUrl);
+        parcel.writeString(gistsUrl);
+        parcel.writeString(starredUrl);
+        parcel.writeString(subscriptionsUrl);
+        parcel.writeString(organizationsUrl);
+        parcel.writeString(reposUrl);
+        parcel.writeString(eventsUrl);
+        parcel.writeString(receivedEventsUrl);
+        parcel.writeString(type);
+        parcel.writeByte((byte) (siteAdmin == null ? 0 : siteAdmin ? 1 : 2));
+        if (score == null) {
+            parcel.writeByte((byte) 0);
+        } else {
+            parcel.writeByte((byte) 1);
+            parcel.writeDouble(score);
+        }
+    }
 }
