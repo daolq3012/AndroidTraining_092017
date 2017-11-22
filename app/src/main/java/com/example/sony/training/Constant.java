@@ -5,7 +5,6 @@ package com.example.sony.training;
  */
 
 public class Constant  {
-    public static final String EXTRA_LIST_USER = "EXTRA_LIST_USER";
     public static final String EXTRA_USER = "EXTRA_USER";
     public static final String LIMIT_EXTRA = "LIMIT_EXTRA";
 }
