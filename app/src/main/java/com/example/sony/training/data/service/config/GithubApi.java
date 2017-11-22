@@ -1,7 +1,7 @@
-package com.example.sony.training.service.config;
+package com.example.sony.training.data.service.config;
 
 import com.example.sony.training.model.User;
-import com.example.sony.training.service.response.SearchGithubUserResponse;
+import com.example.sony.training.data.service.response.SearchGithubUserResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;

@@ -1,4 +1,4 @@
-package com.example.sony.training.service.config;
+package com.example.sony.training.data.service.config;
 
 import android.content.Context;
 import android.support.annotation.NonNull;

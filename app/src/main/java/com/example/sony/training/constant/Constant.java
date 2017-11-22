@@ -1,4 +1,4 @@
-package com.example.sony.training;
+package com.example.sony.training.constant;
 
 /**
  * Created by Administrator on 11/17/17.

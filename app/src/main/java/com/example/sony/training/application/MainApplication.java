@@ -1,8 +1,8 @@
-package com.example.sony.training;
+package com.example.sony.training.application;
 
 import android.app.Application;
-import com.example.sony.training.service.config.GithubApi;
-import com.example.sony.training.service.config.ServiceGenerators;
+import com.example.sony.training.data.service.config.GithubApi;
+import com.example.sony.training.data.service.config.ServiceGenerators;
 
 /**
  * Created by Administrator on 11/17/17.
