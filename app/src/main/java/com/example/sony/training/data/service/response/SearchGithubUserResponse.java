@@ -1,4 +1,4 @@
-package com.example.sony.training.service.response;
+package com.example.sony.training.data.service.response;
 
 import com.example.sony.training.model.User;
 import com.google.gson.annotations.Expose;

@@ -1,4 +1,4 @@
-package com.example.sony.training.adapter;
+package com.example.sony.training.screen.listuser.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -21,8 +21,7 @@ public class GithubUserAdapter extends RecyclerView.Adapter<GithubUserAdapter.Gi
     private OnRecyclerViewItemListener mOnRecyclerViewItemListener;
     private Context mContext;
 
-    public GithubUserAdapter(List<User> listItems,Context context) {
-        this.listItems = listItems;
+    public GithubUserAdapter(Context context) {
         mContext = context;
     }
 
@@ -44,7 +43,16 @@ public class GithubUserAdapter extends RecyclerView.Adapter<GithubUserAdapter.Gi
 
     @Override
     public int getItemCount() {
-        return listItems.size();
+        if(listItems == null) {
+            return 0;
+        } else {
+            return listItems.size();
+        }
+    }
+
+    public void updateData(List<User> listItems) {
+        this.listItems = listItems;
+        notifyDataSetChanged();
     }
 
     static class GithubUserHolder extends RecyclerView.ViewHolder {

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.example.sony.training.UserDetailsActivity"
+    tools:context="com.example.sony.training.screen.userdetail.UserDetailsActivity"
     >
 
     <ImageView
