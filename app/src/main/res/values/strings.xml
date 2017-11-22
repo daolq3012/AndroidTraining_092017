@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="username_textview">Username</string>
+    <string name="password_textview">Password</string>
+    <string name="login_button">Login</string>
+    <string name="username_edittext">Enter Username</string>
+    <string name="password_edittext">Enter Password</string>
 </resources>
