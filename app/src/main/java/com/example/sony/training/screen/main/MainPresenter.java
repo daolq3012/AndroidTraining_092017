@@ -1,8 +1,5 @@
 package com.example.sony.training.screen.main;
 
-import android.content.Intent;
-import com.example.sony.training.constant.Constant;
-import com.example.sony.training.screen.listuser.ListUserActivity;
 
 /**
  * Created by Administrator on 11/22/17.
