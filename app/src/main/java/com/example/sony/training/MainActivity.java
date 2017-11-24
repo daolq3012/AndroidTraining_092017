@@ -7,6 +7,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
                 mGoogleMap.addMarker(
                         new MarkerOptions().position(new LatLng(16.0603684, 108.2071436))
                                 .title("Day la marker 2"));
+
+                mGoogleMap.setMapStyle(
+                        MapStyleOptions.loadRawResourceStyle(MainActivity.this, R.raw.google_map));
             }
         });
     }
