@@ -1,7 +1,9 @@
-package com.example.sony.training;
+package com.example.sony.training.screen.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.sony.training.R;
 
 public class MainActivity extends AppCompatActivity {
 

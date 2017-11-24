@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">AndroidTraining_092017</string>
+    <string name="keyword">keyword</string>
+    <string name="limit">limit</string>
+    <string name="search">Search</string>
+    <string name="listuser">List User</string>
+    <string name="name">name</string>
 
     <array name="spinner_email">
         <item>Gmail</item>
