@@ -1,18 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#8f8b8b"
     tools:context="com.example.sony.training.MainActivity">
 
     <TextView
+        android:id="@+id/nameMusicTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/nameMusic"
+        android:layout_marginLeft="@dimen/dp_90"
+        android:textSize="@dimen/sp_20"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/secondStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/secondStart"
+        android:layout_below="@+id/nameMusicTextView"/>
+    <TextView
+        android:id="@+id/secondTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/secondEnd"
+        android:layout_marginLeft="@dimen/dp_260"
+        android:layout_marginStart="@dimen/dp_260"
+        android:layout_below="@+id/nameMusicTextView"/>
+    <SeekBar
+        android:id="@+id/lengthMusicSeekBar"
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secondStart"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/lengthMusicSeekBar"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_40"
+        android:id="@+id/linearLayout">
+        <Button
+            android:id="@+id/previousMusicButton"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_previous" />
+        <Button
+            android:id="@+id/stopMusicButton"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_stop"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"/>
+
+        <Button
+            android:id="@+id/play_pauseMusicButton"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_play" />
+        <Button
+            android:id="@+id/nextMusicButton"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_next"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
